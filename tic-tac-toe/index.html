@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Крестики нолики</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+	<div id="field">
+		<div id="field-1" onclick="complexity()"></div>
+		<div id="field-2" onclick="complexity()"></div>
+		<div id="field-3" onclick="complexity()"></div>
+		<div id="field-4" onclick="complexity()"></div>
+		<div id="field-5" onclick="complexity()"></div>
+		<div id="field-6" onclick="complexity()"></div>
+		<div id="field-7" onclick="complexity()"></div>
+		<div id="field-8" onclick="complexity()"></div>
+		<div id="field-9" onclick="complexity()"></div>
+	</div>
+	
+	<div id="forma">
+		<h3>Настройки</h3><br />
+
+		<form name="form" onchange="form1()">
+
+			<div class="box1">
+				<p class="text-complexity">Уровень сложности:</p>
+				<select id="complexity">
+					<option value='sel-compl'>Выбирите сложность</option>
+					<option value="easy">Легко</option>
+					<option value="normal">Нормально</option>
+					<option value="hard">Сложно</option>
+				</select>
+			</div>
+
+			<div class="box2">
+				<p class="text-sign">Играть за:</p>
+				<select id="sign">
+					<option value="cross">Крестики</option>
+					<option value="circle">Нолики</option>
+				</select>
+			</div>
+			<button type="button" onclick="form1()">Начать заново</button>
+		</form>
+	</div>
+			
+<script src="js/script.js"></script>
+</body>
+</html>
