@@ -101,13 +101,12 @@ select {
 /**********************************  адаптация  *****************************/
 
 @media only screen and (max-width: 1080px){
-	html, body {
-		margin: 0;
-		height: 100%
+	body {
+		position: fixed;
 	}
 
 	body {
-		padding: 25px 15px 50px 15px;
+		padding: 25px 15px 0 15px;
 	}
 
 	#forma {
@@ -116,23 +115,23 @@ select {
 	}
 	
 	#forma h3 {
-		font-size: 70pt;
+		font-size: 80pt;
 	}
 
 	#forma p {
-		font-size: 40pt;
+		font-size: 50pt;
 	}
 
 	select {
-		font-size: 30px;
-		padding: 15px;
+		font-size: 40px;
+		padding: 20px;
 	}
 
 	button {
 		width: auto;
 		padding: 15px;
 		margin-left: 30px;
-		font-size: 30px;
+		font-size: 40px;
 	}
 
 	#field {
@@ -140,7 +139,7 @@ select {
 		margin-right: -4px;
 		width: 940px;
 		height: 940px;
-		margin-left: 25px;	 
+		margin-left: 15px;	 
 	}
 
 	#field * {
