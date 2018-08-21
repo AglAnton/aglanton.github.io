@@ -103,9 +103,6 @@ select {
 @media only screen and (max-width: 1080px){
 	body {
 		position: fixed;
-	}
-
-	body {
 		padding: 25px 15px 0 15px;
 	}
 
@@ -128,6 +125,7 @@ select {
 	}
 
 	button {
+		background-color: red;
 		width: auto;
 		padding: 15px;
 		margin-left: 30px;
