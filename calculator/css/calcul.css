@@ -1,0 +1,47 @@
+body {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+}
+
+.calcul {
+	border: 1px solid black;
+	padding: 5px;
+	margin: auto;
+	margin-top: 40px;
+	background-color: #c3c5c9; 
+}
+
+#screen {
+	border: 1px solid black;
+	width: 220px;
+	height: 43px;
+	padding: 5px;
+	background-color: #8fad90;
+}
+
+.screen {
+	float: left;
+	margin: 0;
+	font-size: 39px;
+	font-weight: bold;
+}
+
+.screen p {
+	display: inline;
+}
+
+div {
+	width: 232px;
+}
+
+button {
+	width: 	55px;
+	height: 55px;
+	margin-top: 6px;
+	font-weight: bold;
+	font-size: 27px;
+}
+
+button:hover {
+	background-color: gray;
+}
