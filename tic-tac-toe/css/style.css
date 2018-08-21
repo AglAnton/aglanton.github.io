@@ -101,16 +101,21 @@ select {
 /**********************************  адаптация  *****************************/
 
 @media only screen and (max-width: 1080px){
+	body{
+		margin: 10px 0 0 0;
+	}
+	
 	#forma {
 		float: none;
 		width: 100%;
 	}
 	
 	#field {
-	display: inline-block;
-	margin-right: -4px;
-	width: 940px;
-	height: 940px;	 
+		display: inline-block;
+		margin-right: -4px;
+		width: 940px;
+		height: 940px;	 
+		margin: 0 auto;
 	}
 
 	#field * {
@@ -118,6 +123,14 @@ select {
 		padding: 0;
 		width: 309px;
 		height: 309px;
+	}
+	
+	#forma h3 {
+		font-size: 56pt;
+	}
+	
+	#forma p {
+		font-size: 26pt;
 	}
 
 	#field-2, #field-5, #field-8 {
