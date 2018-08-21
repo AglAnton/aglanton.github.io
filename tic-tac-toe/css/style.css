@@ -124,7 +124,6 @@ select {
 	}
 
 	button {
-		background-color: red;
 		width: auto;
 		padding: 15px;
 		margin-left: 30px;
@@ -136,7 +135,7 @@ select {
 		margin-right: -4px;
 		width: 940px;
 		height: 940px;
-		margin-left: 15px;	 
+		margin-left: 0;	 
 	}
 
 	#field * {
