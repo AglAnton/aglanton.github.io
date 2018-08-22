@@ -1,0 +1,10 @@
+@media (max-width: 1080px){
+	.head{
+		height: 200px;
+	}
+	.bar, .box{
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
