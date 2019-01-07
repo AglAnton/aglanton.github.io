@@ -1,0 +1,154 @@
+body{
+	padding: 0;
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+	background-color: #F6F6F6;
+}
+.container{
+	padding: 0 20px;
+}
+.left{
+	width: 20%;
+	display: inline-block;
+	vertical-align: top;
+}
+.glav{
+	width: 80%;
+	display: inline-block;
+	margin-left: -4px;
+	vertical-align: top;
+}
+.glav *{
+	margin-left: 10px;
+}
+header p{
+	display: inline-block;
+	vertical-align: top;
+	font-size: 14px;
+}
+header .hover:hover{
+	color: #f3740d;
+	text-decoration: underline;
+	cursor: pointer;
+}
+ul{
+	margin: 0;
+}
+li{
+	list-style-type: none;
+}
+header ul, .header-2 ul{
+	display: inline-block;
+}
+header li, .header-2 li{
+	float: left;
+	margin-right: 15px;
+}
+header .inf{
+	float: right;
+	display: inline-block;
+	vertical-align: top;
+}
+header .inf p{
+	margin-right: 15px;
+}
+header .number{
+	font-size: 14px;
+	font-weight: bold;
+	margin-right: 5px;
+}
+.header-2{
+	background-color: #f3740d;
+}
+.header-2 form{
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 13px;
+}
+.header-2 input{
+	width: 100%;
+	padding: 10px;
+	border: 0px;
+	border-radius: 5px;
+	font-size: 16px;
+	outline: none;
+}
+.header-2 p{
+	color: #fff;
+	margin: 0;
+}
+.header-2 ul{
+	margin-top: 8px;
+}
+.header-2 li{
+	padding: 15px 50px;
+}
+.header-2 .korz{
+	background-color: #fff;
+	border-radius: 8px;
+}
+.header-2 .korz p{
+	color: #000;
+}
+.product li{
+	padding: 10px;
+	text-align: center;
+	background-color: #fff;
+	border: 1px solid #C0C0C0;
+	border-top: none;
+}
+.product{
+	padding: 0;
+}
+.product .org{
+	border-left: 3px solid #FFBA75;
+}
+.product .blue{
+	border-left: 3px solid #80cafc;
+}
+.predl p{
+	color: #0194D9;
+	text-align: center;
+	background-color: #fff;
+	font-weight: 500;
+	border: 1px solid #C0C0C0;
+	padding: 10px;
+	border-radius: 5px;
+} 
+.news{
+	border: 1px solid #C0C0C0;
+	border-radius: 5px;
+	width: 100%;
+	box-sizing: border-box;
+	background-color: #fff;
+}
+.news .padd{
+	padding: 20px;
+}
+.news h6 {
+	margin: 0;
+	font-size: 20px;
+	font-weight: 600;
+}
+.news img{
+	width: 100%;
+	margin-top: 15px;
+}
+.news p{
+	color: #4587A9;
+}
+.news .date{
+	color: #C0C0C0;
+	font-size: 14px;
+	margin-bottom: 0;
+}
+.news hr{
+	color: #fff;
+	background-color: #fff;
+	margin: 0;	
+}
+.content .slider{
+	margin-top: 15px;
+	text-align: center;
+}
