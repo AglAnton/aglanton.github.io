@@ -70,6 +70,14 @@ main .inf{
 	width: 100%;
 	opacity: 0;
 }
+.inf1{
+	top: 0px;
+	position: absolute;
+	font-weight: bold;
+	font-size: 17px;
+	transition: 0.3s;
+	width: 100%;
+}
 main .opacity{
 	background-color: #000b36;
 	background-color: rgba(1, 11, 46,0.75); 
@@ -125,6 +133,7 @@ main .day ul{
 	position: relative;
 	cursor: default;
 	transition: 0.3s;
+	z-index: 0;
 }
 main .day li{
 	border-bottom: 1px solid gray;
@@ -148,7 +157,6 @@ main .nav-trigger{
 	clip: rect(0, 0, 0, 0);
 }
 main .day label{
-	/*z-index: 2;*/
 	position: absolute;
 	top: 0;
 	left: 50%;
@@ -159,11 +167,39 @@ main .day label{
 	border-bottom: 1px dashed red;
 	transition: 0.2s;
 }
-.nav-trigger:checked ~ .hhh{
+.nav-trigger1:checked ~ .daily-routine1{
+	z-index: 2;
 	opacity: 1;
 	transition: 0.3s;
 }
-.nav-trigger:checked ~ .hhh a{
+.nav-trigger1:checked ~ .daily-routine1 a{
+	pointer-events: auto;
+	cursor: pointer;
+}
+.nav-trigger2:checked ~ .daily-routine2{
+	z-index: 2;
+	opacity: 1;
+	transition: 0.3s;
+}
+.nav-trigger2:checked ~ .daily-routine2 a{
+	pointer-events: auto;
+	cursor: pointer;
+}
+.nav-trigger3:checked ~ .daily-routine3{
+	z-index: 2;
+	opacity: 1;
+	transition: 0.3s;
+}
+.nav-trigger3:checked ~ .daily-routine3 a{
+	pointer-events: auto;
+	cursor: pointer;
+}
+.nav-trigger4:checked ~ .daily-routine4{
+	z-index: 2;
+	opacity: 1;
+	transition: 0.3s;
+}
+.nav-trigger4:checked ~ .daily-routine4 a{
 	pointer-events: auto;
 	cursor: pointer;
 }
@@ -173,5 +209,89 @@ main .day input{
 main .day label:hover{
 	color: #fff;
 	border-color: #fff;
+	transition: 0.2s;
+}
+main .next{
+	position: absolute;
+	width: 70%;
+	top: 250px;
+	left: 50%;
+	transform: translateX(-50%);
+	color: #fff;
+	font-size: 22px;
+	padding: 10px;
+	box-sizing: border-box;
+	z-index: 1;
+}
+main .next-session{
+	text-align: center;
+}
+main .next-session p{
+	font-weight: lighter;
+}
+main .next-time{
+	background-color: rgba(162, 159, 159, 0.2);
+	border-radius: 50px;
+}
+main .next-time p{
+	display: inline-block;
+	margin: 0;
+	vertical-align: top;
+	box-sizing: border-box;
+}
+main .next-time .time{
+	width: 30%;
+	font-size: 30px;
+	padding: 10px 10px 10px 25px;
+}
+main .next-time .buy{
+	border-radius: 50px;
+	background-color: red;
+	font-size: 18px;
+	transition: 0.2s;
+	width: 60%;
+	margin-left: -11px;
+	margin: 5px 5px 5px 0;
+	text-align: center;
+	float: right;
+	padding: 12px 20px 12px 20px;
+}
+main .next-time .buy:hover{
+	background: #a01717;
+	transition: 0.2s;
+}
+.schedule{
+	position: absolute;
+	width: 70%;
+	top: 400px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.schedule p{
+	color: #fff;
+	text-align: center;
+	font-size: 22px;
+}
+.schedule ul{
+	list-style-type: none;
+	margin: 0;
+}
+.schedule ul li{
+	display: inline-block;
+	width: 20%;
+	margin-left: -4px;
+	margin-top: 0px;
+}
+.schedule ul .top{
+	margin-top: 14px;
+}
+.schedule ul a{
+	color: red;
+	text-decoration: none;
+	font-size: 20px;
+	transition: 0.2s;
+}
+.schedule ul a:hover{
+	color: #fff;
 	transition: 0.2s;
 }
