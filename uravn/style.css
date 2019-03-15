@@ -35,3 +35,20 @@ button:hover{
 #resh p {
   display: block;
 }
+
+@media screen and (max-width: 575px){
+  input, p, button {
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 767px){
+  input, p, button {
+    font-size: 40px;
+  }
+  button:hover {
+
+  }
+  #resh {
+    font-size: 50px;
+  }
+}
