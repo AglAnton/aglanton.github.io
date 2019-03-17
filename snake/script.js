@@ -169,9 +169,7 @@ function move() {
 
     setTimeout(() => {
       alert(`Игра окончена. Ваши очки: ${score}.`);
-      if (confirm('Начать заново?')) {
-        location.reload();
-      }
+      location.reload();
     }, 200);
   }
 
