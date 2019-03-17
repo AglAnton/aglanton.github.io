@@ -138,22 +138,22 @@ function move() {
       clearInterval(interval);
       interval = setInterval(move, 150);
 
-    } else if(score == 15) {
+    } else if(score == 20) {
 
       clearInterval(interval);
       interval = setInterval(move, 120);
 
-    } else if(score == 25) {
+    } else if(score == 45) {
 
       clearInterval(interval);
       interval = setInterval(move, 100);
 
-    } else if(score == 50) {
+    } else if(score == 75) {
 
       clearInterval(interval);
       interval = setInterval(move, 80);
 
-    } else if (score == 80) {
+    } else if (score == 110) {
 
       clearInterval(interval);
       interval = setInterval(move, 50);
