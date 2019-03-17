@@ -158,6 +158,14 @@ function move() {
       clearInterval(interval);
       interval = setInterval(move, 50);
 
+    } else if (score > 656) {
+
+      clearInterval(interval);
+      setTimeout(() => {
+        alert('Вы победили! Вы набрали максимальное число очков 657!');
+        location.reload();
+      }, 200);
+    
     }
   }
   
