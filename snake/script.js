@@ -65,6 +65,24 @@ function createMouse() {
 
 createMouse();
 
+let rad = 0;
+
+let checkbox = document.createElement('input');
+
+checkbox.setAttribute('type', 'checkbox');
+checkbox.setAttribute('onchange', 'radio()');
+
+function radio() {
+  rad = (checkbox.checked == true) ? 1 : 0;
+  localStorage.setItem("radKey", rad);
+  location.reload();
+}
+
+rad = localStorage.getItem("radKey");
+if (rad == 1) {
+  checkbox.setAttribute('checked', 'checked');
+}
+
 let direction = 'right';
 let steps = false;
 let p = document.createElement('p');
@@ -86,39 +104,112 @@ function move() {
   snakeBody[snakeBody.length-1].classList.remove('snakeBody');
   snakeBody.pop();
 
-  if (direction == 'right') {
+  if (rad == 0) {//без стенки
+    if (direction == 'right') {
 
-    if (snakeCoordinates[0] < max) {
-      snakeBody.unshift(document.querySelector('[posX = "' + (+snakeCoordinates[0] + 1) + '"][posY = "' + snakeCoordinates[1] + '"]'));
-    } else {
-      snakeBody.unshift(document.querySelector('[posX = "1"][posY = "' + snakeCoordinates[1] + '"]'));
+      if (snakeCoordinates[0] < max) {
+        snakeBody.unshift(document.querySelector('[posX = "' + (+snakeCoordinates[0] + 1) + '"][posY = "' + snakeCoordinates[1] + '"]'));
+      } else {
+        snakeBody.unshift(document.querySelector('[posX = "1"][posY = "' + snakeCoordinates[1] + '"]'));
+      }
+  
+    } else if (direction == 'left') {
+  
+      if (snakeCoordinates[0] > 1) {
+        snakeBody.unshift(document.querySelector('[posX = "' + (+snakeCoordinates[0] - 1) + '"][posY = "' + snakeCoordinates[1] + '"]'));
+      } else {
+        snakeBody.unshift(document.querySelector('[posX = "' + max +'"][posY = "' + snakeCoordinates[1] + '"]'));
+      }
+  
+    } else if (direction == 'down') {
+  
+      if (snakeCoordinates[1] > 1) {
+        snakeBody.unshift(document.querySelector('[posX = "' + snakeCoordinates[0] + '"][posY = "' + (+snakeCoordinates[1] - 1) + '"]'));
+      } else {
+        snakeBody.unshift(document.querySelector('[posX = "' + snakeCoordinates[0] + '"][posY = "' + max +'"]'));
+      }
+  
+    } else if (direction == 'up') {
+  
+      if (snakeCoordinates[1] < max) {
+        snakeBody.unshift(document.querySelector('[posX = "' + snakeCoordinates[0] + '"][posY = "' + (+snakeCoordinates[1] + 1) + '"]'));
+      } else {
+        snakeBody.unshift(document.querySelector('[posX = "' + snakeCoordinates[0] + '"][posY = "1"]'));
+      }
+  
     }
+  } else {//со стенкой
+    if (direction == 'right') {
 
-  } else if (direction == 'left') {
+      if (snakeCoordinates[0] < max) {
+        snakeBody.unshift(document.querySelector('[posX = "' + (+snakeCoordinates[0] + 1) + '"][posY = "' + snakeCoordinates[1] + '"]'));
+      } else {
+        clearInterval(interval);
+        for (let i = 0; i < snakeBody.length; i++) {
+          snakeBody[i].style.backgroundColor = '#a30101';
+        }
 
-    if (snakeCoordinates[0] > 1) {
-      snakeBody.unshift(document.querySelector('[posX = "' + (+snakeCoordinates[0] - 1) + '"][posY = "' + snakeCoordinates[1] + '"]'));
-    } else {
-      snakeBody.unshift(document.querySelector('[posX = "' + max +'"][posY = "' + snakeCoordinates[1] + '"]'));
+        setTimeout(() => {
+          alert(`Игра окончена. Ваши очки: ${score}.`);
+          location.reload();
+        }, 200);
+        return;
+      }
+  
+    } else if (direction == 'left') {
+  
+      if (snakeCoordinates[0] > 1) {
+        snakeBody.unshift(document.querySelector('[posX = "' + (+snakeCoordinates[0] - 1) + '"][posY = "' + snakeCoordinates[1] + '"]'));
+      } else {
+        clearInterval(interval);
+        for (let i = 0; i < snakeBody.length; i++) {
+          snakeBody[i].style.backgroundColor = '#a30101';
+        }
+
+        setTimeout(() => {
+          alert(`Игра окончена. Ваши очки: ${score}.`);
+          location.reload();
+        }, 200);
+        return;
+      }
+  
+    } else if (direction == 'down') {
+  
+      if (snakeCoordinates[1] > 1) {
+        snakeBody.unshift(document.querySelector('[posX = "' + snakeCoordinates[0] + '"][posY = "' + (+snakeCoordinates[1] - 1) + '"]'));
+      } else {
+        clearInterval(interval);
+        for (let i = 0; i < snakeBody.length; i++) {
+          snakeBody[i].style.backgroundColor = '#a30101';
+        }
+
+        setTimeout(() => {
+          alert(`Игра окончена. Ваши очки: ${score}.`);
+          location.reload();
+        }, 200);
+        return;
+      }
+  
+    } else if (direction == 'up') {
+  
+      if (snakeCoordinates[1] < max) {
+        snakeBody.unshift(document.querySelector('[posX = "' + snakeCoordinates[0] + '"][posY = "' + (+snakeCoordinates[1] + 1) + '"]'));
+      } else {
+        clearInterval(interval);
+        for (let i = 0; i < snakeBody.length; i++) {
+          snakeBody[i].style.backgroundColor = '#a30101';
+        }
+
+        setTimeout(() => {
+          alert(`Игра окончена. Ваши очки: ${score}.`);
+          location.reload();
+        }, 200);
+        return;
+      }
+  
     }
-
-  } else if (direction == 'down') {
-
-    if (snakeCoordinates[1] > 1) {
-      snakeBody.unshift(document.querySelector('[posX = "' + snakeCoordinates[0] + '"][posY = "' + (+snakeCoordinates[1] - 1) + '"]'));
-    } else {
-      snakeBody.unshift(document.querySelector('[posX = "' + snakeCoordinates[0] + '"][posY = "' + max +'"]'));
-    }
-
-  } else if (direction == 'up') {
-
-    if (snakeCoordinates[1] < max) {
-      snakeBody.unshift(document.querySelector('[posX = "' + snakeCoordinates[0] + '"][posY = "' + (+snakeCoordinates[1] + 1) + '"]'));
-    } else {
-      snakeBody.unshift(document.querySelector('[posX = "' + snakeCoordinates[0] + '"][posY = "1"]'));
-    }
-
   }
+  
   
   if (snakeBody[0].getAttribute('posX') == mouse.getAttribute('posX') && snakeBody[0].getAttribute('posY') == mouse.getAttribute('posY')) {
     mouse.classList.remove('mouse');
@@ -206,3 +297,15 @@ window.addEventListener('keydown', function (e){
     }
   }
 });
+
+let f = document.body.appendChild(document.createElement('p'));
+
+f.innerHTML = "Стенка: ";
+f.appendChild(checkbox);
+f.style.cssText = `
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  display: block;
+  font-family: sans-serif;
+`;
