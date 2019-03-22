@@ -65,6 +65,35 @@ function createMouse() {
 
 createMouse();
 
+let collectionBonus = false;
+let timeBonus = 0;
+let bonus;
+let presenceBonus = false;
+let chanceBonus = 1;
+function createBonus() {
+  if ( Math.floor(Math.random() * 100) < chanceBonus ) {
+
+    function generateBonus() {
+      let posX = Math.round(Math.random() * (max - 1) + 1);
+      let posY = Math.round(Math.random() * (max - 1) + 1);
+      return [posX, posY];
+    }
+
+    let bonusCoordinates = generateBonus();
+    bonus = document.querySelector('[posX = "' + bonusCoordinates[0] + '"][posY = "' + bonusCoordinates[1] + '"]');
+
+    while (bonus.classList.contains('snakeBody')) {
+      let bonusCoordinates = generateBonus();
+      bonus = document.querySelector('[posX = "' + bonusCoordinates[0] + '"][posY = "' + bonusCoordinates[1] + '"]');
+    }
+
+    bonus.classList.add('bonus');
+    presenceBonus = true;
+  }
+
+}
+
+
 let rad = 0;
 
 let checkbox = document.createElement('input');
@@ -219,37 +248,7 @@ function move() {
     createMouse();
     score++;
     p.innerHTML = `Ваши очки: ${score}`;
-    if (score == 5) {
-
-      clearInterval(interval);
-      interval = setInterval(move, 200);
-
-    } else if(score == 10) {
-
-      clearInterval(interval);
-      interval = setInterval(move, 150);
-
-    } else if(score == 20) {
-
-      clearInterval(interval);
-      interval = setInterval(move, 120);
-
-    } else if(score == 45) {
-
-      clearInterval(interval);
-      interval = setInterval(move, 100);
-
-    } else if(score == 75) {
-
-      clearInterval(interval);
-      interval = setInterval(move, 80);
-
-    } else if (score == 110) {
-
-      clearInterval(interval);
-      interval = setInterval(move, 50);
-
-    } else if (score > 656) {
+    if (score >= 657) {
 
       clearInterval(interval);
       setTimeout(() => {
@@ -257,9 +256,90 @@ function move() {
         location.reload();
       }, 200);
     
+    } else if (score >= 110 && collectionBonus == false) {
+
+      clearInterval(interval);
+      interval = setInterval(move, 50);
+
+    } else if (score >= 75 && collectionBonus == false) {
+
+      clearInterval(interval);
+      interval = setInterval(move, 80);
+
+    } else if (score >= 45 && collectionBonus == false) {
+
+      clearInterval(interval);
+      interval = setInterval(move, 100);
+
+    } else if (score >= 20 && collectionBonus == false) {
+
+      clearInterval(interval);
+      interval = setInterval(move, 120);
+
+    } else if (score >= 10 && collectionBonus == false) {
+
+      clearInterval(interval);
+      interval = setInterval(move, 150);
+
+    } else if (score >= 5 && collectionBonus == false) {
+
+      clearInterval(interval);
+      interval = setInterval(move, 200);
+    }
+
+  }
+
+  if (presenceBonus == false && score >= 110) {
+    chanceBonus = 3;
+    createBonus();
+  } else if (presenceBonus == false && score >= 75) {
+    chanceBonus = 2;
+    createBonus();
+  } else if (presenceBonus == false && score >= 45) {
+    createBonus();
+  }
+
+  if (presenceBonus == true && snakeBody[0].getAttribute('posX') == bonus.getAttribute('posX') && snakeBody[0].getAttribute('posY') == bonus.getAttribute('posY')) {
+    bonus.classList.remove('bonus');
+    collectionBonus = true;
+
+    clearInterval(interval);
+    interval = setInterval(move, 200);
+
+    if (score >= 110) {
+      timeBonus = 55;
+    } else if (score >= 75) {
+      timeBonus = 35;
+    } else if (score >= 45) {
+      timeBonus = 20;
     }
   }
-  
+
+  if (timeBonus > 0) {
+    timeBonus--;
+  } else if (timeBonus == 0 && collectionBonus == true) {
+
+    if (score >= 110) {
+      
+      clearInterval(interval);
+      interval = setInterval(move, 50);
+
+    } else if (score >= 75) {
+      
+      clearInterval(interval);
+      interval = setInterval(move, 80);
+
+    } else if (score >= 45) {
+     
+      clearInterval(interval);
+      interval = setInterval(move, 100);
+
+    }
+    
+    collectionBonus = false;
+    presenceBonus = false;
+  }
+
   if (snakeBody[0].classList.contains('snakeBody')){
     clearInterval(interval);
     for (let i = 0; i < snakeBody.length; i++) {
