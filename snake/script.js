@@ -362,16 +362,16 @@ function move() {
 
 window.addEventListener('keydown', function (e){
   if (steps == true) {
-    if (e.keyCode == 37 && direction != 'right') {
+    if ((e.keyCode == 37 || e.keyCode == 65) && direction != 'right') {
       direction = 'left';
       steps = false;
-    } else if (e.keyCode == 38 && direction != 'down') {
+    } else if ((e.keyCode == 38 || e.keyCode == 87) && direction != 'down') {
       direction = 'up';
       steps = false;
-    } else if (e.keyCode == 39 && direction != 'left') {
+    } else if ((e.keyCode == 39 || e.keyCode == 68) && direction != 'left') {
       direction = 'right';
       steps = false;
-    } else if (e.keyCode == 40 && direction != 'up') {
+    } else if ((e.keyCode == 40 || e.keyCode == 83) && direction != 'up') {
       direction = 'down';
       steps = false;
     }
