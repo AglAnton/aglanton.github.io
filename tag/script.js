@@ -138,7 +138,7 @@ window.addEventListener('keydown', function (e){
   let cellNone = document.body.querySelector('.cellNone'),
       cellNoneX = cellNone.getAttribute('posX'),
       cellNoneY = cellNone.getAttribute('posY');
-  // let x, y;
+      
   if ((e.keyCode == 37 || e.keyCode == 65) && cellNoneX > 1) {//left
     cellNoneX = Number(cellNoneX) - 1;
   } else if ((e.keyCode == 38 || e.keyCode == 87) && cellNoneY < 4) {//up
