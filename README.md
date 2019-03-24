@@ -7,3 +7,4 @@
 3. [Meganomkino](https://aglanton.github.io/meganom/ "Meganomkino")
 4. [Квадратные уравнения](https://aglanton.github.io/uravn/ "Квадратные уравнения")
 5. [Змейка](https://aglanton.github.io/snake/ "Змейка")
+6. [Пятнашки](https://aglanton.github.io/tag/ "Пятнашки")
