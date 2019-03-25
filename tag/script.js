@@ -78,6 +78,7 @@ function move(x, y) {
           setTimeout(() => {
             alert("Вы победили!")
           }, 50);
+          win = false;
         }
       } 
     }
@@ -91,46 +92,42 @@ buttonStir.setAttribute('onclick', 'stir()');
 buttonStir.innerHTML = "Размешать";
 
 function stir() {
-  let have = [15], rand;
-  for (let i = 0; i < 15; i++) {
-    have[i] = false;
-  }
+  let pastRand = 0,
+      rand;
 
-  for (let i = 0; i < 15; i++) {
+  for (let i = 0; i < 200; i++) {
+    let cellNone = document.body.querySelector('.cellNone'),
+        cellNoneX = cellNone.getAttribute('posX'),
+        cellNoneY = cellNone.getAttribute('posY');
+
     do {
-      rand = Math.floor(Math.random() * (16 - 1) + 1);
-      
-      if (have[rand-1] == false) {
-        have[rand-1] = true;
-        cell[i].innerHTML = rand;
-        cell[i].setAttribute('value', rand);
+      rand = Math.floor(Math.random() * (5 - 1) + 1);
+    } while (rand == pastRand || (cellNoneX == 1 && rand == 1) || (cellNoneX == 4 && rand == 3)
+            || (cellNoneY == 1 && rand == 4) || (cellNoneY == 4 && rand == 2));
+    
+    pastRand = (rand > 2) ? rand - 2 : rand + 2;
+    
+    switch (rand) {
+      case 1: {//left
+        cellNoneX = Number(cellNoneX) - 1;
         break;
       }
-    } while (have[rand-1] == true);
+      case 2: {//up
+        cellNoneY = Number(cellNoneY) + 1;
+        break;
+      }
+      case 3: {//right
+        cellNoneX = Number(cellNoneX) + 1;
+        break;
+      }
+      case 4: {//down
+        cellNoneY = Number(cellNoneY) - 1;
+        break;
+      }
+    }
+    move(cellNoneX, cellNoneY);
   }
-
-  rand = Math.floor(Math.random() * (16 - 1) + 1);
-
-  let cellNone = document.body.querySelector('.cellNone'),
-      cellNoneX = cellNone.getAttribute('posX'),
-      cellNoneY = cellNone.getAttribute('posY');
-
-  let cellSwap = document.querySelector('[value="' +  rand + '"]'),
-      cellSwapX = cellSwap.getAttribute('posX'),
-      cellSwapY = cellSwap.getAttribute('posY');
-
-  cellNone.setAttribute('value', rand);
-  cellNone.innerHTML = rand;
-  cellNone.classList.remove('cellNone');
-  cellNone.classList.add('cell');
-  cellNone.setAttribute('onclick', 'move(' + cellNoneX + ',' + cellNoneY + ')');
-
-  cellSwap.setAttribute('value', 0);
-  cellSwap.innerHTML = '';
-  cellSwap.classList.remove('cell');
-  cellSwap.classList.add('cellNone');
-  cellSwap.removeAttribute('onclick');
-
+  
   win = true;
 }
 
