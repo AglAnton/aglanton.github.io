@@ -114,18 +114,37 @@ if (rad == 1) {
 
 let direction = 'right';
 let steps = false;
-let p = document.createElement('p');
-document.body.appendChild(p);
-p.style.cssText = `
-  text-align: center;
-  margin-top: 40px;
+
+let inner = document.createElement('div');
+document.body.appendChild(inner);
+inner.style = `
+  width: 660px;
+  margin: auto;
+  margin-bottom: 120px;
+`;
+
+let pScore = document.createElement('p');
+inner.appendChild(pScore);
+pScore.style.cssText = `
+  float: left;
   font-size: 30px;
-  display: block;
   font-family: sans-serif;
 `;
-let score = 0;
 
-p.innerHTML = `Ваши очки: ${score}`;
+let pRecord = document.createElement('p');
+inner.appendChild(pRecord);
+pRecord.style.cssText = `
+  float: right;
+  font-size: 30px;
+  font-family: sans-serif;
+`;
+
+let score = 0;
+let record = 0;
+record = localStorage.getItem('recordKey');
+
+pScore.innerHTML = `Ваши очки: ${score}`;
+pRecord.innerHTML = `Рекорд: ${record}`;
 
 function move() {
   let snakeCoordinates = [snakeBody[0].getAttribute('posX'), snakeBody[0].getAttribute('posY')];
@@ -178,10 +197,19 @@ function move() {
           snakeBody[i].style.backgroundColor = '#a30101';
         }
 
-        setTimeout(() => {
-          alert(`Игра окончена. Ваши очки: ${score}.`);
-          location.reload();
-        }, 200);
+        if (record < score) {
+          record = score;
+          setTimeout(() => {
+            alert(`Игра окончена. Новый рекорд: ${record}`);
+            location.reload();
+          }, 200);
+          localStorage.setItem('recordKey', record);
+        } else {
+          setTimeout(() => {
+            alert(`Игра окончена. Ваши очки: ${score}. Рекорд: ${record}`);
+            location.reload();
+          }, 200);
+        }
         return;
       }
   
@@ -195,10 +223,19 @@ function move() {
           snakeBody[i].style.backgroundColor = '#a30101';
         }
 
-        setTimeout(() => {
-          alert(`Игра окончена. Ваши очки: ${score}.`);
-          location.reload();
-        }, 200);
+        if (record < score) {
+          record = score;
+          setTimeout(() => {
+            alert(`Игра окончена. Новый рекорд: ${record}`);
+            location.reload();
+          }, 200);
+          localStorage.setItem('recordKey', record);
+        } else {
+          setTimeout(() => {
+            alert(`Игра окончена. Ваши очки: ${score}. Рекорд: ${record}`);
+            location.reload();
+          }, 200);
+        }
         return;
       }
   
@@ -212,10 +249,19 @@ function move() {
           snakeBody[i].style.backgroundColor = '#a30101';
         }
 
-        setTimeout(() => {
-          alert(`Игра окончена. Ваши очки: ${score}.`);
-          location.reload();
-        }, 200);
+        if (record < score) {
+          record = score;
+          setTimeout(() => {
+            alert(`Игра окончена. Новый рекорд: ${record}`);
+            location.reload();
+          }, 200);
+          localStorage.setItem('recordKey', record);
+        } else {
+          setTimeout(() => {
+            alert(`Игра окончена. Ваши очки: ${score}. Рекорд: ${record}`);
+            location.reload();
+          }, 200);
+        }
         return;
       }
   
@@ -229,10 +275,19 @@ function move() {
           snakeBody[i].style.backgroundColor = '#a30101';
         }
 
-        setTimeout(() => {
-          alert(`Игра окончена. Ваши очки: ${score}.`);
-          location.reload();
-        }, 200);
+        if (record < score) {
+          record = score;
+          setTimeout(() => {
+            alert(`Игра окончена. Новый рекорд: ${record}`);
+            location.reload();
+          }, 200);
+          localStorage.setItem('recordKey', record);
+        } else {
+          setTimeout(() => {
+            alert(`Игра окончена. Ваши очки: ${score}. Рекорд: ${record}`);
+            location.reload();
+          }, 200);
+        }
         return;
       }
   
@@ -247,7 +302,7 @@ function move() {
     snakeBody.push(document.querySelector('[posX = "' + a + '"][posY = "' + b + '"]'));
     createMouse();
     score++;
-    p.innerHTML = `Ваши очки: ${score}`;
+    pScore.innerHTML = `Ваши очки: ${score}`;
     if (score >= 657) {
 
       clearInterval(interval);
@@ -346,10 +401,19 @@ function move() {
       snakeBody[i].style.backgroundColor = '#a30101';
     }
 
-    setTimeout(() => {
-      alert(`Игра окончена. Ваши очки: ${score}.`);
-      location.reload();
-    }, 200);
+    if (record < score) {
+      record = score;
+      setTimeout(() => {
+        alert(`Игра окончена. Новый рекорд: ${record}`);
+        location.reload();
+      }, 200);
+      localStorage.setItem('recordKey', record);
+    } else {
+      setTimeout(() => {
+        alert(`Игра окончена. Ваши очки: ${score}. Рекорд: ${record}`);
+        location.reload();
+      }, 200);
+    }
   }
 
   snakeBody[0].classList.add('head');
