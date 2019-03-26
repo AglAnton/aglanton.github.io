@@ -140,8 +140,8 @@ pRecord.style.cssText = `
 `;
 
 let score = 0;
-let record = 0;
-record = localStorage.getItem('recordKey');
+
+let record = (localStorage.getItem('recordKey')) ? localStorage.getItem('recordKey') : 0;
 
 pScore.innerHTML = `Ваши очки: ${score}`;
 pRecord.innerHTML = `Рекорд: ${record}`;
