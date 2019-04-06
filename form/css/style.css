@@ -1,0 +1,72 @@
+body {
+	font-family: sans-serif;
+	background-color: #aad4ff;
+}
+h1 {
+	text-align: center;
+	margin-top: 60px;
+	margin-bottom: 20px;
+}
+form {
+	margin: auto;
+	border: 2px solid #474747;
+	width: 400px;
+	border-radius: 10px;
+  background-color: #fff896;
+  padding: 15px;
+  position: relative;
+}
+input {
+	display: block;
+	padding: 10px;
+	font-size: 17px;
+	margin: 15px auto;
+	border: 1px solid #666768;
+	border-radius: 10px;
+	outline: none;
+  transition: 0.2s;
+  width: 200px;
+}
+input:focus {
+	background-color: #d8f6ff;
+	transition: 0.2s;
+}
+button {
+	text-align: center;
+	display: block;
+	margin: auto;
+	padding: 15px 20px;
+	margin-top: 20px;
+	font-size: 20px;
+	background-color: #fff896;
+	border: 1px solid #474747;
+	border-radius: 50px;
+	outline: none;
+	transition: 0.3s;
+}
+button:hover {
+	transition: 0.3s;
+	border: 3px solid #fff896;
+	background-color: #aad4ff;
+}
+.example {
+	font-size: 17px;
+	background-color: #fff;
+  text-align: center;
+  width: 200px;
+  margin: auto;
+  padding: 7px;
+  border: 1px solid #474747;
+  border-radius: 5px;
+  color: #454545;
+  position: relative;
+}
+.pass {
+  position: absolute;
+  margin-top: 13px;
+  margin-left: 230px;
+	background-color: #fff896;
+	padding: 2px;
+	border-radius: 5px;
+  cursor: pointer;
+}

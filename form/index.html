@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Вход</title>
+</head>
+<body>
+
+<h1>Вход</h1>
+<form>
+	<input type="text" placeholder="Имя" id="name" onkeyup="nameCheck()" onmouseover="nameAdd()" onmouseout="nameRemove()" autocomplete="off">
+	<p></p>
+	<input type="text" placeholder="Логин" id="login" onkeyup="loginCheck()" onmouseover="loginAdd()" onmouseout="loginRemove()" autocomplete="off">
+	<p></p>
+	<input type="text" placeholder="E-mail" id="email" onkeyup="emailCheck()" onmouseover="emailAdd()" onmouseout="emailRemove()" autocomplete="off">
+  <div onclick="insert()" onmouseover="passwordAdd()" class="pass">вставить</div>
+	<p></p>
+	<input type="password" placeholder="Пароль" id="password" onkeyup="passCheck()" onmouseover="passwordAdd()" onmouseout="passwordRemove()" autocomplete="off">
+  <p></p>
+  <input type="password" placeholder="Повторите пароль" onkeyup="passCheck()" id="passwordRepeat" autocomplete="off">
+	<p></p>
+</form>
+<button onclick="send()">Отправить</button>
+
+<script src="js/script.js"></script>
+</body>
+</html>
