@@ -508,13 +508,14 @@ function cellZeroFormula(x, y, k, j) {
 
 
 let rec = document.getElementById('record');
-if (localStorage.getItem('rec') === null) {
-  localStorage.setItem('rec', 999);
-} else {
+if (localStorage.getItem('rec') !== null) {
   rec.innerHTML = 'Ваш рекорд: ' + localStorage.getItem('rec') + 'с.';
 }
 
 function record() {
+  if (localStorage.getItem('rec') === null) {
+    localStorage.setItem('rec', 999);
+  }
 
   if (timeValue < localStorage.getItem('rec')) localStorage.setItem('rec', timeValue);
 
