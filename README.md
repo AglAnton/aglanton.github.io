@@ -5,3 +5,4 @@
 3. [Змейка](https://aglanton.github.io/snake/ "Змейка")
 4. [Пятнашки](https://aglanton.github.io/tag/ "Пятнашки")
 5. [Форма + опрос](https://aglanton.github.io/form/ "Форма + опрос")
+6. [Сапёр](https://aglanton.github.io/sapper/ "Сапёр")

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <title>Sapper</title>
+</head>
+<body oncontextmenu="return false">
+
+  <!-- <div id="settings">
+    <p><input type="number" id="width" value="30"></p>
+    <p><input type="number" id="height" value="16"></p>
+    <p><input type="number" id="bombValue" value="99"></p>
+    <button onclick="newGame(1)">Новая игра</button>
+  </div> -->
+  <div id="game">
+
+    <div class="header">
+      <p id="bomb"></p>
+      <div id="smilePos">
+        <div id="smile" onmousedown="smileDown()" onclick="smileUp(1)" onmouseout="smileUp(0)"></div>
+      </div>
+      <p id="time">000</p>
+    </div>
+
+    <div id="field"></div>
+  </div>
+  <p id="record">Ваш рекорд: -</p>
+  
+  <script src="script.js"></script>
+</body>
+</html>
