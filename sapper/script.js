@@ -559,6 +559,12 @@ function record() {
   rec.innerHTML = 'Ваш рекорд: ' + localStorage.getItem('rec') + 'с.';
 }
 
+window.addEventListener('keydown', function (e){
+  if (e.keyCode == 13) {
+    newGame(1);
+  }
+  move(cellNoneX, cellNoneY);
+});
 
 //cheats
 let bombMini = false;
