@@ -1,16 +1,52 @@
-// let WIDTH, HEIGHT, BOMB_VALUE;
+let WIDTH, HEIGHT, BOMB_VALUE;
 
-// function newGame(n) {
-//   WIDTH  = document.getElementById('width').value,
-//   HEIGHT = document.getElementById('height').value,
-//   BOMB_VALUE = document.getElementById('bombValue').value;
-//   // if (n > 0) bombGeneration();
-// }
-// newGame(0);    
+function newGame(n) {
 
-let WIDTH  = 30,
-    HEIGHT = 16,
-    BOMB_VALUE = 99;
+  if (localStorage.getItem('width') !== null) {
+    WIDTH = localStorage.getItem('width');
+    HEIGHT = localStorage.getItem('height');
+    BOMB_VALUE = localStorage.getItem('bombValue');
+
+    document.getElementById('width').setAttribute('value', WIDTH);
+    document.getElementById('height').setAttribute('value', HEIGHT);
+    document.getElementById('bombValue').setAttribute('value', BOMB_VALUE);
+  } else {
+    WIDTH  = document.getElementById('width').value;
+    HEIGHT = document.getElementById('height').value;
+    BOMB_VALUE = document.getElementById('bombValue').value;
+  }
+
+  if (n > 0) {
+    let
+    width  = document.getElementById('width').value,
+    height = document.getElementById('height').value,
+    bombValue = document.getElementById('bombValue').value;
+
+    if (width > 30) {
+      width = 30;
+    } else if (width < 2) { 
+      width = 2;
+    } 
+    localStorage.setItem('width', width);
+
+    if (height > 20) {
+      height = 20;
+    } else if (height < 2) { 
+      height = 2;
+    }
+    localStorage.setItem('height', height);
+
+    if (bombValue > width * height - 1) {
+      bombValue = width * height - 1;
+    } else if (bombValue < 1) { 
+      bombValue = 1;
+    }
+    localStorage.setItem('bombValue', bombValue);
+
+    window.location.replace(location);
+  }
+}
+newGame(0);    
 
 let smile     = document.getElementById('smile'),
     bomb      = document.getElementById('bomb'),
@@ -126,7 +162,7 @@ function bombGeneration() {
 
         for (let k = 0; k <= 1; k++) {
           for (let j = -1; j <= 0; j++) {
-            if (coordinates[x+k][y+j] == -1) num++;
+            if (coordinates[x+k][Number(y)+j] == -1) num++;
           }
         }
 
@@ -150,7 +186,7 @@ function bombGeneration() {
 
         for (let k = -1; k <= 0; k++) {
           for (let j = -1; j <= 0; j++) {
-            if (coordinates[x+k][y+j] == -1) num++;
+            if (coordinates[x+k][Number(y)+j] == -1) num++;
           }
         }
         
@@ -174,8 +210,8 @@ function bombGeneration() {
 
         for (let k = -1; k <= 1; k++) {
           for (let j = -1; j <= 0; j++) {
-            if (coordinates[x+k][y+j] == -1) num++;
-          }
+            if (coordinates[x+k][Number(y)+j] == -1) num++;
+          }          
         }
 
       } else {
@@ -200,6 +236,7 @@ function bombGeneration() {
   }
 }
 bombGeneration();
+
 
 function cellDown(x, y) {
   if (cellStyle[x][y] == 'cell' || cellStyle[x][y] == 'bombMini') {
@@ -306,7 +343,7 @@ function cellUp(x, y, n) {
     smile.style.background = 'url(img/smile.jpg) no-repeat center';
   }
 
-  if (cellStyle[x][y] != bomb && course == win) {
+  if (cellStyle[x][y] != 'bomb' && course == win) {
     smile.style.background = 'url(img/smileWin.jpg) no-repeat center';
     x = 1, y = HEIGHT;
     for (let i = 0; i < WIDTH * HEIGHT; i++) {
