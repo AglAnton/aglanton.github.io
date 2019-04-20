@@ -239,166 +239,171 @@ bombGeneration();
 
 
 function cellDown(x, y) {
-  if (cellStyle[x][y] == 'cell' || cellStyle[x][y] == 'bombMini') {
-    let cell = document.querySelector(`[posX = "${x}" ][ posY = "${y}" ]`)
-    smile.style.background = 'url(img/smileO.jpg) no-repeat center';
-    cell.style.background = 'url(img/cellZero.jpg) no-repeat center';
+  if (cellStyle[1][1] != 'bomb') {
+    if (cellStyle[x][y] == 'cell' || cellStyle[x][y] == 'bombMini') {
+      let cell = document.querySelector(`[posX = "${x}" ][ posY = "${y}" ]`)
+      smile.style.background = 'url(img/smileO.jpg) no-repeat center';
+      cell.style.background = 'url(img/cellZero.jpg) no-repeat center';
+    }
   }
 }
 
 function cellUp(x, y, n) {
-  let cell = document.querySelector(`[posX = "${x}" ][ posY = "${y}" ]`);
+  if (cellStyle[1][1] != 'bomb' &&  course < win) {
+    let cell = document.querySelector(`[posX = "${x}" ][ posY = "${y}" ]`);
 
-  if (n > 0 && (cellStyle[x][y] == 'cell' || cellStyle[x][y] == 'bombMini')) {
+    if (n > 0 && (cellStyle[x][y] == 'cell' || cellStyle[x][y] == 'bombMini')) {
 
-    switch (coordinates[x][y]) {
-      case -1: {
-        cell.style.background = 'url(img/bombClick.png) no-repeat center';
-        coordinates[x][y] = -2;
-        clearInterval(timer);
+      switch (coordinates[x][y]) {
+        case -1: {
+          cell.style.background = 'url(img/bombClick.png) no-repeat center';
+          coordinates[x][y] = -2;
+          clearInterval(timer);
 
-        let corX = 1, corY = HEIGHT;
-        for (let i = 0; i < WIDTH * HEIGHT; i++){
-          cell = document.querySelector(`[posX = "${corX}" ][ posY = "${corY}" ]`);
-          if (coordinates[corX][corY] == -1) {
-            cell.style.background = 'url(img/bomb.jpg) no-repeat center';
-          }
-          if (cellStyle[corX][corY] == 'flag') {
-            if (coordinates[corX][corY] != -1) {
-              cell.style.background = 'url(img/bombX.png) no-repeat center';
+          let corX = 1, corY = HEIGHT;
+          for (let i = 0; i < WIDTH * HEIGHT; i++){
+            cell = document.querySelector(`[posX = "${corX}" ][ posY = "${corY}" ]`);
+            if (coordinates[corX][corY] == -1) {
+              cell.style.background = 'url(img/bomb.jpg) no-repeat center';
+            }
+            if (cellStyle[corX][corY] == 'flag') {
+              if (coordinates[corX][corY] != -1) {
+                cell.style.background = 'url(img/bombX.png) no-repeat center';
+              }
+            }
+            cellStyle[corX][corY] = 'bomb';
+
+            corX++;
+            if (corX > WIDTH) {
+              corX = 1;
+              corY--;
             }
           }
-          cellStyle[corX][corY] = 'bomb';
-
-          corX++;
-          if (corX > WIDTH) {
-            corX = 1;
-            corY--;
-          }
+          bombMini = false;
+          break;
         }
-        bombMini = false;
-        break;
-      }
-      case 0: {
+        case 0: {
 
-        cellZero(x, y);
+          cellZero(x, y);
 
-        break;
+          break;
+        }
+        case 1: {
+          cell.style.background = 'url(img/cell1.png) no-repeat center';
+          cellStyle[x][y] = 'one';
+          break;
+        }
+        case 2: {
+          cell.style.background = 'url(img/cell2.png) no-repeat center';
+          cellStyle[x][y] = 'one';
+          break;
+        }
+        case 3: {
+          cell.style.background = 'url(img/cell3.png) no-repeat center';
+          cellStyle[x][y] = 'one';
+          break;
+        }
+        case 4: {
+          cell.style.background = 'url(img/cell4.png) no-repeat center';
+          cellStyle[x][y] = 'one';
+          break;
+        }
+        case 5: {
+          cell.style.background = 'url(img/cell5.png) no-repeat center';
+          cellStyle[x][y] = 'one';
+          break;
+        }
+        case 6: {
+          cell.style.background = 'url(img/cell6.png) no-repeat center';
+          cellStyle[x][y] = 'one';
+          break;
+        }
+        case 7: {
+          cell.style.background = 'url(img/cell7.png) no-repeat center';
+          cellStyle[x][y] = 'one';
+          break;
+        }
+        case 8: {
+          cell.style.background = 'url(img/cell8.png) no-repeat center';
+          cellStyle[x][y] = 'one';
+          break;
+        }
       }
-      case 1: {
-        cell.style.background = 'url(img/cell1.png) no-repeat center';
-        cellStyle[x][y] = 'one';
-        break;
-      }
-      case 2: {
-        cell.style.background = 'url(img/cell2.png) no-repeat center';
-        cellStyle[x][y] = 'one';
-        break;
-      }
-      case 3: {
-        cell.style.background = 'url(img/cell3.png) no-repeat center';
-        cellStyle[x][y] = 'one';
-        break;
-      }
-      case 4: {
-        cell.style.background = 'url(img/cell4.png) no-repeat center';
-        cellStyle[x][y] = 'one';
-        break;
-      }
-      case 5: {
-        cell.style.background = 'url(img/cell5.png) no-repeat center';
-        cellStyle[x][y] = 'one';
-        break;
-      }
-      case 6: {
-        cell.style.background = 'url(img/cell6.png) no-repeat center';
-        cellStyle[x][y] = 'one';
-        break;
-      }
-      case 7: {
-        cell.style.background = 'url(img/cell7.png) no-repeat center';
-        cellStyle[x][y] = 'one';
-        break;
-      }
-      case 8: {
-        cell.style.background = 'url(img/cell8.png) no-repeat center';
-        cellStyle[x][y] = 'one';
-        break;
-      }
-    }
-    course++;
+      course++;
 
-  } else if (cellStyle[x][y] == 'cell'){
+    } else if (cellStyle[x][y] == 'cell'){
+    
+      cell.style.background = 'url(img/cell.jpg) no-repeat center';
   
-    cell.style.background = 'url(img/cell.jpg) no-repeat center';
- 
-  } else if (cellStyle[x][y] == 'bombMini') {
-     
-    cell.style.background = 'url(img/bombMini.jpg) no-repeat center';
+    } else if (cellStyle[x][y] == 'bombMini') {
+      
+      cell.style.background = 'url(img/bombMini.jpg) no-repeat center';
 
-  }
-
-  if (cellStyle[x][y] == 'bomb') {
-    smile.style.background = 'url(img/smileX.jpg) no-repeat center';
-  } else {
-    smile.style.background = 'url(img/smile.jpg) no-repeat center';
-  }
-
-  if (cellStyle[x][y] != 'bomb' && course == win) {
-    smile.style.background = 'url(img/smileWin.jpg) no-repeat center';
-    x = 1, y = HEIGHT;
-    for (let i = 0; i < WIDTH * HEIGHT; i++) {
-      let cell = document.querySelector(`[posX = "${x}" ][ posY = "${y}" ]`);
-      if (coordinates[x][y] == -1) {
-        cell.style.background = 'url(img/flag.png) no-repeat center';
-        cellStyle[x][y] = 'flag';
-      }
-      x++;
-      if (x > WIDTH) {
-        x = 1;
-        y--;
-      }
     }
-    clearInterval(timer);
-    record();
-  }
 
+    if (cellStyle[x][y] == 'bomb') {
+      smile.style.background = 'url(img/smileX.jpg) no-repeat center';
+    } else {
+      smile.style.background = 'url(img/smile.jpg) no-repeat center';
+    }
+
+    if (cellStyle[x][y] != 'bomb' && course == win) {
+      smile.style.background = 'url(img/smileWin.jpg) no-repeat center';
+      x = 1, y = HEIGHT;
+      for (let i = 0; i < WIDTH * HEIGHT; i++) {
+        let cell = document.querySelector(`[posX = "${x}" ][ posY = "${y}" ]`);
+        if (coordinates[x][y] == -1) {
+          cell.style.background = 'url(img/flag.png) no-repeat center';
+          cellStyle[x][y] = 'flag';
+        }
+        x++;
+        if (x > WIDTH) {
+          x = 1;
+          y--;
+        }
+      }
+      clearInterval(timer);
+      record();
+    }
+  } 
 }
 
 function cellFlag(x, y){
-  let cell = document.querySelector(`[posX = "${x}" ][ posY = "${y}" ]`);
+  if (cellStyle[1][1] != 'bomb' && course < win) {
+    let cell = document.querySelector(`[posX = "${x}" ][ posY = "${y}" ]`);
 
-  if ((cellStyle[x][y] == 'cell' || cellStyle[x][y] == 'bombMini') && bombValue > 0) {
+    if ((cellStyle[x][y] == 'cell' || cellStyle[x][y] == 'bombMini') && bombValue > 0) {
 
-    cell.style.background = 'url(img/flag.png) no-repeat center';
-    cellStyle[x][y] = 'flag';
-    
-    bombValue--;
-    bomb.innerHTML = '0' + bombValue;
-    if (bombValue < 10) bomb.innerHTML = '00' + bombValue;
+      cell.style.background = 'url(img/flag.png) no-repeat center';
+      cellStyle[x][y] = 'flag';
+      
+      bombValue--;
+      bomb.innerHTML = '0' + bombValue;
+      if (bombValue < 10) bomb.innerHTML = '00' + bombValue;
 
-  } else if (cellStyle[x][y] == 'flag') {
+    } else if (cellStyle[x][y] == 'flag') {
 
-    if (coordinates[x][y] == -1 && bombMini == true) {
+      if (coordinates[x][y] == -1 && bombMini == true) {
 
-      cell.style.background = 'url(img/bombMini.jpg) no-repeat center';
-      cellStyle[x][y] = 'bombMini';
+        cell.style.background = 'url(img/bombMini.jpg) no-repeat center';
+        cellStyle[x][y] = 'bombMini';
 
-    } else {
+      } else {
 
+        cell.style.background = 'url(img/cell.jpg) no-repeat center';
+        cellStyle[x][y] = 'cell';
+
+      } 
+
+      bombValue++;
+      bomb.innerHTML = '0' + bombValue;
+      if (bombValue < 10) bomb.innerHTML = '00' + bombValue;
+
+    } else if (cellStyle[x][y] == 'cell') {
       cell.style.background = 'url(img/cell.jpg) no-repeat center';
-      cellStyle[x][y] = 'cell';
-
-    } 
-
-    bombValue++;
-    bomb.innerHTML = '0' + bombValue;
-    if (bombValue < 10) bomb.innerHTML = '00' + bombValue;
-
-  } else if (cellStyle[x][y] == 'cell') {
-    cell.style.background = 'url(img/cell.jpg) no-repeat center';
+    }
+    smile.style.background = 'url(img/smile.jpg) no-repeat center';
   }
-  smile.style.background = 'url(img/smile.jpg) no-repeat center';
 }
 
 
@@ -571,10 +576,14 @@ let bombMini = false;
 function bombView() {
   x = 1, y = HEIGHT;
   for (let i = 0; i < WIDTH * HEIGHT; i++){
-    if (coordinates[x][y] == -1) {
+    if (coordinates[x][y] == -1 && cellStyle[x][y] != 'flag') {
       let cell = document.querySelector(`[posX = "${x}" ][ posY = "${y}" ]`);
       cell.style.background = 'url(img/bombMini.jpg) no-repeat center';
       cellStyle[x][y] = 'bombMini';
+    } else if (coordinates[x][y] != -1 && cellStyle[x][y] == 'flag') {
+      let cell = document.querySelector(`[posX = "${x}" ][ posY = "${y}" ]`);
+      cell.style.background = 'url(img/cell.jpg) no-repeat center';
+      cellStyle[x][y] = 'cell';
     }
     x++;
     if (x > WIDTH) {
@@ -586,71 +595,75 @@ function bombView() {
 }
 
 function funWin() {
-  x = 1, y = HEIGHT;
-  for (let i = 0; i < WIDTH * HEIGHT; i++) {
-    let cell = document.querySelector(`[posX = "${x}" ][ posY = "${y}" ]`);
-    switch (coordinates[x][y]) {
-      case -1: {
-        cell.style.background = 'url(img/flag.png) no-repeat center';
-        cellStyle[x][y] = 'flag';
-        break;
+  if (cellStyle[1][1] != 'bomb') {
+    
+    x = 1, y = HEIGHT;
+    for (let i = 0; i < WIDTH * HEIGHT; i++) {
+      let cell = document.querySelector(`[posX = "${x}" ][ posY = "${y}" ]`);
+      switch (coordinates[x][y]) {
+        case -1: {
+          cell.style.background = 'url(img/flag.png) no-repeat center';
+          cellStyle[x][y] = 'flag';
+          break;
+        }
+        case 0: {
+          cell.style.background = 'url(img/cellZero.jpg) no-repeat center';
+          cellStyle[x][y] = 'one';
+          break;
+        } 
+        case 1: {
+          cell.style.background = 'url(img/cell1.png) no-repeat center';
+          cellStyle[x][y] = 'one';
+          break;
+        }
+        case 2: {
+          cell.style.background = 'url(img/cell2.png) no-repeat center';
+          cellStyle[x][y] = 'one';
+          break;
+        }
+        case 3: {
+          cell.style.background = 'url(img/cell3.png) no-repeat center';
+          cellStyle[x][y] = 'one';
+          break;
+        }
+        case 4: {
+          cell.style.background = 'url(img/cell4.png) no-repeat center';
+          cellStyle[x][y] = 'one';
+          break;
+        }
+        case 5: {
+          cell.style.background = 'url(img/cell5.png) no-repeat center';
+          cellStyle[x][y] = 'one';
+          break;
+        }
+        case 6: {
+          cell.style.background = 'url(img/cell6.png) no-repeat center';
+          cellStyle[x][y] = 'one';
+          break;
+        }
+        case 7: {
+          cell.style.background = 'url(img/cell7.png) no-repeat center';
+          cellStyle[x][y] = 'one';
+          break;
+        }
+        case 8: {
+          cell.style.background = 'url(img/cell8.png) no-repeat center';
+          cellStyle[x][y] = 'one';
+          break;
+        }        
       }
-      case 0: {
-        cell.style.background = 'url(img/cellZero.jpg) no-repeat center';
-        cellStyle[x][y] = 'one';
-        break;
-      } 
-      case 1: {
-        cell.style.background = 'url(img/cell1.png) no-repeat center';
-        cellStyle[x][y] = 'one';
-        break;
+      x++;
+      if (x > WIDTH) {
+        x = 1;
+        y--;
       }
-      case 2: {
-        cell.style.background = 'url(img/cell2.png) no-repeat center';
-        cellStyle[x][y] = 'one';
-        break;
-      }
-      case 3: {
-        cell.style.background = 'url(img/cell3.png) no-repeat center';
-        cellStyle[x][y] = 'one';
-        break;
-      }
-      case 4: {
-        cell.style.background = 'url(img/cell4.png) no-repeat center';
-        cellStyle[x][y] = 'one';
-        break;
-      }
-      case 5: {
-        cell.style.background = 'url(img/cell5.png) no-repeat center';
-        cellStyle[x][y] = 'one';
-        break;
-      }
-      case 6: {
-        cell.style.background = 'url(img/cell6.png) no-repeat center';
-        cellStyle[x][y] = 'one';
-        break;
-      }
-      case 7: {
-        cell.style.background = 'url(img/cell7.png) no-repeat center';
-        cellStyle[x][y] = 'one';
-        break;
-      }
-      case 8: {
-        cell.style.background = 'url(img/cell8.png) no-repeat center';
-        cellStyle[x][y] = 'one';
-        break;
-      }        
     }
-    x++;
-    if (x > WIDTH) {
-      x = 1;
-      y--;
-    }
+    smile.style.background = 'url(img/smileWin.jpg) no-repeat center';
+    course = win;
+    clearInterval(timer);
+    bomb.innerHTML = '000';
+    record();
   }
-  smile.style.background = 'url(img/smileWin.jpg) no-repeat center';
-  course = win;
-  clearInterval(timer);
-  record();
 }
 
 function timeStop() {
