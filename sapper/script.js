@@ -255,6 +255,7 @@ function cellUp(x, y, n) {
       case -1: {
         cell.style.background = 'url(img/bombClick.png) no-repeat center';
         coordinates[x][y] = -2;
+        clearInterval(timer);
 
         let corX = 1, corY = HEIGHT;
         for (let i = 0; i < WIDTH * HEIGHT; i++){
