@@ -66,18 +66,22 @@ if (BOMB_VALUE < 10) {
   bomb.innerHTML = BOMB_VALUE;
 }
 
-let timer = setInterval(function() {
-  timeValue++;
-  if (timeValue < 10) {
-    time.innerHTML = '00' + timeValue;
-  } else if (timeValue < 100) {
-    time.innerHTML = '0' + timeValue;
-  } else if (timeValue < 1000){
-    time.innerHTML = timeValue;
-  } else {
-    clearInterval(timer);
-  }
-}, 1000);
+let timer;
+function startTime() {
+  timer = setInterval(function() {
+    timeValue++;
+    if (timeValue < 10) {
+      time.innerHTML = '00' + timeValue;
+    } else if (timeValue < 100) {
+      time.innerHTML = '0' + timeValue;
+    } else if (timeValue < 1000){
+      time.innerHTML = timeValue;
+    } else {
+      clearInterval(timer);
+    }
+  }, 1000);
+}
+startTime();
 
 function smileDown() {
   smile.style.background = 'url(img/smileClick.jpg) no-repeat center';
@@ -269,6 +273,8 @@ function cellUp(x, y, n) {
             if (cellStyle[corX][corY] == 'flag') {
               if (coordinates[corX][corY] != -1) {
                 cell.style.background = 'url(img/bombX.png) no-repeat center';
+              } else {
+                cell.style.background = 'url(img/flag.png) no-repeat center';
               }
             }
             cellStyle[corX][corY] = 'bomb';
@@ -279,7 +285,7 @@ function cellUp(x, y, n) {
               corY--;
             }
           }
-          bombMini = false;
+          // bombMini = false;
           break;
         }
         case 0: {
@@ -668,4 +674,56 @@ function funWin() {
 
 function timeStop() {
   clearInterval(timer);
+}
+
+function next() {
+  if (cellStyle[1][1] == 'bomb') {
+    smile.style.background = 'url(img/smile.jpg) no-repeat center';
+
+    x = 1, y = HEIGHT;
+    for (let i = 0; i < WIDTH * HEIGHT; i++) {
+      let cell = document.querySelector(`[posX = "${x}" ][ posY = "${y}" ]`),
+          cellAtt = cell.getAttribute('style');
+      
+      switch (coordinates[x][y]) {
+        case -2: {
+          coordinates[x][y] = -1;
+          cell.style.background = 'url(img/cell.jpg) no-repeat center';
+          cellStyle[x][y] = 'cell';
+        }
+        case -1: {
+          
+          if (cellAtt == 'background: url("img/flag.png") center center no-repeat;') {
+            cellStyle[x][y] = 'flag';
+            
+          } else {
+            cell.style.background = 'url(img/cell.jpg) no-repeat center';
+            cellStyle[x][y] = 'cell';
+          }
+          break;
+        }
+        default: {
+          if (cellAtt == 'background: url("img/cell.jpg") center center no-repeat;') {
+            cellStyle[x][y] = 'cell';
+          } else if (cellAtt == 'background: url("img/flag.png") center center no-repeat;') {
+            cellStyle[x][y] = 'flag';
+          } else if (cellAtt == 'background: url("img/bombX.png") center center no-repeat;') {
+            cell.style.background = 'url(img/flag.png) no-repeat center';
+            cellStyle[x][y] = 'flag';
+          } else {
+            cellStyle[x][y] = 'one'
+          }
+          break;
+        }
+      }
+      x++;
+      if (x > WIDTH) {
+        x = 1;
+        y--;
+      }
+    }
+    startTime();
+    course--;
+    if (bombMini == true) bombView();
+  }
 }
