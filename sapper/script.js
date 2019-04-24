@@ -384,8 +384,13 @@ function cellFlag(x, y){
       cellStyle[x][y] = 'flag';
       
       bombValue--;
-      bomb.innerHTML = '0' + bombValue;
-      if (bombValue < 10) bomb.innerHTML = '00' + bombValue;
+      if (bombValue < 10){
+        bomb.innerHTML = '00' + bombValue;
+      } else if (bombValue < 100) {
+         bomb.innerHTML = '0' + bombValue;
+      } else {
+        bomb.innerHTML = bombValue;
+      }
 
     } else if (cellStyle[x][y] == 'flag') {
 
@@ -402,9 +407,14 @@ function cellFlag(x, y){
       } 
 
       bombValue++;
-      bomb.innerHTML = '0' + bombValue;
-      if (bombValue < 10) bomb.innerHTML = '00' + bombValue;
-
+      if (bombValue < 10){
+        bomb.innerHTML = '00' + bombValue;
+      } else if (bombValue < 100) {
+         bomb.innerHTML = '0' + bombValue;
+      } else {
+        bomb.innerHTML = bombValue;
+      }
+      
     } else if (cellStyle[x][y] == 'cell') {
       cell.style.background = 'url(img/cell.jpg) no-repeat center';
     }
