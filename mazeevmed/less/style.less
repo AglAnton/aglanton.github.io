@@ -17,7 +17,7 @@ html {
 
 .section-style(@bgc: @assisting, @pd: 8rem) {
   background-color: @bgc;
-  padding: @pd;
+  padding: @pd 1rem;
   text-align: center;
 }
 .header-style(@c: @main) {
@@ -53,7 +53,7 @@ html {
   height: 3.2rem;
   position: fixed;
   width: 100%;
-  z-index: 2;
+  z-index: 20;
   ul {
     list-style-type: none;
     padding: 0;
@@ -162,9 +162,6 @@ html {
   .section-style();
   .header-style();
   &-slider {
-    img {
-      height: 49rem;
-    }
     .prev {
       width: 6.8rem;
       height: 6.8rem;
@@ -172,14 +169,14 @@ html {
       z-index: 99;
       border: none;
       top: 50%;
-      transform: scaleY(-50%);
+      transform: translateY(-50%);
       &-prev {
-        left: -9.8rem;
+        left: -8rem;
         background: url(../img/about_us/arr_left.png) center no-repeat;
         background-size: 100%;
       }
       &-next {
-        right: -9.8rem;
+        right: -8rem;
         background: url(../img/about_us/arr_right.png) center no-repeat;
         background-size: 100%;
       }
@@ -255,5 +252,73 @@ html {
     color: @assisting;
     margin: 0;
     font-size: 1.4rem;
+  }
+}
+
+//adaptive
+@media (max-width: 1199px) {
+  .header {
+    padding-bottom: 10rem;
+  }
+  .about-us {
+    &-slider .prev {
+      width: 6rem;
+      height: 6rem;
+      &-prev {
+        left: -7rem;
+      }
+      &-next {
+        right: -7rem;
+      }
+    }
+    &-description p{
+      font-size: 1.6rem;
+    }
+  }
+}
+@media (max-width: 991px) {
+  .nav {
+    // display: none;
+    position: initial;
+    height: auto;
+    transition: 0.3s;
+    ul {
+      margin: 0;
+      padding: 0;
+      a {
+        font-size: 2.5rem;
+        li {
+          width: 100%;
+          margin: 0;
+          padding: 2rem 0;
+          border: 1px solid @color-nav-frame;
+          border-bottom: none;
+        }
+      }
+    }
+  }
+  .header {
+    padding-top: 0;
+    transition: 0.3s;
+    &-contain {
+      .menu {
+        background: url(../img/header/menu.png) center no-repeat;
+        background-size: 100%;
+        width: 5rem;
+        height: 5rem;
+        display: inline-block;
+        vertical-align: middle;
+        z-index: 99;
+        position: absolute;
+      }
+    }
+    p {
+      font-size: 3rem;
+      margin-top: 8rem;
+    }
+    &-img {
+      display: none;
+      padding-bottom: 15rem;
+    }
   }
 }
