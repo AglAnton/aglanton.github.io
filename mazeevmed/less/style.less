@@ -1,0 +1,259 @@
+html {
+  font-size: 10px;
+}
+
+//colors
+
+@main: #2cbd00;
+@assisting: #fff;
+@color-button: #ffbe23;
+@color-button-hover: #efaf15;
+@color-nav-frame: #269e01;
+@color-text-advantages: #1e6506;
+@bgc-header: #3dcaff;
+@bgc-assisting: #f9f9f9;
+@bgc-form: #fafffa;
+@bgc-footer: #a1a1a1;
+
+.section-style(@bgc: @assisting, @pd: 8rem) {
+  background-color: @bgc;
+  padding: @pd;
+  text-align: center;
+}
+.header-style(@c: @main) {
+  h2 {
+    color: @c;
+    font-size: 3.5rem;
+    margin-bottom: 5rem;
+  }
+}
+
+//body
+
+.button {
+  width: 100%;
+  display: inline-block;
+  padding: 0.8rem 0;
+  color: @assisting;
+  text-decoration: none;
+  border-radius: 1.5rem;
+  background-color: @color-button;
+  font-size: 2.3rem;
+  transition: 0.2s;
+  &:hover {
+    text-decoration: none;
+    color: @assisting;
+    background-color: @color-button-hover;
+  }
+}
+
+.nav {
+  font-size: 1.8rem;
+  background-color: @main;
+  height: 3.2rem;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin-left: 5px;
+    margin-right: -7px;
+    a {
+      color: @assisting;
+      text-decoration: none;
+      &:hover {
+        color: @assisting;
+        text-decoration: none;
+      }
+      li {
+        border-left: 1px solid @color-nav-frame;
+        display: inline-block;
+        line-height: 3.2rem;
+        width: 20%;
+        margin-left: -5px;
+        text-align: center;
+        transition: 0.2s;
+        &:hover {
+          background-color: @color-nav-frame;
+        }
+      }
+    }
+  }
+  &-last {
+    border-right: 1px solid @color-nav-frame;
+  }
+}
+
+.header {
+  background: url(../img/header/bg-header.jpg) bottom repeat-x;
+  background-color: @bgc-header;
+  padding-bottom: 7rem;
+  padding-top: 3.2rem;
+  &-contain {
+    text-align: center;
+    margin-top: 5.5rem;
+    p {
+      color: @assisting;
+      font-size: 2.2rem;
+      margin: 13rem 0 6rem;
+    }
+    a {
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.23);
+      text-transform: uppercase;
+    }
+  }
+  &-img {
+    img {
+      display: block;
+    }
+    .clouds {
+      width: 90%;
+      margin: 2.6rem auto;
+    }
+    .bee {
+      margin-top: 10rem;
+    }
+  }
+}
+
+.advantages {
+  .section-style();
+  .header-style();
+  img {
+    width: 50%;
+  }
+  p {
+    font-size: 1.9rem;
+    margin-top: 1.5rem;
+    color: @color-text-advantages;
+  }
+}
+
+.prices {
+  .section-style(@main);
+  .header-style(@assisting);
+  img {
+    width: 100%;
+  }
+  &-block {
+    .section-style(@assisting, 3rem);
+    box-sizing: border-box;
+    border-radius: 0.7rem;
+    h3 {
+      margin-top: 1.5rem;
+      font-size: 2.4rem;
+    }
+    .mass {
+      font-size: 1.7rem;
+    }
+    .price {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+    a {
+      border-radius: 0.7rem;
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.about-us {
+  .section-style();
+  .header-style();
+  &-slider {
+    img {
+      height: 49rem;
+    }
+    .prev {
+      width: 6.8rem;
+      height: 6.8rem;
+      position: absolute;
+      z-index: 99;
+      border: none;
+      top: 50%;
+      transform: scaleY(-50%);
+      &-prev {
+        left: -9.8rem;
+        background: url(../img/about_us/arr_left.png) center no-repeat;
+        background-size: 100%;
+      }
+      &-next {
+        right: -9.8rem;
+        background: url(../img/about_us/arr_right.png) center no-repeat;
+        background-size: 100%;
+      }
+    }
+  }
+  &-description {
+    p {
+      font-size: 1.8rem;
+      text-align: left;
+    }
+  }
+}
+
+.contacts {
+  .section-style(@bgc-assisting);
+  .header-style();
+  &-description {
+    text-align: left;
+  }
+  h3 {
+    font-size: 2.1rem;
+    margin-top: 3rem;
+  }
+  p {
+    font-size: 1.6rem;
+    margin-left: 1rem;
+    margin-top: 1.4rem;
+  }
+}
+
+.order {
+  .section-style();
+  .header-style(#000);
+  p {
+    font-size: 2.1rem;
+  }
+  &-description {
+    margin-top: 10rem;
+  }
+  &-form {
+    border: 2px solid @main;
+    border-radius: 1.5rem;
+    padding: 3rem;
+    background-color: @bgc-form;
+    p {
+      text-align: left;
+      margin: 0;
+      margin-left: 1rem;
+    }
+    input {
+      border: 2px solid @main;
+      border-radius: 1.3rem;
+      background-color: @assisting;
+      font-size: 1.8rem;
+      padding: 0.8rem;
+      width: 100%;
+    }
+    input {
+      margin-bottom: 3rem;
+    }
+    button {
+      border: none;
+    }
+  }
+}
+
+.footer {
+  background-color: @bgc-footer;
+  margin: 0;
+  padding: 2rem;
+  p {
+    text-align: center;
+    color: @assisting;
+    margin: 0;
+    font-size: 1.4rem;
+  }
+}
