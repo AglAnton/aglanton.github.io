@@ -145,7 +145,7 @@
       <h2>О нас</h2>
       <div class="row">
         <div class="col-lg-7 offset-lg-1 col-12">
-          <div class="about-us-slider wow flipInX" data-wow-delay="0.2s">
+          <div class="about-us-slider wow flipInX" data-wow-delay="0.3s">
             <img src="img/about_us/img1.jpg" alt="img1">
             <img src="img/about_us/img2.jpg" alt="img2">
             <img src="img/about_us/img3.jpg" alt="img3">
@@ -242,7 +242,7 @@
     new WOW().init();
   </script>
 
-  <!--  -->
+  <!-- Изменение анимации н амаленькмх экранах -->
   <script>
     if (document.body.clientWidth < 992) {
       $('.bounceInLeft').removeClass('bounceInLeft').addClass('fadeInUp');
@@ -251,6 +251,11 @@
       $('.slideInLeft').removeClass('slideInLeft').addClass('fadeInUp');
       $('.zoomInLeft').removeClass('zoomInLeft').addClass('fadeInUp');
       $('.zoomInRight').removeClass('zoomInRight').addClass('zoomInUp');
+
+      $('.prices-block').attr('data-wow-delay', '0.1s');
+      $('div[data-wow-delay]').attr('data-wow-delay', '0.1s');
+      
+      $('.flipInX').attr('data-wow-delay', '0.3s');
     }  
   </script>
   
