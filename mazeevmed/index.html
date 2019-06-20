@@ -203,7 +203,7 @@
         </div>
 
         <div class="col-lg-4 offset-lg-1 col-md-8 offset-md-2 col-sm-10 offset-sm-1 col-12">
-            <form class="order-form wow zoomInRight" action="form.php" method="POST">
+            <form class="order-form wow zoomInRight" data-wow-delay="0.2s" action="form.php" method="POST">
               <p>Имя</p>
               <input type="text" name="name" placeholder="Сергей">
               <p>Номер телефона</p>
@@ -242,6 +242,18 @@
     new WOW().init();
   </script>
 
+  <!--  -->
+  <script>
+    if (document.body.clientWidth < 992) {
+      $('.bounceInLeft').removeClass('bounceInLeft').addClass('fadeInUp');
+      $('.fadeInLeft').removeClass('fadeInLeft').addClass('fadeInUp');
+      $('.fadeInRight').removeClass('fadeInRight').addClass('fadeInUp');
+      $('.slideInLeft').removeClass('slideInLeft').addClass('fadeInUp');
+      $('.zoomInLeft').removeClass('zoomInLeft').addClass('zoomInUp');
+      $('.zoomInRight').removeClass('zoomInRight').addClass('zoomInUp');
+    }  
+  </script>
+  
   <!-- Анимация переходов -->
   <script>
     $(document).ready(function(){
@@ -328,6 +340,7 @@
     });
   </script>
 
+  <!-- menu -->
   <script>
     let open = false;
     let elem = document.getElementsByClassName('nav')[0];
