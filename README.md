@@ -6,3 +6,5 @@
 4. [Пятнашки](https://aglanton.github.io/tag/ "Пятнашки")
 5. [Форма + опрос](https://aglanton.github.io/form/ "Форма + опрос")
 6. [Сапёр](https://aglanton.github.io/sapper/ "Сапёр")
+7. [MazeevMED](https://aglanton.github.io/mazeevmed/ "MazeevMED")
+8. [Agancy](https://aglanton.github.io/agancy/ "Agancy")
