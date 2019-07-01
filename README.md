@@ -1,6 +1,6 @@
 # aglanton.github.io  
 
-##Игры
+## Игры
 
 1. [Крестики нолики](https://aglanton.github.io/tic-tac-toe/ "Крестики нолики")
 2. [Змейка](https://aglanton.github.io/snake/ "Змейка")
@@ -8,7 +8,7 @@
 4. [Сапёр](https://aglanton.github.io/sapper/ "Сапёр")
 
 
-##Сайты
+## Сайты
 
 1. [Meganomkino](https://aglanton.github.io/meganom/ "Meganomkino (Не адаптивен)")
 2. [MazeevMED](https://aglanton.github.io/mazeevmed/ "MazeevMED")
