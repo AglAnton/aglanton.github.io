@@ -10,6 +10,6 @@
 
 ## Сайты
 
-1. [Meganomkino](https://aglanton.github.io/meganom/ "Meganomkino (Не адаптивен)")
+1. [Meganomkino (Не адаптивен)](https://aglanton.github.io/meganom/ "Meganomkino")
 2. [MazeevMED](https://aglanton.github.io/mazeevmed/ "MazeevMED")
-3. [Agancy](https://aglanton.github.io/agancy/ "Agancy (В разработке)")
+3. [Agancy (В разработке)](https://aglanton.github.io/agancy/ "Agancy")
