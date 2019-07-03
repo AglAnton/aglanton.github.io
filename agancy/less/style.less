@@ -82,6 +82,9 @@ h1, h2, h3, h4, h5, h6 {
 h1, h2 {
   text-transform: uppercase;
 }
+h2 {
+  font-size: 3.7rem;
+}
 p {
   .reg();
   color: @colorText;
@@ -150,8 +153,6 @@ p {
     vertical-align: top;
   }
   h2 {
-    font-size: 3.7rem;
-    letter-spacing: 0.2rem;
     margin-bottom: 5rem;
   }
   a {
@@ -174,6 +175,59 @@ p {
 }
 
 .products {
-  padding: 0;
-
+  padding-top: 0;
+  h2 {
+    text-align: center;
+  }
+  p {
+    text-align: center;
+    margin-top: 3rem;
+  }
+  hr {
+    width: 13.2rem;
+    background-color: @assisting;
+    height: 1px;
+    margin-top: 2.4rem;
+    margin-bottom: 8rem;
+  }
+  ul {
+    text-align: center;
+    padding: 0;
+    margin-bottom: 3rem;
+    li {
+      list-style-type: none;
+      display: inline-block;
+      font-size: 22px;
+      text-transform: uppercase;
+      .semi();
+      margin: 0 2rem;
+      cursor: pointer;
+      position: relative;
+      &:after {
+        background-color: #000;
+        position: absolute;
+        display: block;
+        content: "";
+        height: 1px;
+        width: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: width 0.3s ease-in-out;
+      }
+      &:hover:after {
+        width: 100%;
+      }
+    }
+    .select {
+      color: @assisting;
+      &:after {
+        background-color: @assisting;
+      }
+    }
+  }
+  img {
+    width: 100%;
+    background-color: @bgFoto;
+    margin-top: 3rem;
+  }
 }
