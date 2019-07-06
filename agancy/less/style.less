@@ -72,14 +72,12 @@ html {
   .bold();
 }
 section {
-  padding: 10rem 0;
+  padding-top: 10rem;
 }
 h1, h2, h3, h4, h5, h6 {
   .bold();
   color: @colorHead;
   margin: 0;
-}
-h1, h2 {
   text-transform: uppercase;
 }
 h2 {
@@ -91,6 +89,29 @@ p {
   font-size: 1.5rem;
   line-height: 2.5rem;
 }
+.hr {
+  width: 13.2rem;
+  background-color: @assisting;
+  height: 1px;
+  margin-top: 3rem;
+  margin-bottom: 7rem;
+}
+video, img:not(.provide-block img, .footer img) {
+  background-color: @bgFoto;
+  width: 100%;
+}
+.nav-list {
+  padding: 0;
+  li {
+    text-decoration: none;
+    list-style-type: none;
+    display: inline-block;
+    transition: 0.3s;
+    margin-left: -4px;
+    cursor: pointer;
+    color: #000;
+  }
+}
 
 
 // styles
@@ -101,25 +122,16 @@ p {
     background-color: @mainColor;
     ul {
       text-align: center;
-      margin: 0;
       margin-top: 3rem;
-      a {
+      li {
         color: #fff;
-        text-decoration: none;
-        padding: 0;
-        list-style-type: none;
         font-size: 1.4rem;
         text-transform: uppercase;
         .bold();
-        li {
-          display: inline-block;
-          margin-left: -4px;
-          line-height: 7rem;
-          padding: 0 2rem;
-          transition: 0.3s;
-          &:hover {
-            background-color: @assisting;
-          }
+        line-height: 7rem;
+        padding: 0 2rem;
+        &:hover {
+          background-color: @assisting;
         }
       }
     }
@@ -143,7 +155,6 @@ p {
       // height: auto;
       height: 70%;
       box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.5);
-      background-color: @bgFoto;
     }
   }
 }
@@ -175,7 +186,6 @@ p {
 }
 
 .products {
-  padding-top: 0;
   h2 {
     text-align: center;
   }
@@ -183,25 +193,14 @@ p {
     text-align: center;
     margin-top: 3rem;
   }
-  hr {
-    width: 13.2rem;
-    background-color: @assisting;
-    height: 1px;
-    margin-top: 2.4rem;
-    margin-bottom: 8rem;
-  }
   ul {
     text-align: center;
-    padding: 0;
     margin-bottom: 3rem;
     li {
-      list-style-type: none;
-      display: inline-block;
       font-size: 22px;
       text-transform: uppercase;
       .semi();
       margin: 0 2rem;
-      cursor: pointer;
       position: relative;
       &:after {
         background-color: #000;
@@ -227,7 +226,95 @@ p {
   }
   img {
     width: 100%;
-    background-color: @bgFoto;
     margin-top: 3rem;
+  }
+}
+
+.teem {
+  p:not(.teem .name) {
+    margin-top: 3rem;
+  }
+  img {
+    height: 100%;
+  }
+  &-block {
+    &-img {
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      &:hover .name {
+        bottom: 0;
+      }
+    }
+    h3 {
+      .semi();
+      font-size: 3rem;
+    }
+    ul {
+      margin: 4rem 0;
+      margin-left: 4px;
+      li {
+        .italic();
+        font-size: 1.7rem;
+        opacity: 0.8;
+        line-height: 1;
+        margin-right: 4rem;
+        &:after {
+          width: 0;
+          height: 1px;
+          display: block;
+          content: "";
+          background-color: #000;
+          transition: width 0.3s ease-in-out;
+        }
+        &:hover:after {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .name {
+    position: absolute;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+    line-height: 3rem;
+    font-size: 1.4rem;
+    left: 0;
+    right: 0;
+    bottom: -3rem;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+  }
+}
+
+.distribution {
+  &-block {
+    padding: 12rem;
+    background: url(../img/distribution) no-repeat center;
+    background-color: @bgFoto;
+    background-size: 100%;
+    h2, p {
+      color: #fff;
+      text-align: center;
+    }
+    p {
+      margin-top: 3rem;
+    }
+    form {
+      margin-top: 6rem;
+    }
+    input {
+      width: 100%;
+      font-size: 1.6rem;
+      padding: 2rem;
+      border: none;
+      border-radius: 3px;
+    }
+    button {
+      text-transform: uppercase;
+      padding: 2rem;
+    }
   }
 }
