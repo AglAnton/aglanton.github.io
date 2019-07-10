@@ -1,5 +1,5 @@
-//products-nav
-let items = document.querySelectorAll('.products-nav_item');
+// products-nav
+/* let items = document.querySelectorAll('.products-nav_item');
 
 for (let i = 0; i < items.length; i++) {
   items[i].addEventListener('click', () => selectNav(i));
@@ -44,5 +44,32 @@ function replace(num) {
   for (let i = 0; i < images.length; i++) {
     images[i].setAttribute('src', `img/products/${name}/${i+1}.jpg`);
     images[i].setAttribute('alt', `img${num+1}`);
+  }
+} */
+
+// images
+let images = document.querySelectorAll('.img');
+
+let img = images[0];
+
+let video = images[0].querySelector('video');
+video.style.height = '100%';
+// img.style.height = '100%';
+
+for (let i = 1; i < images.length; i++) {
+  let img = images[i];
+
+  let src = img.dataset.imgSrc;
+  let alt = img.dataset.imgAlt;
+  let bgColor = getComputedStyle(img).backgroundColor;
+
+  img.style.background = `url(${src}) no-repeat center / cover`;
+  img.style.backgroundColor = bgColor;
+  img.style.height = img.dataset.height ? img.dataset.height : `${img.clientWidth}px`;
+
+  let imgPath = new Image();
+  imgPath.src = src;
+  imgPath.onerror = () => {
+    img.innerHTML = alt;
   }
 }

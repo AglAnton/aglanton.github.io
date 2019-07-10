@@ -76,16 +76,19 @@ section {
 }
 h1, h2, h3, h4, h5, h6 {
   .bold();
-  color: @colorHead;
+  // color: @colorHead;
+  opacity: 0.8;
   margin: 0;
   text-transform: uppercase;
 }
 h2 {
-  font-size: 3.7rem;
+  // font-size: 3.7rem;
+  font-size: 4.2rem;
 }
 p {
   .reg();
-  color: @colorText;
+  // color: @colorText;
+  opacity: 0.7;
   font-size: 1.5rem;
   line-height: 2.5rem;
 }
@@ -96,9 +99,14 @@ p {
   margin-top: 3rem;
   margin-bottom: 7rem;
 }
-video, img:not(.provide-block img, .footer img) {
-  background-color: @bgFoto;
+// video, img:not(.provide-block img, .footer img) {
+//   background-color: @bgFoto;
+//   width: 100%;
+// }
+.img {
   width: 100%;
+  background-color: @bgFoto;
+  height: 100%;
 }
 .nav-list {
   padding: 0;
@@ -224,8 +232,7 @@ video, img:not(.provide-block img, .footer img) {
       }
     }
   }
-  img {
-    width: 100%;
+  .img {
     margin-top: 3rem;
   }
 }
@@ -234,7 +241,7 @@ video, img:not(.provide-block img, .footer img) {
   p:not(.teem .name) {
     margin-top: 3rem;
   }
-  img {
+  .img {
     height: 100%;
   }
   &-block {
@@ -292,9 +299,8 @@ video, img:not(.provide-block img, .footer img) {
 .distribution {
   &-block {
     padding: 12rem;
-    background: url(../img/distribution) no-repeat center;
+    background: url(../img/distribution) no-repeat center / cover;
     background-color: @bgFoto;
-    background-size: 100%;
     h2, p {
       color: #fff;
       text-align: center;

@@ -52,10 +52,12 @@
 					</div>
 		
 					<div class="col-md-5 offset-1">
-						<video width="400" height="300" controls="controls" poster="video/prev.jpg">
-							<source src="video/video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-							Видео не поддерживается вашим браузером. 
-						</video>
+						<div class="img" data-video>
+							<video controls="controls" poster="video/prev.jpg">
+								<source src="video/video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+								Видео не поддерживается вашим браузером. 
+							</video>
+						</div>
 					</div>
 	
 				</div>
@@ -141,16 +143,16 @@
 			</ul>
 			<div class="products-image">
 				<div class="row">
-					<div class="col-md-3"><img src="img/products/all/1.jpg" alt="img1"></div>
-					<div class="col-md-3"><img src="img/products/all/2.jpg" alt="img1"></div>
-					<div class="col-md-3"><img src="img/products/all/3.jpg" alt="img1"></div>
-					<div class="col-md-3"><img src="img/products/all/4.jpg" alt="img1"></div>
+					<div class="col-md-3"><div class="img" data-img-src="img/products/all/1.jpg" data-img-alt="img1"></div></div>
+					<div class="col-md-3"><div class="img" data-img-src="img/products/all/2.jpg" data-img-alt="img1"></div></div>
+					<div class="col-md-3"><div class="img" data-img-src="img/products/all/3.jpg" data-img-alt="img1"></div></div>
+					<div class="col-md-3"><div class="img" data-img-src="img/products/all/4.jpg" data-img-alt="img1"></div></div>
 					</div>
 					<div class="row">
-					<div class="col-md-3"><img src="img/products/all/5.jpg" alt="img1"></div>
-					<div class="col-md-3"><img src="img/products/all/6.jpg" alt="img1"></div>
-					<div class="col-md-3"><img src="img/products/all/7.jpg" alt="img1"></div>
-					<div class="col-md-3"><img src="img/products/all/8.jpg" alt="img1"></div>
+					<div class="col-md-3"><div class="img" data-img-src="img/products/all/5.jpg" data-img-alt="img1"></div></div>
+					<div class="col-md-3"><div class="img" data-img-src="img/products/all/6.jpg" data-img-alt="img1"></div></div>
+					<div class="col-md-3"><div class="img" data-img-src="img/products/all/7.jpg" data-img-alt="img1"></div></div>
+					<div class="col-md-3"><div class="img" data-img-src="img/products/all/8.jpg" data-img-alt="img1"></div></div>
 					</div>
 			</div>
 		</div>
@@ -173,7 +175,7 @@
 
 					<div class="col-md-3">
 						<div class="teem-block-img">
-							<img src="img/teem/" alt="img">
+							<div class="img" data-img-src="img/teem/" data-img-alt="img" data-height="100%"></div>
 							<p class="name">sokina jue</p>
 						</div>
 					</div>
@@ -197,25 +199,25 @@
 						<div class="row">
 							<div class="col-md-3">
 								<div class="teem-block-img">
-									<img src="img/teem/" alt="img1">
+									<div class="img" data-img-src="img/teem/" data-img-alt="img1"></div>
 									<p class="name">sokina jue</p>
 								</div>
 							</div>
 							<div class="col-md-3">
 								<div class="teem-block-img">
-									<img src="img/teem/" alt="img2">
+									<div class="img" data-img-src="img/teem/" data-img-alt="img2"></div>
 									<p class="name">sokina jue</p>
 								</div>
 							</div>
 							<div class="col-md-3">
 								<div class="teem-block-img">
-									<img src="img/teem/" alt="img3">
+									<div class="img" data-img-src="img/teem/" data-img-alt="img3"></div>
 									<p class="name">sokina jue</p>
 								</div>
 							</div>
 							<div class="col-md-3">
 								<div class="teem-block-img">
-									<img src="img/teem/" alt="img4">
+									<div class="img" data-img-src="img/teem/" data-img-alt="img4"></div>
 									<p class="name">sokina jue</p>
 								</div>
 							</div>
@@ -243,6 +245,8 @@
 			</div>
 		</div>
 	</section><!-- distribution -->
+
+	section.get-touch>.container>h2{get in touch}+p{Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et.ur adipis cing elit, sed do eiusmod tempor incididunt ut labore et. ur adipis cing elit, sed do eiusmod tempor incididunt ut labore et.}+hr.hr
 
 
 	<!-- script -->
