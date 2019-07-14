@@ -63,7 +63,6 @@ for (let i = 1; i < images.length; i++) {
 }
 
 function insertImg(img) {
-  // let img = images[i];
 
   let src = img.dataset.imgSrc;
   let alt = img.dataset.imgAlt;

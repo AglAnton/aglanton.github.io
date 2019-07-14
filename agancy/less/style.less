@@ -56,6 +56,7 @@
 @bgFoto: #f5f0dd;
 @colorText: #4c4c4c;
 @colorHead: #333;
+@bgFooter: #2d2d2d;
 
 
 // basic-setting
@@ -87,7 +88,6 @@ h2 {
 }
 p {
   .reg();
-  // color: @colorText;
   opacity: 0.7;
   font-size: 1.5rem;
   line-height: 2.5rem;
@@ -156,7 +156,6 @@ p {
     }
     video {
       width: 100%;
-      // height: auto;
       height: 70%;
       box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.5);
     }
@@ -206,7 +205,7 @@ p {
       .semi();
       margin: 0 2rem;
       position: relative;
-      &:after {
+      &::after {
         background-color: #000;
         position: absolute;
         display: block;
@@ -217,7 +216,7 @@ p {
         transform: translateX(-50%);
         transition: width 0.3s ease-in-out;
       }
-      &:hover:after {
+      &:hover::after {
         width: 100%;
       }
     }
@@ -262,16 +261,22 @@ p {
         opacity: 0.8;
         line-height: 1;
         margin-right: 4rem;
-        &:after {
-          width: 0;
+        position: relative;
+        &::before {
+          content: '';
+          position: absolute;
+          bottom: -0.2rem;
+          left: 0;
+          right: 0;
           height: 1px;
-          display: block;
-          content: "";
           background-color: #000;
-          transition: width 0.3s ease-in-out;
+          transform-origin: bottom right;
+          transform: scaleX(0);
+          transition: transform 0.5s ease;
         }
-        &:hover:after {
-          width: 100%;
+        &:hover::before {
+          transform-origin: bottom left;
+          transform: scaleX(1);
         }
       }
     }
@@ -317,6 +322,69 @@ p {
     button {
       text-transform: uppercase;
       padding: 2rem;
+    }
+  }
+}
+
+.get {
+  p {
+    margin-top: 3rem;
+  }
+  &__input {
+    width: 100%;
+    background-color:#e5e5e5;
+    border: none;
+    color: #000;
+    font-size: 1.6rem;
+    .reg();
+    padding: 1.5rem 2rem;
+    border-radius: 10px;
+  }
+  textarea {
+    height: 20rem;
+    margin-top: 4rem;
+  }
+  button {
+    text-transform: uppercase;
+    margin-top: 4.5rem;
+    padding: 2rem 0;
+  }
+  &-block {
+    background-color: @bgFooter;
+    height: 100%;
+    vertical-align: middle;
+    padding: 25% 7rem 0;
+    color: #fff;
+    font-size: 1.6rem;
+    h3 {
+      font-size: 1.8rem;
+    }
+    a {
+      .reg();
+      margin-top: 1.8rem;
+      display: block;
+      color: #fff;
+      opacity: 0.8;
+    }
+  }
+}
+
+.footer {
+  margin-top: 10rem;
+  background-color: @bgFooter;
+  padding: 3rem;
+  color: #b8b8b8;
+  p {
+    display: inline-block;
+    transform: translateY(25%);
+  }
+  &__images {
+    float: right;
+    ul {
+      margin: 0;
+      li {
+        margin-left: 1rem;
+      }
     }
   }
 }
