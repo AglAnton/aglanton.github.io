@@ -413,6 +413,9 @@ p {
   .products {
     &-nav {
       line-height: 2;
+      li:hover::after {
+        width: 0;
+      }
     }
   }
   .teem {
@@ -447,10 +450,8 @@ p {
   }
   .menu {
     transform-origin: top;
-    // transform: translateY(-320px);
     margin-top: -320px;
     &_open {
-      // transform: translateY(0);
       margin-top: 0;
       transition: 0.3s;
     }
@@ -495,7 +496,6 @@ p {
       }
       &_open {
         span {
-          // opacity: 0;
           height: 0;
         }
         span::before {
