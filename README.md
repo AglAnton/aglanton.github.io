@@ -12,4 +12,4 @@
 
 1. [Meganomkino (Не адаптивен)](https://aglanton.github.io/meganom/ "Meganomkino")
 2. [MazeevMED](https://aglanton.github.io/mazeevmed/ "MazeevMED")
-3. [Agancy (В разработке)](https://aglanton.github.io/agancy/ "Agancy")
+3. [Agancy](https://aglanton.github.io/agancy/ "Agancy")
