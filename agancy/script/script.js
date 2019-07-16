@@ -42,9 +42,10 @@ function replace(num) {
   let images = document.querySelector('.products-image').querySelectorAll('.img');
 
   for (let i = 0; i < images.length; i++) {
-    images[i].dataset.imgSrc = `img/products/${name}/${i+1}.jpg`;
-    images[i].dataset.imgAlt = `img${num+1}`;
     let img = images[i];
+    img.dataset.imgSrc = `img/products/${name}/${i+1}.jpg`;
+    img.dataset.imgAlt = `img${num+1}`;
+
     insertImg(img);
   }
 }
@@ -83,6 +84,19 @@ function insertImg(img) {
 if (document.documentElement.clientWidth < 992) {
   let img = document.querySelector('.teem-block-img_height');
   img.style.height = img.offsetWidth / 3 * 4  + 'px';
+
+
+
+  //flipInX - 1, zoomInRight - 2, fadeInLeft - many
+  //animation
+  $('.fadeInLeft').removeClass('fadeInLeft');
+  $('.fadeInRight').removeClass('fadeInRight');
+  $('.zoomInRight').removeClass('zoomInRight');
+  $('.flipInX').removeClass('flipInX');
+
+  $('.wow').addClass('fadeInUp');
+
+  $('.zoomInLeft').removeClass('zoomInLeft').removeClass('fadeInUp').addClass('zoomInUp');
 }
 if (document.documentElement.clientWidth < 768) {
   
@@ -102,6 +116,9 @@ if (document.documentElement.clientWidth < 768) {
   for (let i = 0; i < hr.length; i++) {
     hr[i].removeAttribute('align');
   }
+
+  //animation
+  $('.animate-none').removeClass('wow');
 
   //menu
   let btn = document.querySelector('.btn-menu');
