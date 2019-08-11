@@ -84,8 +84,17 @@ $(document).ready(()=>{
         $(e.target).hasClass('accordion-arrow')) {
 
       $(this).toggleClass('accordion-active');
-      $(this).find('.content').slideToggle(200);
+      
+      $(this).find('.content').css({height: 'auto'});
+      let h = $(this).find('.content').outerHeight();
 
+      if ( $(this).hasClass('accordion-active') ) {
+        $(this).find('.content').css({height: 0});
+        $(this).find('.content').css({height: h});
+      } else {
+        $(this).find('.content').css({height: h});
+        $(this).find('.content').css({height: 0});
+      }
     }
   });
 
