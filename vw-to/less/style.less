@@ -833,12 +833,29 @@ section {
   }
 }
 @media (max-width: 575px) {
+  .button-top {
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    &.button-active {
+      bottom: 1rem;
+      right: 1rem;
+    }
+    p {
+      line-height: 5rem;
+      font-size: 2rem;
+    }
+  }
+  .description {
+    font-size: 1.7rem;
+  }
   .header {
     &-menu {
       padding: 2rem 3rem;
     }
     &-offer {
       h1 {
+        font-size: 3.5rem;
         margin-top: 30%;
       }
       p {
@@ -849,7 +866,35 @@ section {
       display: block;
     }
   }
+  .comments {
+    &-image {
+      width: 30%;
+    }
+  }
+  .form {
+    .contacts {
+      padding: 5rem 8rem;
+    }
+  }
   .footer {
     padding: 2rem;
+    .logo {
+      font-size: 3.5rem;
+    }
+    img {
+      width: 4.5rem;
+    }
+  }
+}
+@media (max-width: 374px) {
+  .header {
+    &-arrow {
+      display: none;
+    }
+  }
+  .form {
+    .contacts {
+      padding: 5rem;
+    }
   }
 }
