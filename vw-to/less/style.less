@@ -847,7 +847,7 @@ section {
     }
   }
   .description {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
   }
   .header {
     &-menu {
@@ -859,11 +859,8 @@ section {
         margin-top: 30%;
       }
       p {
-        margin: 5% 0 6%;
+        margin: 7% 0 15%;
       }
-    }
-    &-arrow {
-      display: block;
     }
   }
   .comments {
@@ -887,14 +884,33 @@ section {
   }
 }
 @media (max-width: 374px) {
+  .adaptive-menu {
+    width: 21rem;
+  }
+  .menu_open {
+    .content {
+      left: -21rem;
+    }
+    .button-top {
+      right: 22rem;
+    }
+  }
   .header {
-    &-arrow {
-      display: none;
+    h1 {
+      margin-top: 10%;
     }
   }
   .form {
     .contacts {
       padding: 5rem;
+    }
+  }
+  .footer {
+    .logo {
+      font-size: 3rem;
+    }
+    img {
+      width: 4rem;
     }
   }
 }
