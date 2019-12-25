@@ -13,4 +13,5 @@
 1. [Meganomkino (Не адаптивен)](https://aglanton.github.io/meganom/ "Meganomkino")
 2. [MazeevMED](https://aglanton.github.io/mazeevmed/ "MazeevMED")
 3. [Agancy](https://aglanton.github.io/agancy/ "Agancy")
-4. [VW-TO (В разработке)](http://vw-to.ru/ "vw-to")
+<!-- 4. [VW-TO (В разработке)](http://vw-to.ru/ "vw-to") -->
+4. [обслужиполо.рф](https://aglanton.github.io/servicePolo/ "обслужиполо.рф")

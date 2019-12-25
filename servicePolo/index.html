@@ -1,0 +1,748 @@
+<?php
+  require "includes/db.php";
+?>
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="img/icon.ico" type="image/x-ico">
+
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="animate/animate.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+
+  <title>обслужиполо.рф</title>
+</head>
+
+<body>
+
+  <div class="adaptive-menu">
+    <ul>
+      <a href="#comments"><li>Отзывы</li></a>
+      <a href="#stages"><li>Этапы</li></a>
+      <a href="#price"><li>Цены</li></a>
+      <a href="#contacts"><li>Контакты</li></a>
+      <li><a href="#form" class="button">заказать сейчас</a></li>
+    </ul>
+  </div>
+
+  <div class="document-content">
+
+    <header class="header" id="header">
+
+      <div class="header-menu">
+        <div class="header-menu-logo logo">обслужиполо.рф</div>
+
+        <div class="btn-menu">
+          <span></span>
+        </div>
+
+        <ul>
+          <li><a href="#comments">отзывы</a></li>
+          <li><a href="#stages">этапы</a></li>
+          <li><a href="#price">цены</a></li>
+          <li><a href="#form">контакты</a></li>
+          <li><a href="#form" class="button">заказать сейчас</a></li>
+        </ul>
+      </div>
+
+      <div class="container">
+
+        <div class="header-offer">
+          <div class="row">
+
+            <div class="col-lg-7 col-12">
+              <h1 class="wow fadeInUp" data-wow-delay="0.1s">Техническое обслуживание Фольксваген Polo Sedan</h1>
+              <p class="col-lg-6 col-12 description wow fadeInUp">Оригинальные запчасти</p>
+              <a href="#form" class="button wow fadeIn">заказать</a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <a href="#next-screen">
+        <div class="header-arrow">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </a>
+
+    </header><!-- header -->
+
+    <section id="next-screen" class="about-products section-bg">
+      <div class="container">
+
+        <h2>О продукте</h2>
+
+        <div class="row">
+
+          <div class="col-lg-5">
+            <img class="wow fadeInLeft" src="img/about-products/img1.jpg" alt="img">
+          </div>
+
+          <div class="col-lg-6 offset-lg-1 wow fadeInUp">
+            <p class="text">При обслуживании мы используем оригинальные запчасти и масло!</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- about-products -->
+
+    <section class="collective">
+      <div class="container">
+        <h2>Ваш автомобиль будет обслужен профессионалами!</h2>
+      </div>
+    </section>
+
+    <section class="why-we">
+      <div class="container">
+
+        <h2>Почему мы?</h2>
+
+        <div class="why-we-slider">
+
+          <div class="why-we-item">
+            <div class="row">
+
+              <div class="col-lg-2 offset-lg-2">
+                <img src="img/why-we/logo1.png" alt="logo1">
+              </div>
+
+              <div class="col-lg-6 offset-lg-0 col-sm-8 offset-sm-2 col-12">
+                <h3>Выгодные цены</h3>
+                <p class="description wow fadeInRight">Обеспечены огромным наличием на собственном скалде</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="why-we-item">
+            <div class="row">
+
+              <div class="col-lg-2 offset-lg-2">
+                <img src="img/why-we/logo2.png" alt="logo2">
+              </div>
+
+              <div class="col-lg-6 offset-lg-0 col-sm-8 offset-sm-2 col-12">
+                <h3>Оригинальный товар</h3>
+                <p class="description wow fadeInRight" data-wow-delay="0.1s">гарантирует качество запчастей</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="why-we-item">
+            <div class="row">
+
+              <div class="col-lg-2 offset-lg-2">
+                <img src="img/why-we/logo3.png" alt="logo3">
+              </div>
+
+              <div class="col-lg-6 offset-lg-0 col-sm-8 offset-sm-2 col-12">
+                <h3>Качество обслуживания</h3>
+                <p class="description wow fadeInRight" data-wow-delay="0.2s">Все сотрудники прошли обучение</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- why-we -->
+
+    <section id="comments" class="comments section-bg">
+      <div class="container">
+
+        <h2>Отзывы</h2>
+
+        <div class="comments-slider wow fadeIn" data-wow-delay="0.1s">
+
+        <!-- <?php
+          // $comments = mysqli_query($connection, "SELECT * FROM `comments`");
+
+          // $delay = '0.3';
+          // while ( $pri = mysqli_fetch_assoc($comments) ) {
+            ?>
+
+              <div class="comments-slide">
+                <div class="comments-image">
+                  <img src="img/comments/<?php echo $pri['image']; ?>" alt="img1">
+                </div>
+                <p class="comments-description description"><?php echo $pri['name']; ?></p>
+
+                <div class="row">
+                  <div class="col-lg-6 offset-lg-3 col-sm-8 offset-sm-2 col-12">
+                    <p class="comments-text text"><?php echo $pri['text']; ?></p>
+                  </div>
+                </div>
+              </div>
+
+            <?php
+          // }
+        ?> -->
+
+              <div class="comments-slide">
+                <div class="comments-image">
+                  <img src="img/comments/img1.jpeg" alt="img1">
+                </div>
+                <p class="comments-description description">Емельянов Александр</p>
+
+                <div class="row">
+                  <div class="col-lg-6 offset-lg-3 col-sm-8 offset-sm-2 col-12">
+                    <p class="comments-text text">Бываю очень часто на этом сервисе. Частенько приходится ругать персонал, но всегда обслуживание обходится доступно и выполняется качественно! Конечно буду советовать друзьям!</p>
+                  </div>
+                </div>
+              </div>
+              <div class="comments-slide">
+                <div class="comments-image">
+                  <img src="img/comments/img1.jpeg" alt="img1">
+                </div>
+                <p class="comments-description description">Емельянов Александр</p>
+
+                <div class="row">
+                  <div class="col-lg-6 offset-lg-3 col-sm-8 offset-sm-2 col-12">
+                    <p class="comments-text text">Бываю очень часто на этом сервисе. Частенько приходится ругать персонал, но всегда обслуживание обходится доступно и выполняется качественно! Конечно буду советовать друзьям!</p>
+                  </div>
+                </div>
+              </div>
+              <div class="comments-slide">
+                <div class="comments-image">
+                  <img src="img/comments/img1.jpeg" alt="img1">
+                </div>
+                <p class="comments-description description">Емельянов Александр</p>
+
+                <div class="row">
+                  <div class="col-lg-6 offset-lg-3 col-sm-8 offset-sm-2 col-12">
+                    <p class="comments-text text">Бываю очень часто на этом сервисе. Частенько приходится ругать персонал, но всегда обслуживание обходится доступно и выполняется качественно! Конечно буду советовать друзьям!</p>
+                  </div>
+                </div>
+              </div>
+
+              
+
+
+        </div>
+
+      </div>
+    </section><!-- comments -->
+
+    <section id="stages" class="stages">
+      <div class="container">
+
+
+        <h2>Этапы работы</h2>
+
+        <div class="stages-contents">
+
+          <span class="stages-line"></span>
+
+          <div class="stages-block">
+            <div class="row">
+
+              <div class="col-lg-2 offset-lg-5">
+                <div class="stages-number">
+                  <p>1</p>
+                </div>
+              </div>
+
+              <div class="col-lg-4 offset-lg-0 col-md-8 offset-md-2">
+                <div class="stages-text">
+                  <h3>Форма</h3>
+                  <p class="description wow fadeInRight">Заполните форму</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="stages-block">
+            <div class="row">
+
+              <div class="col-lg-4 offset-lg-1 col-md-8 offset-md-2">
+                <div class="stages-text_left">
+                  <h3>Цены</h3>
+                  <p class="description wow fadeInLeft" data-wow-delay="0.1s">Получите наше предложение</p>
+                </div>
+              </div>
+
+              <div class="col-lg-2">
+                <div class="stages-number">
+                  <p>2</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="stages-block">
+            <div class="row">
+
+              <div class="col-lg-2 offset-lg-5">
+                <div class="stages-number">
+                  <p>3</p>
+                </div>
+              </div>
+
+              <div class="col-lg-4 offset-lg-0 col-md-8 offset-md-2">
+                <div class="stages-text">
+                  <h3>Подтверждение</h3>
+                  <p class="description wow fadeInRight" data-wow-delay="0.2s">Подтвердите заказ</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="stages-block">
+            <div class="row">
+
+              <div class="col-lg-4 offset-lg-1 col-md-8 offset-md-2">
+                <div class="stages-text_left">
+                  <h3>Получеие</h3>
+                  <p class="description wow fadeInLeft" data-wow-delay="0.3s">Приедте для прохождения ТО</p>
+                </div>
+              </div>
+
+              <div class="col-lg-2">
+                <div class="stages-number">
+                  <p>4</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- stages -->
+
+    <section id="price" class="price">
+      <div class="container">
+
+        <h2>Цены на запчасти</h2>
+
+        <div class="price-slider">
+
+        <!-- <?php
+          // $spare_parts = mysqli_query($connection, "SELECT * FROM `spare_parts`");
+
+          // $delay = '0.3';
+          // while ( $pri = mysqli_fetch_assoc($spare_parts) ) {
+            ?>
+
+              <div class="col-lg-4">
+                <div class="price-block wow fadeInLeft" <?php if($delay>0 || $col==3){ echo "data-wow-delay='" . $delay . "s'"; $delay-=0.1;} ?>>
+                  <img src="img/price/<?php echo $pri['image']; ?>" alt="">
+                  <h4><?php echo $pri['title']; ?></h4>
+                  <p class="description"><?php echo $pri['number']; ?></p>
+                  <p class="price-retail"><?php echo $pri['price_rep']; ?>
+                    <span></span>
+                  </p>
+                  <p class="price-our"><?php echo $pri['price_opt']; ?></p>
+                </div>
+              </div>
+
+            <?php
+          // }
+        ?> -->
+
+              <div class="col-lg-4">
+                <div class="price-block wow fadeInLeft" data-wow-delay='0.3s'>
+                  <img src="img/price/oil_filter.jpg" alt="">
+                  <h4>Фильтр</h4>
+                  <p class="description">03C115561H</p>
+                  <p class="price-retail">881
+                    <span></span>
+                  </p>
+                  <p class="price-our">540</p>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="price-block wow fadeInLeft" data-wow-delay='0.2s'>
+                  <img src="img/price/oil_filter.jpg" alt="">
+                  <h4>Фильтр</h4>
+                  <p class="description">03C115561H</p>
+                  <p class="price-retail">881
+                    <span></span>
+                  </p>
+                  <p class="price-our">540</p>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="price-block wow fadeInLeft" data-wow-delay='0.1s'>
+                  <img src="img/price/oil_filter.jpg" alt="">
+                  <h4>Фильтр</h4>
+                  <p class="description">03C115561H</p>
+                  <p class="price-retail">881
+                    <span></span>
+                  </p>
+                  <p class="price-our">540</p>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="price-block wow fadeInLeft" data-wow-delay='0s'>
+                  <img src="img/price/oil_filter.jpg" alt="">
+                  <h4>Фильтр</h4>
+                  <p class="description">03C115561H</p>
+                  <p class="price-retail">881
+                    <span></span>
+                  </p>
+                  <p class="price-our">540</p>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="price-block wow fadeInLeft" data-wow-delay='0s'>
+                  <img src="img/price/oil_filter.jpg" alt="">
+                  <h4>Фильтр</h4>
+                  <p class="description">03C115561H</p>
+                  <p class="price-retail">881
+                    <span></span>
+                  </p>
+                  <p class="price-our">540</p>
+                </div>
+              </div>
+
+        </div>
+
+        <a href="#form" class="button">узнать цену</a>
+
+      </div>
+    </section><!-- price -->
+
+    <section class="price">
+      <div class="container">
+
+        <h2>Цены на работы</h2>
+
+        <div class="price-slider">
+
+        <!-- <?php
+          // $works = mysqli_query($connection, "SELECT * FROM `works`");
+
+          // $delay = '0.3';
+          // while ( $pri = mysqli_fetch_assoc($works) ) {
+            ?>
+
+              <div class="col-lg-4">
+                <div class="price-block wow fadeInLeft" <?php if($delay>0 || $col==3){ echo "data-wow-delay='" . $delay . "s'"; $delay-=0.1;} ?>>
+                  <img src="img/price/<?php echo $pri['image']; ?>" alt="">
+                  <h4><?php echo $pri['title']; ?></h4>
+                  <p class="description"><?php echo $pri['number']; ?></p>
+                  <p class="price-retail"><?php echo $pri['price_rep']; ?>
+                    <span></span>
+                  </p>
+                  <p class="price-our"><?php echo $pri['price_opt']; ?></p>
+                </div>
+              </div>
+
+            <?php
+          // }
+        ?> -->
+
+              <div class="col-lg-4">
+                <div class="price-block wow fadeInLeft"data-wow-delay='0.3s'>
+                  <img src="img/price/oil_change.jpg" alt="">
+                  <h4>Замена фильтра</h4>
+                  <p class="description">03C115561H</p>
+                  <p class="price-retail">1500
+                    <span></span>
+                  </p>
+                  <p class="price-our">999</p>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="price-block wow fadeInLeft"data-wow-delay='0.2s'>
+                  <img src="img/price/oil_change.jpg" alt="">
+                  <h4>Замена фильтра</h4>
+                  <p class="description">03C115561H</p>
+                  <p class="price-retail">1500
+                    <span></span>
+                  </p>
+                  <p class="price-our">999</p>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="price-block wow fadeInLeft"data-wow-delay='0.1s'>
+                  <img src="img/price/oil_change.jpg" alt="">
+                  <h4>Замена фильтра</h4>
+                  <p class="description">03C115561H</p>
+                  <p class="price-retail">1500
+                    <span></span>
+                  </p>
+                  <p class="price-our">999</p>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="price-block wow fadeInLeft"data-wow-delay='0s'>
+                  <img src="img/price/oil_change.jpg" alt="">
+                  <h4>Замена фильтра</h4>
+                  <p class="description">03C115561H</p>
+                  <p class="price-retail">1500
+                    <span></span>
+                  </p>
+                  <p class="price-our">999</p>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="price-block wow fadeInLeft"data-wow-delay='0s'>
+                  <img src="img/price/oil_change.jpg" alt="">
+                  <h4>Замена фильтра</h4>
+                  <p class="description">03C115561H</p>
+                  <p class="price-retail">1500
+                    <span></span>
+                  </p>
+                  <p class="price-our">999</p>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="price-block wow fadeInLeft"data-wow-delay='0s'>
+                  <img src="img/price/oil_change.jpg" alt="">
+                  <h4>Замена фильтра</h4>
+                  <p class="description">03C115561H</p>
+                  <p class="price-retail">1500
+                    <span></span>
+                  </p>
+                  <p class="price-our">999</p>
+                </div>
+              </div>
+
+        </div>
+
+        <a href="#form" class="button">узнать цену</a>
+
+      </div>
+    </section><!-- price -->
+
+    <section id="form" class="form">
+      <div class="container">
+
+        <h2>Заполни форму!</h2>
+        <img src="img/form/arrow.png" alt="">
+
+        <div class="form-content">
+          <div class="row">
+
+            <div class="col-lg-6">
+              <form action="php/form.php" method="POST" class="wow zoomIn">
+                <div class="row">
+
+                  <div class="col-lg-6">
+                    <input type="text" name="name" placeholder="Имя" required>
+                  </div>
+
+                  <div class="col-lg-6">
+                    <input type="text" id="phone" name="number" placeholder="Телефон" required>
+                  </div>
+
+                </div>
+
+                <div class="row">
+
+                  <div class="col-lg-6">
+                    <input type="text" class="input-top" name="email" placeholder="E-mail" required>
+                  </div>
+
+                  <div class="col-lg-6">
+                    <input type="text" class="input-top" name="vincode" placeholder="VIN код" required>
+                  </div>
+
+                </div>
+
+                <button id="contacts" class="button">Заказать</button>
+                <p class="privacy">Нажимая на кнопку вы соглашаетесь<br>с <a href="#">политикой конфиденциальности</a></p>
+
+              </form>
+            </div>
+
+            <div class="col-lg-5 offset-lg-1">
+              <div class="contacts">
+                <h3>Контакты</h3>
+                <ul class="contact-info">
+                  <li class="description"><a class="a" href="tel:+79789999999">+7 978 999 99 99</a></li>
+                  <li class="description"><a class="a" href="mailto:service-polo@gmail.com">service-polo@gmail.com</a></li>
+                  <li class="description">ИП ...</li>
+                  <li class="description">ИНН ...</li>
+                  <li class="description">ОГРН ...</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- form -->
+
+    <footer class="footer">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-md-3 col-sm-4 col-6">
+            <div class="logo">обслужиполо.рф</div>
+          </div>
+
+          <div class="col-md-9 col-sm-8 col-6">
+            <div class="social-block">
+
+              <a href="#"><img src="img/footer/Tilda_Icons_26sn_vkontakte.png" alt="vk"></a>
+              <a href="#"><img class="last" src="img/footer/Tilda_Icons_26sn_odnoklassniki.png" alt="vk"></a>
+
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-3 offset-lg-3">
+            <ul class="contact-info">
+              <li class="description"><a class="a" href="tel:+79789999999">+7 978 999 99 99</a></li>
+              <li class="description"><a class="a" href="mailto:service-polo@gmail.com">service-polo@gmail.com</a></li>
+              <li class="description">ИП ...</li>
+              <li class="description">ИНН ...</li>
+              <li class="description">ОГРН ...</li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 offset-lg-1">
+            <ul class="contact-info">
+              <!-- <li class="description"><a class="a" href="#">Оптовикам</a></li> -->
+              <li class="description"><a class="a" href="admin/">Адимин</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3">
+            <ul class="contact-info contact-info_small">
+              <li class="description">Иконки: <a class="a" href="https://tilda.cc">Tilda Publishing</a></li>
+              <li class="description">Разработка сайта: <a class="a" href="https://vk.com/id236520614">Антон</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <p class="copy">&copy;обслужиполо.рф 2019</p>
+
+      </div>
+    </footer><!-- footer -->
+
+    <a href="#header">
+      <div class="button-top">
+        <p>&uarr;</p>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- script -->
+  <!-- jQuery -->
+  <script src="script/jquery.min.js"></script>
+
+  <!-- scroll animate -->
+  <script src="script/animateTransition.js"></script>
+  <script>
+    animateTransition();
+  </script>
+
+  <!-- animate wow js -->
+  <script src="animate/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
+
+  <!-- slick slider -->
+  <link rel="stylesheet" href="slick/slick.css">
+  <link rel="stylesheet" href="slick/slick-theme.css">
+  <script src="slick/slick.min.js"></script>
+
+  <!-- settings slider -->
+  <script>
+    $(document).ready(function () {
+      //why-we
+      $(window).resize(function () {
+        whyWeSlider();
+      });
+      let whyWe = false;
+
+      function whyWeSlider() {
+        if ($(window).width() < 992 && !whyWe) {
+          $('.why-we-slider').slick({
+            dots: true,
+            arrows: false,
+          });
+          whyWe = true;
+        } else if ($(window).width() >= 992 && whyWe) {
+          $('.why-we-slider').slick('unslick');
+          whyWe = false;
+        }
+      }
+      whyWeSlider();
+
+      //comments
+      $('.comments-slider').slick({
+        dots: true,
+        prevArrow: '<button type="button" class="col-lg-1 offset-lg-1 arrows">&#8249;</button>',
+        nextArrow: '<button type="button" class="col-lg-1 offset-lg-10 arrows">&#8250;</button>',
+        responsive: [{
+          breakpoint: 991,
+          settings: {
+            arrows: false,
+          }
+        }]
+      });
+
+      //price
+      $('.price-slider').slick({
+        dots: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        prevArrow: '<button type="button" class="prev arrows">&#8249;</button>',
+        nextArrow: '<button type="button" class="next arrows">&#8250;</button>',
+        responsive: [
+          {
+            breakpoint: 991,
+            settings: {
+              arrows: false,
+              slidesToShow: 2,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 767,
+            settings: {
+              arrows: false,
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+
+    });
+  </script>
+
+  <!-- masked input -->
+  <script src="script/jquery.maskedinput.min.js"></script>
+  <script>
+    jQuery(function ($) {
+      $("#phone").mask("+7(999) 999-99-99");
+    });
+  </script>
+
+  <!-- myScript -->
+  <script src="script/script.js"></script>
+
+</body>
+
+</html>
