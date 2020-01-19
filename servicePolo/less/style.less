@@ -23,6 +23,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Nunito';
+  src: url('../fonts/Nunito-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 .reg() {
   font-family: 'Roboto', sans-serif;
 }
@@ -162,6 +168,39 @@ section {
 }
 
 // styles
+.modal {
+  &-title {
+    font-size: 3rem;
+  }
+  .close {
+    font-size: 2rem;
+  }
+  &-img {
+    width: 100%;
+  }
+  &-list {
+    margin-top: 2rem;
+    list-style-type: circle;
+  }
+  &-price {
+    float: right;
+  }
+  &-total-price {
+    font-weight: bold;
+  }
+  &-arr {
+    font-size: 5rem;
+    color: #000;
+  }
+  &-description {
+    color: #000;
+    opacity: .7;
+  }
+  &-button {
+    font-size: 1.7rem;
+    padding: .7rem 1.5rem;
+  }
+}
 .btn-menu {
   display: none;
 }
@@ -251,7 +290,7 @@ section {
     z-index: 99;
     position: fixed;
     &-logo {
-      font-size: 2.5rem;
+      font-size: 5rem;
       display: inline-block;
       line-height: 7.5rem;
       vertical-align: middle;
@@ -339,6 +378,9 @@ section {
 }
 
 .about-products {
+  background: url(../img/about-products/img1.jpg) no-repeat center;
+  height: 100vh;
+  background-size: cover;
   img {
     width: 100%;
   }
@@ -347,12 +389,6 @@ section {
     top: 50%;
     transform: translateY(-50%);
   }
-}
-
-.collective {
-  background: url(../img/collective/collective.jpeg) no-repeat top;
-  height: 100vh;
-  background-size: cover;
 }
 
 .why-we {
@@ -394,7 +430,7 @@ section {
   &-line {
     background-color: @main;
     width: 2px;
-    height: 60rem;
+    height: 55rem;
     position: absolute;
     left: 50%;
     transform: translateX(-50%); 
@@ -448,38 +484,21 @@ section {
     text-align: center;
     border-radius: 12px;
     padding: 3.3rem;
+    .button {
+      background-color: @main;
+      margin-top: 4rem;
+      border: none;
+      &:hover {
+        background-color: @main-hover;
+      }
+    }
     img {
       width: 100%;
       border-radius: 12px;
     }
-    .price-retail::before {
-      content: 'РРЦ: ';
-    }
-    .price-our::before {
-      content: 'Наша цена: ';
-    }
-    .price-retail::after,
-    .price-our::after {
-      content: '\20BD';
-    }
-    .price-retail {
-      font-size: 1.7rem;
-      margin-top: 2rem;
-      position: relative;
-      overflow: hidden;
-      span {
-        width: 100px;
-        height: 2px;
-        position: absolute;
-        background-color: red;
-        left: 50%; 
-        top: 50%;
-        opacity: 0.7;
-        transform: translate(-50%, -50%) rotate(-7deg);
-      }
-    }
     .price-our {
       font-size: 2rem;
+      margin-top: 1rem;
       .bold();
     }
   }
@@ -511,14 +530,14 @@ section {
     margin-top: 3rem;
   }
   form {
-    button {
+    .form-button {
       border: none;
       position: relative;
       left: 50%;
       transform: translateX(-50%);
       margin-top: 3rem;
     }
-    textarea,
+    textarea, .form-checkbox,
     input:not([type="checkbox"]):not(.count) {
       width: 100%;
       border: 2px solid @main;
@@ -531,19 +550,11 @@ section {
     }
     textarea {
       font-size: 1.7rem;
-      margin-top: 4rem;
+      margin-top: 1.5rem;
       min-height: 15rem;
     }
     input:not([type="checkbox"]):not(.count) {
       font-size: 2rem;
-    }
-    .count {
-      border: 1px solid @bg-hover;
-      border-radius: 5px;
-      padding-left: 1rem;
-      width: 5rem;
-      position: absolute;
-      right: 1rem;
     }
     .input-top {
       margin-top: 2.5rem;
@@ -552,78 +563,17 @@ section {
       text-transform: uppercase;
     }
     .form {
-      &-description {
-        text-align: center;
-        opacity: 0.9;
-        margin: 3.5rem 0 2rem;
+      &-text {
+        margin-top: 2rem;
       }
-      &-select {
-        width: 100%;
-        border: 2px solid @main;
-        border-radius: 10px;
-        overflow: hidden;
-        position: relative;
-        .accordion {
-          &-active {
-            .accordion-arrow {
-              transform: rotate(90deg);
-            }
-            &.accordion .content {
-              transform: scaleY(1);
-            }
-          }
-          &-arrow {
-            font-size: 4rem;
-            line-height: 3rem;
-            color: @main;
-            position: absolute;
-            right: 1rem;
-            transition: .2s;
-          }
-          .panel {
-            background-color: @bg;
-            cursor: pointer;
-            font-size: 2rem;
-            padding: 0.5rem 1rem;
-            transition: .3s;
-            &:not(.panel-first) {
-              border-top: 2px solid @main;
-            }
-            &:hover {
-              background-color: @bg-hover;
-            }
-            p {
-              display: inline-block;
-              &:first-child {
-                opacity: 0.9;
-              }
-            }
-          }
-          .content {
-            background-color: @bg;
-            height: 0;
-            transform: scaleY(0);
-            transform-origin: center top;
-            transition: .2s;
-            font-size: 1.5rem;
-            ul {
-              margin: 0;
-              padding: 0;
-              list-style: none;
-              li {
-                border-top: 1px solid @bg-hover;
-                padding: 0.5rem 1rem;
-              }
-              input, label {
-                cursor: pointer;
-              }
-              label {
-                margin-left: 0.5rem;
-                margin-top: 0.8rem;
-              }
-            }
-          }
-        }
+      &-checkbox {
+        margin-top: 1rem;
+      }
+      &-btn {
+        border: none;
+        float: right;
+        background-color: @bg;
+        cursor: pointer;
       }
     }
   }
@@ -644,10 +594,10 @@ section {
 }
 
 .footer {
-  padding: 3rem 0;
+  padding: 2rem 0;
   background-color: @footer;
   .logo {
-    font-size: 3.5rem;
+    font-size: 4rem;
   }
   img {
     width: 5.5rem;
@@ -672,7 +622,7 @@ section {
     text-align: center;
     color: #fff;
     font-size: 1.5rem;
-    margin-top: 3rem;
+    // margin-top: 3rem;
   }
 }
 
@@ -688,9 +638,6 @@ section {
   }
 }
 @media (max-width: 991px) {//md
-  .collective {
-    display: none;
-  }
   .menu_open {
     .document-content {
       left: -30rem;
@@ -911,7 +858,7 @@ section {
   .footer {
     padding: 2rem;
     .logo {
-      font-size: 2rem;
+      font-size: 3.5rem;
     }
     img {
       width: 4.5rem;
@@ -942,7 +889,7 @@ section {
   }
   .footer {
     .logo {
-      font-size: 2rem;
+      font-size: 3rem;
     }
     img {
       width: 4rem;

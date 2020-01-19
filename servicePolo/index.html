@@ -8,14 +8,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- <link rel="shortcut icon" href="img/icon.ico" type="image/x-ico"> -->
+  <link rel="shortcut icon" href="img/icon.ico" type="image/x-ico">
 
-
+  <link rel="stylesheet" href="slick/slick.css">
+  <link rel="stylesheet" href="slick/slick-theme.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="animate/animate.min.css">
   <link rel="stylesheet" href="css/style.css">
-
-  <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
 
   <title>обслужиполо.рф</title>
 </head>
@@ -24,10 +23,10 @@
 
   <div class="adaptive-menu">
     <ul>
-      <a href="#comments"><li>Отзывы</li></a>
+      <!-- <li href="#comments"><li>Отзывы</li></a> -->
       <a href="#stages"><li>Этапы</li></a>
       <a href="#price"><li>Цены</li></a>
-      <a href="#contacts"><li>Контакты</li></a>
+      <!-- <a href="#contacts"><li>Контакты</li></a> -->
       <li><a href="#form" class="button">заказать сейчас</a></li>
     </ul>
   </div>
@@ -44,10 +43,10 @@
         </div>
 
         <ul>
-          <li><a href="#comments">отзывы</a></li>
+          <!-- <li><a href="#comments"></a></li> -->
           <li><a href="#stages">этапы</a></li>
           <li><a href="#price">цены</a></li>
-          <li><a href="#form">контакты</a></li>
+          <!-- <li><a href="#form">контакты</a></li> -->
           <li><a href="#form" class="button">заказать сейчас</a></li>
         </ul>
       </div>
@@ -78,12 +77,12 @@
 
     </header><!-- header -->
 
-    <section id="next-screen" class="about-products section-bg">
+    <section id="next-screen" class="about-products">
       <div class="container">
 
-        <h2>О продукте</h2>
+        <h2>В своей работе мы используем</h2>
 
-        <div class="row">
+        <!-- <div class="row">
 
           <div class="col-lg-5">
             <img class="wow fadeInLeft" src="img/about-products/img1.jpg" alt="img">
@@ -93,18 +92,12 @@
             <p class="text">При обслуживании мы используем оригинальные запчасти и масло!</p>
           </div>
 
-        </div>
+        </div> -->
 
       </div>
     </section><!-- about-products -->
 
-    <section class="collective">
-      <div class="container">
-        <h2>Ваш автомобиль будет обслужен профессионалами!</h2>
-      </div>
-    </section>
-
-    <section class="why-we">
+    <section class="why-we section-bg">
       <div class="container">
 
         <h2>Почему мы?</h2>
@@ -120,7 +113,7 @@
 
               <div class="col-lg-6 offset-lg-0 col-sm-8 offset-sm-2 col-12">
                 <h3>Выгодные цены</h3>
-                <p class="description wow fadeInRight">Обеспечены огромным наличием на собственном скалде</p>
+                <p class="description wow fadeInRight">Обеспечены огромным наличием запчастей на собственном складе</p>
               </div>
 
             </div>
@@ -135,7 +128,7 @@
 
               <div class="col-lg-6 offset-lg-0 col-sm-8 offset-sm-2 col-12">
                 <h3>Оригинальный товар</h3>
-                <p class="description wow fadeInRight" data-wow-delay="0.1s">гарантирует качество запчастей</p>
+                <p class="description wow fadeInRight" data-wow-delay="0.1s">Гарантируем качество запчастей</p>
               </div>
 
             </div>
@@ -150,7 +143,7 @@
 
               <div class="col-lg-6 offset-lg-0 col-sm-8 offset-sm-2 col-12">
                 <h3>Качество обслуживания</h3>
-                <p class="description wow fadeInRight" data-wow-delay="0.2s">Все сотрудники прошли обучение</p>
+                <p class="description wow fadeInRight" data-wow-delay="0.2s">Обученный персонал</p>
               </div>
 
             </div>
@@ -160,7 +153,7 @@
       </div>
     </section><!-- why-we -->
 
-    <section id="comments" class="comments section-bg">
+    <!-- <section id="comments" class="comments section-bg">
       <div class="container">
 
         <h2>Отзывы</h2>
@@ -189,7 +182,7 @@
 
             <?php
           // }
-        ?> -->
+        ?>
 
               <div class="comments-slide">
                 <div class="comments-image">
@@ -234,7 +227,7 @@
         </div>
 
       </div>
-    </section><!-- comments -->
+    </section>comments -->
 
     <section id="stages" class="stages">
       <div class="container">
@@ -258,7 +251,7 @@
               <div class="col-lg-4 offset-lg-0 col-md-8 offset-md-2">
                 <div class="stages-text">
                   <h3>Форма</h3>
-                  <p class="description wow fadeInRight">Заполните форму</p>
+                  <p class="description wow fadeInRight">Заполните <a href="#form">форму</a></p>
                 </div>
               </div>
 
@@ -296,7 +289,7 @@
               <div class="col-lg-4 offset-lg-0 col-md-8 offset-md-2">
                 <div class="stages-text">
                   <h3>Подтверждение</h3>
-                  <p class="description wow fadeInRight" data-wow-delay="0.2s">Подтвердите заказ</p>
+                  <p class="description wow fadeInRight" data-wow-delay="0.2s">Подтвердите заявку и согласуйте время визита</p>
                 </div>
               </div>
 
@@ -308,8 +301,8 @@
 
               <div class="col-lg-4 offset-lg-1 col-md-8 offset-md-2">
                 <div class="stages-text_left">
-                  <h3>Обслуживание</h3>
-                  <p class="description wow fadeInLeft" data-wow-delay="0.3s">Приедьте для прохождения ТО</p>
+                  <h3>Получеие</h3>
+                  <p class="description wow fadeInLeft" data-wow-delay="0.3s">Визит на сервис</p>
                 </div>
               </div>
 
@@ -330,196 +323,50 @@
     <section id="price" class="price">
       <div class="container">
 
-        <h2>Цены на запчасти</h2>
+        <h2>Наши предложения</h2>
 
-        <div class="price-slider">
+        <div class="row">
 
-        <!-- <?php
-          // $spare_parts = mysqli_query($connection, "SELECT * FROM `spare_parts`");
+          <div class="col-lg-4">
+            <div class="price-block wow fadeInLeft" data-wow-delay='0.3s'>
+              <img src="img/price/pack_1.jpg" alt="">
 
-          // $delay = '0.3';
-          // while ( $pri = mysqli_fetch_assoc($spare_parts) ) {
-            ?>
+              <h4>Пакет 1</h4>
+              <p class="description">Работа + материалы</p>
+              <p class="price-our">3200&#8381;</p>
 
-              <div class="col-lg-4">
-                <div class="price-block wow fadeInLeft" <?php if($delay>0 || $col==3){ echo "data-wow-delay='" . $delay . "s'"; $delay-=0.1;} ?>>
-                  <img src="img/price/<?php echo $pri['image']; ?>" alt="">
-                  <h4><?php echo $pri['title']; ?></h4>
-                  <p class="description"><?php echo $pri['number']; ?></p>
-                  <p class="price-retail"><?php echo $pri['price_rep']; ?>
-                    <span></span>
-                  </p>
-                  <p class="price-our"><?php echo $pri['price_opt']; ?></p>
-                </div>
-              </div>
+              <button type="button" data-toggle="modal" data-target="#pack_1" class="button">Подробнее</button>
+            </div>
 
-            <?php
-          // }
-        ?> -->
+          </div>
 
-              <div class="col-lg-4">
-                <div class="price-block wow fadeInLeft" data-wow-delay='0.3s'>
-                  <img src="img/price/oil_filter.jpg" alt="">
-                  <h4>Фильтр</h4>
-                  <p class="description">03C115561H</p>
-                  <p class="price-retail">881
-                    <span></span>
-                  </p>
-                  <p class="price-our">540</p>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="price-block wow fadeInLeft" data-wow-delay='0.2s'>
-                  <img src="img/price/oil_filter.jpg" alt="">
-                  <h4>Фильтр</h4>
-                  <p class="description">03C115561H</p>
-                  <p class="price-retail">881
-                    <span></span>
-                  </p>
-                  <p class="price-our">540</p>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="price-block wow fadeInLeft" data-wow-delay='0.1s'>
-                  <img src="img/price/oil_filter.jpg" alt="">
-                  <h4>Фильтр</h4>
-                  <p class="description">03C115561H</p>
-                  <p class="price-retail">881
-                    <span></span>
-                  </p>
-                  <p class="price-our">540</p>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="price-block wow fadeInLeft" data-wow-delay='0s'>
-                  <img src="img/price/oil_filter.jpg" alt="">
-                  <h4>Фильтр</h4>
-                  <p class="description">03C115561H</p>
-                  <p class="price-retail">881
-                    <span></span>
-                  </p>
-                  <p class="price-our">540</p>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="price-block wow fadeInLeft" data-wow-delay='0s'>
-                  <img src="img/price/oil_filter.jpg" alt="">
-                  <h4>Фильтр</h4>
-                  <p class="description">03C115561H</p>
-                  <p class="price-retail">881
-                    <span></span>
-                  </p>
-                  <p class="price-our">540</p>
-                </div>
-              </div>
+          <div class="col-lg-4">
+            <div class="price-block wow fadeInLeft" data-wow-delay='0.2s'>
+              <img src="img/price/pack_2.jpg" alt="">
+
+              <h4>Пакет 2</h4>
+              <p class="description">Работа + материалы</p>
+              <p class="price-our">4760&#8381;</p>
+
+              <button type="button" data-toggle="modal" data-target="#pack_2" class="button">Подробнее</button>
+            </div>
+          </div>
+          
+          <div class="col-lg-4">
+            <div class="price-block wow fadeInLeft" data-wow-delay='0.1s'>
+              <img src="img/price/pack_2.jpg" alt="">
+
+              <h4>Пакет 3</h4>
+              <p class="description">Работа + материалы</p>
+              <p class="price-our">4760&#8381;</p>
+
+              <button type="button" data-toggle="modal" data-target="#pack_2" class="button">Подробнее</button>
+            </div>
+          </div>
 
         </div>
 
-        <a href="#form" class="button">узнать цену</a>
-
-      </div>
-    </section><!-- price -->
-
-    <section class="price">
-      <div class="container">
-
-        <h2>Цены на работы</h2>
-
-        <div class="price-slider">
-
-        <!-- <?php
-          // $works = mysqli_query($connection, "SELECT * FROM `works`");
-
-          // $delay = '0.3';
-          // while ( $pri = mysqli_fetch_assoc($works) ) {
-            ?>
-
-              <div class="col-lg-4">
-                <div class="price-block wow fadeInLeft" <?php if($delay>0 || $col==3){ echo "data-wow-delay='" . $delay . "s'"; $delay-=0.1;} ?>>
-                  <img src="img/price/<?php echo $pri['image']; ?>" alt="">
-                  <h4><?php echo $pri['title']; ?></h4>
-                  <p class="description"><?php echo $pri['number']; ?></p>
-                  <p class="price-retail"><?php echo $pri['price_rep']; ?>
-                    <span></span>
-                  </p>
-                  <p class="price-our"><?php echo $pri['price_opt']; ?></p>
-                </div>
-              </div>
-
-            <?php
-          // }
-        ?> -->
-
-              <div class="col-lg-4">
-                <div class="price-block wow fadeInLeft"data-wow-delay='0.3s'>
-                  <img src="img/price/oil_change.jpg" alt="">
-                  <h4>Замена фильтра</h4>
-                  <p class="description">03C115561H</p>
-                  <p class="price-retail">1500
-                    <span></span>
-                  </p>
-                  <p class="price-our">999</p>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="price-block wow fadeInLeft"data-wow-delay='0.2s'>
-                  <img src="img/price/oil_change.jpg" alt="">
-                  <h4>Замена фильтра</h4>
-                  <p class="description">03C115561H</p>
-                  <p class="price-retail">1500
-                    <span></span>
-                  </p>
-                  <p class="price-our">999</p>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="price-block wow fadeInLeft"data-wow-delay='0.1s'>
-                  <img src="img/price/oil_change.jpg" alt="">
-                  <h4>Замена фильтра</h4>
-                  <p class="description">03C115561H</p>
-                  <p class="price-retail">1500
-                    <span></span>
-                  </p>
-                  <p class="price-our">999</p>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="price-block wow fadeInLeft"data-wow-delay='0s'>
-                  <img src="img/price/oil_change.jpg" alt="">
-                  <h4>Замена фильтра</h4>
-                  <p class="description">03C115561H</p>
-                  <p class="price-retail">1500
-                    <span></span>
-                  </p>
-                  <p class="price-our">999</p>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="price-block wow fadeInLeft"data-wow-delay='0s'>
-                  <img src="img/price/oil_change.jpg" alt="">
-                  <h4>Замена фильтра</h4>
-                  <p class="description">03C115561H</p>
-                  <p class="price-retail">1500
-                    <span></span>
-                  </p>
-                  <p class="price-our">999</p>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="price-block wow fadeInLeft"data-wow-delay='0s'>
-                  <img src="img/price/oil_change.jpg" alt="">
-                  <h4>Замена фильтра</h4>
-                  <p class="description">03C115561H</p>
-                  <p class="price-retail">1500
-                    <span></span>
-                  </p>
-                  <p class="price-our">999</p>
-                </div>
-              </div>
-
-        </div>
-
-        <a href="#form" class="button">узнать цену</a>
+        <a href="#form" class="button">заказать</a>
 
       </div>
     </section><!-- price -->
@@ -528,21 +375,21 @@
       <div class="container">
 
         <h2>Заполни форму!</h2>
-        <img src="img/form/arrow.png" alt="">
+        <!-- <img src="img/form/arrow.png" alt=""> -->
 
         <div class="form-content">
           <div class="row">
 
-            <div class="col-lg-6">
+            <div class="col-lg-6 offset-lg-3">
               <form action="php/form.php" method="POST" class="wow zoomIn">
                 <div class="row">
 
                   <div class="col-lg-6">
-                    <input type="text" name="name" placeholder="Имя" required>
+                    <input type="text" name="name" placeholder="Имя*" required>
                   </div>
 
                   <div class="col-lg-6">
-                    <input type="text" id="phone" name="number" placeholder="Телефон" required>
+                    <input type="text" id="phone" name="number" placeholder="Телефон*" required>
                   </div>
 
                 </div>
@@ -554,29 +401,50 @@
                   </div>
 
                   <div class="col-lg-6">
-                    <input type="text" class="input-top" name="vincode" placeholder="VIN код" required>
+                    <input type="text" class="input-top" name="vincode" placeholder="VIN код">
                   </div>
 
                 </div>
 
-                <button id="contacts" class="button">Заказать</button>
-                <p class="privacy">Нажимая на кнопку вы соглашаетесь<br>с <a href="#">политикой конфиденциальности</a></p>
+                <p class="description form-text" align="center">Выбери из наших предложений</p>
+
+                <div class="form-checkbox description">
+                  <label><input type="checkbox" name="pack1" value="pack1" id="pack1"> Пакет 1 </label>
+                  <button type="button" data-toggle="modal" data-target="#pack_1" class="form-btn">?</button>
+                </div>
+
+                <div class="form-checkbox description">
+                  <label><input type="checkbox" name="pack2" value="pack2" id="pack2"> Пакет 2 </label>
+                  <button type="button" data-toggle="modal" data-target="#pack_2" class="form-btn">?</button>
+                </div>
+
+                <div class="form-checkbox description">
+                  <label><input type="checkbox" name="pack3" value="pack3" id="pack3"> Пакет 3 </label>
+                  <button type="button" data-toggle="modal" data-target="#pack_3" class="form-btn">?</button>
+                </div>
+
+
+                <p class="description form-text" align="center">Вам нужны другие работы? Оставьте заявку в печатном виде или позвоните нам</p>
+                <textarea name="comment" id="comment" placeholder="Мне нужно..."></textarea>
+
+                <button id="contacts" class="form-button button">Заказать</button>
+                <p class="privacy">Нажимая на кнопку вы соглашаетесь<br>с <a href="privacy_policy.html">политикой конфиденциальности</a></p>
 
               </form>
             </div>
 
-            <div class="col-lg-5 offset-lg-1">
+            <!-- <div class="col-lg-5 offset-lg-1">
               <div class="contacts">
                 <h3>Контакты</h3>
                 <ul class="contact-info">
                   <li class="description"><a class="a" href="tel:+79789999999">+7 978 999 99 99</a></li>
-                  <li class="description"><a class="a" href="mailto:service-polo@gmail.com">service-polo@gmail.com</a></li>
+                  <li class="description"><a class="a" href="mailto:servicepolo@ya.ru">servicepolo@ya.ru</a></li>
                   <li class="description">ИП ...</li>
                   <li class="description">ИНН ...</li>
                   <li class="description">ОГРН ...</li>
                 </ul>
               </div>
-            </div>
+            </div> -->
 
           </div>
         </div>
@@ -593,14 +461,14 @@
             <div class="logo">обслужиполо.рф</div>
           </div>
 
-          <div class="col-md-9 col-sm-8 col-6">
+          <!-- <div class="col-md-9 col-sm-8 col-6">
             <div class="social-block">
 
               <a href="#"><img src="img/footer/Tilda_Icons_26sn_vkontakte.png" alt="vk"></a>
               <a href="#"><img class="last" src="img/footer/Tilda_Icons_26sn_odnoklassniki.png" alt="vk"></a>
 
             </div>
-          </div>
+          </div> -->
 
         </div>
 
@@ -609,7 +477,7 @@
           <div class="col-lg-3 offset-lg-3">
             <ul class="contact-info">
               <li class="description"><a class="a" href="tel:+79789999999">+7 978 999 99 99</a></li>
-              <li class="description"><a class="a" href="mailto:service-polo@gmail.com">service-polo@gmail.com</a></li>
+              <li class="description"><a class="a" href="mailto:servicepolo@ya.ru">servicepolo@ya.ru</a></li>
               <li class="description">ИП ...</li>
               <li class="description">ИНН ...</li>
               <li class="description">ОГРН ...</li>
@@ -618,15 +486,14 @@
 
           <div class="col-lg-2 offset-lg-1">
             <ul class="contact-info">
-              <!-- <li class="description"><a class="a" href="#">Оптовикам</a></li> -->
               <li class="description"><a class="a" href="admin/">Адимин</a></li>
             </ul>
           </div>
 
           <div class="col-lg-3">
             <ul class="contact-info contact-info_small">
-              <li class="description">Иконки: <a class="a" href="https://tilda.cc">Tilda Publishing</a></li>
-              <li class="description">Разработка сайта: <a class="a" href="https://vk.com/id236520614">Антон</a></li>
+              <li class="description">Иконки: <a class="a" href="https://tilda.cc" target="_blank">Tilda Publishing</a></li>
+              <li class="description">Разработка сайта: <a class="a" href="https://vk.com/id236520614" target="_blank">Антон</a></li>
             </ul>
           </div>
 
@@ -642,12 +509,172 @@
         <p>&uarr;</p>
       </div>
     </a>
-
+    
   </div>
+
+  <!-- modal windows -->
+  <div class="modal fade modal-style" id="pack_1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title">Пакет 1</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div class="modal-body">
+
+          <div id="pack1-slider" class="carousel slide" data-ride="carousel" data-interval="2000">
+
+            <ol class="carousel-indicators">
+              <li data-target="#pack1-slider" data-slide-to="0" class="active"></li>
+              <li data-target="#pack1-slider" data-slide-to="1"></li>
+              <li data-target="#pack1-slider" data-slide-to="2"></li>
+            </ol>
+
+            <div class="carousel-inner">
+
+              <div class="carousel-item active">
+                <img class="modal-img d-block w-100" src="img/price/pack_1.jpg" alt="Pack 1">
+              </div>
+
+              <div class="carousel-item">
+                <img class="modal-img d-block w-100" src="img/price/oil_filter.jpg" alt="Oil filter">
+                <div class="carousel-caption">
+                  <p class="description modal-description">Масляный фильтр</p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img class="modal-img d-block w-100" src="img/price/stopper.jpg" alt="Stopper">
+                <div class="carousel-caption">
+                  <p class="description modal-description">Пробка</p>
+                </div>
+              </div>
+
+            </div>
+
+            <a class="carousel-control-prev" href="#pack1-slider" role="button" data-slide="prev">
+              <span class="modal-arr">&#8249;</span>
+            </a>
+            <a class="carousel-control-next" href="#pack1-slider" role="button" data-slide="next">
+              <span class="modal-arr">&#8250;</span>
+            </a>
+
+          </div>
+
+          <ul class="modal-list description">
+            <li>Работа <span class="modal-price">- 400&#8381;</span></li>
+            <li>G  052502M9 &#8722; Масло 4л. (ориг. разливное) <span class="modal-price">- 2070&#8381;</span></li>
+            <li>03C115561H &#8722; Масляный фильтр <span class="modal-price">- 614&#8381;</span></li>
+            <li>N  90813202 &#8722; Пробка <span class="modal-price">- 121&#8381;</span></li>
+          </ul>
+          <span class="text modal-price modal-total-price">= 3200&#8381;</span>
+
+        </div>
+
+        <div class="modal-footer">
+          <a class="button modal-button" data-dismiss="modal" href="#form">Заказать</a>
+        </div>
+
+      </div>
+    </div>
+  </div> <!-- pack 1 -->
+
+  <div class="modal fade modal-style" id="pack_2">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title">Пакет 2</h5>
+          <button type="button" class="close" data-dismiss="modal">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div class="modal-body">
+
+          <div id="pack2-slider" class="carousel slide" data-ride="carousel" data-interval="2000">
+
+            <ol class="carousel-indicators">
+              <li data-target="#pack2-slider" data-slide-to="0" class="active"></li>
+              <li data-target="#pack2-slider" data-slide-to="1"></li>
+              <li data-target="#pack2-slider" data-slide-to="2"></li>
+              <li data-target="#pack2-slider" data-slide-to="3"></li>
+              <li data-target="#pack2-slider" data-slide-to="4"></li>
+            </ol>
+
+            <div class="carousel-inner">
+
+              <div class="carousel-item active">
+                <img class="modal-img d-block w-100" src="img/price/pack_1.jpg" alt="Pack 1">
+              </div>
+
+              <div class="carousel-item">
+                <img class="modal-img d-block w-100" src="img/price/oil_filter.jpg" alt="Oil filter">
+                <div class="carousel-caption">
+                  <p class="description modal-description">Масляный фильтр</p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img class="modal-img d-block w-100" src="img/price/stopper.jpg" alt="Stopper">
+                <div class="carousel-caption">
+                  <p class="description modal-description">Пробка</p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img class="modal-img d-block w-100" src="img/price/salon_filter.jpg" alt="Salon filter">
+                <div class="carousel-caption">
+                  <p class="description modal-description">Фильтр салонный</p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img class="modal-img d-block w-100" src="img/price/air_filter.jpg" alt="Air filter">
+                <div class="carousel-caption">
+                  <p class="description modal-description">Фильтр воздушный</p>
+                </div>
+              </div>
+
+            </div>
+
+            <a class="carousel-control-prev" href="#pack2-slider" role="button" data-slide="prev">
+              <span class="modal-arr">&#8249;</span>
+            </a>
+            <a class="carousel-control-next" href="#pack2-slider" role="button" data-slide="next">
+              <span class="modal-arr">&#8250;</span>
+            </a>
+
+          </div>
+
+          <ul class="modal-list description">
+            <li>Работа <span class="modal-price">- 640&#8381;</span></li>
+            <li>G  052502M9 &#8722; Масло 4л. (ориг. разливное) <span class="modal-price">- 2070&#8381;</span></li>
+            <li>03C115561H &#8722; Масляный фильтр <span class="modal-price">- 614&#8381;</span></li>
+            <li>N  90813202 &#8722; Пробка <span class="modal-price">- 121&#8381;</span></li>
+            <li>JZW819653F &#8722; Фильтр салонный (угольный) <span class="modal-price">- 848&#8381;</span></li>
+            <li>036129620J &#8722; Фильтр воздушный <span class="modal-price">- 470&#8381;</span></li>
+          </ul>
+          <span class="text modal-price modal-total-price">= 4760&#8381;</span>
+
+        </div>
+
+        <div class="modal-footer">
+            <a data-dismiss="modal"class="button modal-button" href="#form">Заказать</a>
+        </div>
+
+      </div>
+    </div>
+  </div> <!-- pack 2 -->
 
   <!-- script -->
   <!-- jQuery -->
   <script src="script/jquery.min.js"></script>
+
 
   <!-- scroll animate -->
   <script src="script/animateTransition.js"></script>
@@ -662,8 +689,6 @@
   </script>
 
   <!-- slick slider -->
-  <link rel="stylesheet" href="slick/slick.css">
-  <link rel="stylesheet" href="slick/slick-theme.css">
   <script src="slick/slick.min.js"></script>
 
   <!-- settings slider -->
@@ -702,33 +727,6 @@
         }]
       });
 
-      //price
-      $('.price-slider').slick({
-        dots: true,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        prevArrow: '<button type="button" class="prev arrows">&#8249;</button>',
-        nextArrow: '<button type="button" class="next arrows">&#8250;</button>',
-        responsive: [
-          {
-            breakpoint: 991,
-            settings: {
-              arrows: false,
-              slidesToShow: 2,
-              slidesToScroll: 2
-            }
-          },
-          {
-            breakpoint: 767,
-            settings: {
-              arrows: false,
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
-          }
-        ]
-      });
-
     });
   </script>
 
@@ -742,6 +740,8 @@
 
   <!-- myScript -->
   <script src="script/script.js"></script>
+  <!-- bootstrap.js -->
+  <script src="script/bootstrap.min.js"></script>
 
 </body>
 

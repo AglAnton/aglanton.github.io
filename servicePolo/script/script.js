@@ -119,36 +119,6 @@ $(document).ready(()=>{
   // accordion value
   countVal(); 
 
-  // validation
-  $('[name="name"]').on('keydown', function(e) {
-    if (e.key >= 0 && e.key <= 9 && e.key != ' ') {
-      return false;
-    }
-  });
-  $('form button').on('click', function(e) {
-    // email
-    let reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-    let address = $('[name="email"]');
-    
-    if (reg.test(address.val()) == false) {
-      alert('Введите корректный e-mail');
-      address.addClass('error');
-      return false;
-    } else if (address.hasClass('error')) {
-      address.removeClass('error');
-    }
-
-    // vin code
-    console.log($('[name="vincode"]').val().length);
-    if ($('[name="vincode"]').val().length != 17) {
-      alert('Введите корректный VIN код');
-      $('[name="vincode"]').addClass('error');
-      return false;
-    } else if ($('[name="vincode"]').hasClass('error')) {
-      $('[name="vincode"]').removeClass('error');
-    }
-  });
-
 });
 
 // adaptation animate

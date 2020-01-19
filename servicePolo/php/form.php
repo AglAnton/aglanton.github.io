@@ -45,7 +45,7 @@
 <?php
   // get data
   $name = $_POST["name"];
-  $email = $_POST["email"];
+  // $email = $_POST["email"];
   $number = $_POST["number"];
   $vincode = strtoupper( $_POST["vincode"] );
   $comment = $_POST["comment"];
@@ -92,7 +92,6 @@
   }
 
   if (!empty($name) ||
-      !empty($email) ||
       !empty($number) ||
       !empty($vincode) ) {
           
@@ -135,8 +134,8 @@
       }
       
       $result = $mysqli->query("INSERT INTO ".$db_table."
-      (`name`, `number`, `e-mail`, `vin code`, `comment`, `spare parts`) VALUES
-      ('$name', '$number', '$email', '$vincode', '$comment', '$spareParts')");
+      (`name`, `number`, `vin code`, `comment`, `spare parts`) VALUES
+      ('$name', '$number', '$vincode', '$comment', '$spareParts')");
     
       // compilation letter
       // $to = "aglanton31@ya.ru";
@@ -157,7 +156,6 @@
         "<ul>" .
         "<li><b>Имя:</b> $name</li>" .
         "<li><b>Номер:</b> $number</li>" .
-        "<li><b>E-mail:</b> $email</li>" .
         "<li><b>Vin код:</b> $vincode</li><br>" .
         $filterMessage .
         $oilMessage .
@@ -182,7 +180,7 @@
           $message;
         echo $answerMessage;
         
-        mail ($email, "Спасибо за заказ!", $answerMessage, $headers);
+        // mail ($email, "Спасибо за заказ!", $answerMessage, $headers);
         
       } else {
         echo "
