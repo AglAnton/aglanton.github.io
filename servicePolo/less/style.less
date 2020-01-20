@@ -183,7 +183,9 @@ section {
     list-style-type: circle;
   }
   &-price {
-    float: right;
+    text-align: right;
+    vertical-align: bottom;
+    height: 100%;
   }
   &-total-price {
     font-weight: bold;
@@ -290,7 +292,7 @@ section {
     z-index: 99;
     position: fixed;
     &-logo {
-      font-size: 5rem;
+      font-size: 4rem;
       display: inline-block;
       line-height: 7.5rem;
       vertical-align: middle;
@@ -627,16 +629,6 @@ section {
 }
 
 // adaptation
-@media (max-width: 1019px) {
-  .price {
-    .prev {
-      left: -3.1rem;
-    }
-    .next {
-      right: -3.1rem;
-    }
-  }
-}
 @media (max-width: 991px) {//md
   .menu_open {
     .document-content {
@@ -704,6 +696,7 @@ section {
     }
   }
   .about-products {
+    padding-top: 3rem;
     p {
       margin-top: 3rem;
     }
@@ -739,20 +732,15 @@ section {
       width: 25%;
     }
   }
+  .price {
+    &-block:not(.first) {
+      margin-top: 5rem;
+    }
+  }
   .form {
     form {
-      input:not([type="checkbox"]):not(.count]) {
-        padding: 1rem;
-      }
       #phone {
         margin-top: 2.5rem;
-      }
-      .form-select {
-        .accordion {
-          .panel {
-            padding: 1rem;
-          }
-        }
       }
     }
     .contacts {
@@ -789,6 +777,9 @@ section {
   .header {
     &-menu {
       position: static;
+      &-logo {
+        font-size: 3.5rem;
+      }
     }
     &-offer {
       h1 {
@@ -803,6 +794,9 @@ section {
       display: none;
     }
   }
+  .about-products {
+    padding-top: 2rem;
+  }
   .comments {
     &-image {
       width: 25%;
@@ -815,6 +809,12 @@ section {
   }
 }
 @media (max-width: 575px) {
+  h2 {
+    font-size: 3.5rem;
+  }
+  h3 {
+    font-size: 2.5rem;
+  }
   .button-top {
     display: block;
     width: 5rem;
@@ -834,16 +834,21 @@ section {
   .header {
     &-menu {
       padding: 2rem 3rem;
+      &-logo {
+        font-size: 2rem;
+      }
     }
     &-offer {
       h1 {
         font-size: 3.5rem;
-        margin-top: 30%;
       }
       p {
-        margin: 7% 0 15%;
+        margin: 2rem 0;
       }
     }
+  }
+  .about-products {
+    padding-top: 4rem;
   }
   .comments {
     &-image {
@@ -858,10 +863,13 @@ section {
   .footer {
     padding: 2rem;
     .logo {
-      font-size: 3.5rem;
+      font-size: 2rem;
     }
     img {
       width: 4.5rem;
+    }
+    .copy {
+      margin-top: 2rem;
     }
   }
 }
@@ -888,9 +896,6 @@ section {
     }
   }
   .footer {
-    .logo {
-      font-size: 3rem;
-    }
     img {
       width: 4rem;
     }
