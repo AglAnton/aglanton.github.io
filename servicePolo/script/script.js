@@ -82,43 +82,6 @@ $(document).ready(()=>{
   }
   stagesAdaptive();
 
-  // link
-  $('a.a').on('click', function() {
-    window.location = $(this).attr('href');
-  });
-
-  // form
-  // accordion
-  $('.accordion').on('click', function (e) {
-    if ($(e.target).hasClass('panel') ||
-        $(e.target).hasClass('accordion-paragraph') ||
-        $(e.target).hasClass('accordion-arrow')) {
-
-      $(this).toggleClass('accordion-active');
-      
-      $(this).find('.content').css({height: 'auto'});
-      let h = $(this).find('.content').outerHeight();
-
-      if ( $(this).hasClass('accordion-active') ) {
-        $(this).find('.content').css({height: 0});
-        $(this).find('.content').css({height: h});
-      } else {
-        $(this).find('.content').css({height: h});
-        $(this).find('.content').css({height: 0});
-      }
-    }
-  });
-
-  // accordion count
-  lab = $('.accordion label');
-  lab.each(function(i, elem) {
-    let id = $(elem).attr('for');
-    $(elem).after(`<input onchange="countVal()" type="number" value="1" class="count">`);
-  });
-
-  // accordion value
-  countVal(); 
-
 });
 
 // adaptation animate
@@ -138,16 +101,3 @@ function animate() {
   }
 }
 animate();
-
-// functions
-function countVal() {
-  lab.each(function (i, elem) {
-    let id = $(elem).attr('for');
-    let text = $(elem).text();
-  
-    let count = $(elem).next().val();
-    text = `${text} - ${count}шт.`;
-  
-    $('#' + id).val(text);
-  });  
-}
