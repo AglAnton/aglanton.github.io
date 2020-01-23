@@ -182,6 +182,16 @@ section {
     margin-top: 2rem;
     list-style-type: circle;
   }
+  &-sublist {
+    padding-left: 2rem;
+    list-style-type: none;
+    font-size: 1.5rem;
+    &_elem {
+      &:before {
+        content: '- ';
+      }
+    }
+  }
   &-price {
     text-align: right;
     vertical-align: bottom;
@@ -376,6 +386,23 @@ section {
         animation-delay: -0.4s;
       }
     }
+  }
+}
+
+.our-works {
+  &-list {
+    list-style-type: none;
+    padding: 0;
+    &_elem {
+      margin-top: 2rem;
+      &:before {
+        content: '\2013  ';
+      }
+    }
+  }
+  &-btn {
+    text-align: center;
+    margin-top: 5rem;
   }
 }
 
