@@ -106,7 +106,6 @@ html {
     &:hover {
         color: #ffffff;
         transform: translate(0);
-        // transform: translate(1px, 1px);
 
         &:before {
             animation: move-light .5s;
@@ -116,6 +115,10 @@ html {
 
 .close {
     font-size: 2.5rem;
+}
+
+.slick-dots {
+    position: initial;
 }
 
 
@@ -187,12 +190,23 @@ html {
             }
         }
     }
+
+    &-btn-mobile {
+        width: 100%;
+        text-align: center;
+        display: none;
+        position: absolute;
+        // top: 75%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        // transform: translateY(-50%);
+    }
 }
 
 .description {
     .container {
         background: url(../../image/description/bg.png) center left no-repeat;
-        background-size: contain;
     }
 
     &-card {
@@ -226,6 +240,10 @@ html {
 }
 
 .advantages {
+    &-slider {
+        display: none;
+    }
+
     &-block {
         margin-top: 7.5rem;
         position: relative;
@@ -278,6 +296,10 @@ html {
     &-block {
         margin-top: 7.5rem;
 
+        &_label {
+            width: 100%;
+        }
+
         &_desc {
             .font-text();
             opacity: 0.5;
@@ -300,6 +322,12 @@ html {
             margin-top: 4rem;
             padding: 2rem;
             cursor: pointer;
+
+            &_mobile {
+                &-img {
+                    width: 100%;
+                }
+            }
 
             &_img {
                 width: 100%;
@@ -383,9 +411,7 @@ html {
     text-align: center;
 
     &-block {
-        &_img {
-            margin-top: 5rem;
-        }
+        margin-top: 5rem;
 
         &_text {
             .font-text();
@@ -400,6 +426,10 @@ html {
 }
 
 .gallery {
+    &-slider {
+        display: none;
+    }
+
     &-block {
         margin-top: 7.5rem;
 
@@ -534,6 +564,7 @@ html {
 
     &-body {
         padding: 0 4rem 2rem;
+        transition: 0.5s;
 
         &-list {
             list-style-type: none;
@@ -586,6 +617,194 @@ html {
             margin-top: 2.5rem;
         }
     }
+
+    &-show {
+        display: none;
+        opacity: 0;
+    }
 }
 
 // adaptation
+@media (max-width: 991px) {
+    .section {
+        padding: 7.5rem 0;
+    }
+
+    .description {
+        .container {
+            background: none;
+        }
+
+        &-card {
+            &_text {
+                padding: 1.5rem;
+                background-color: @bg;
+                border-radius: 0 0 25px 25px;
+
+                &_desc {
+                    text-align: center;
+                }
+            }
+
+            &__down {
+                margin-top: 0;
+            }
+        }
+    }
+
+    .advantages {
+        &-noslider {
+            display: none;
+        }
+
+        &-slider {
+            display: block;
+        }
+
+        &-block {
+            margin-top: 2.5rem;
+            position: initial;
+            padding: 1.5rem;
+
+            &-text {
+                position: initial;
+                top: 0;
+                transform: translateY(0);
+                margin-top: 3rem;
+
+                &_header {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .your-blinds {
+        &-block {
+            margin-top: 4rem;
+
+            &-card {
+                margin-top: 3rem;
+                padding: 0;
+
+                &_mobile {
+                    position: relative;
+                    overflow: hidden;
+                    width: 100%;
+                    padding-top: 45%;
+
+                    &:before {
+                        content: '';
+                        display: block;
+                        width: 100px;
+                    }
+
+                    &-img {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        width: 100%;
+                    }
+                }
+
+                &_text {
+                    margin-top: 1rem;
+                }
+
+                &__price {
+                    padding: 2rem;
+                }
+            }
+        }
+    }
+
+    .gallery {
+        &-slider {
+            display: block;
+        }
+
+        &-noslider {
+            display: none;
+        }
+
+        &-block {
+            margin-top: 4rem;
+
+            &_img {
+                padding: 1rem;
+            }
+        }
+
+    }
+}
+
+@media (max-width: 767px) {
+    .section-header {
+        font-size: 3rem;
+    }
+
+    .header {
+        padding: 2rem;
+
+        &-text {
+            &_main {
+                font-size: 3.3rem;
+            }
+        }
+
+        &-arrow {
+            display: none;
+        }
+    }
+
+    .advantages {
+        &-block {
+            &-text {
+                &_header {
+                    font-size: 2.2rem;
+                }
+            }
+        }
+    }
+
+    .footer {
+        padding: 2rem 0;
+
+        &-icons {
+            &_vk {
+                width: 4.5rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .header {
+        &-logo {
+            position: initial;
+            text-align: center;
+
+            &_text {
+                position: initial;
+                top: 0;
+                transform: translateY(0);
+                font-size: 2.5rem;
+            }
+        }
+
+        &-menu {
+            display: none;
+        }
+
+        &-btn-mobile {
+            display: block;
+        }
+    }
+
+    .delivery {
+        &-block {
+            margin-top: 3rem;
+        }
+    }
+}
