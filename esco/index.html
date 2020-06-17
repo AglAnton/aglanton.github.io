@@ -239,7 +239,7 @@
                                         class="your-blinds-block-card_mobile-img">
                                 </div>
                                 <p class="your-blinds-block-card_name your-blinds-block-card_name__opacity">10</p>
-                                <input type="radio" name="opacity" value="10" checked
+                                <input type="radio" name="opacity" value="op10" checked
                                     class="your-blinds-block-card_radio">
                                 <span class="your-blinds-block-card_radio-span"></span>
                             </div>
@@ -253,7 +253,7 @@
                                         class="your-blinds-block-card_mobile-img">
                                 </div>
                                 <p class="your-blinds-block-card_name your-blinds-block-card_name__opacity">5</p>
-                                <input type="radio" name="opacity" value="5" class="your-blinds-block-card_radio">
+                                <input type="radio" name="opacity" value="op5" class="your-blinds-block-card_radio">
                                 <span class="your-blinds-block-card_radio-span"></span>
                             </div>
                         </label>
@@ -266,7 +266,7 @@
                                         class="your-blinds-block-card_mobile-img">
                                 </div>
                                 <p class="your-blinds-block-card_name your-blinds-block-card_name__opacity">0</p>
-                                <input type="radio" name="opacity" value="0" class="your-blinds-block-card_radio">
+                                <input type="radio" name="opacity" value="op0" class="your-blinds-block-card_radio">
                                 <span class="your-blinds-block-card_radio-span"></span>
                             </div>
                         </label>
@@ -317,7 +317,7 @@
                             <div class="your-blinds-block-card wow zoomIn" data-wow-delay=".1s">
                                 <img src="image/your_blinds/standard.png" alt="" class="your-blinds-block-card_img">
                                 <p class="your-blinds-block-card_name">Стандартные</p>
-                                <input type="radio" name="add-func" value="std" checked
+                                <input type="radio" name="additional" value="std" checked
                                     class="your-blinds-block-card_radio">
                                 <span class="your-blinds-block-card_radio-span"></span>
                             </div>
@@ -328,7 +328,8 @@
                             <div class="your-blinds-block-card wow zoomIn" data-wow-delay=".1s">
                                 <img src="image/your_blinds/for_smoking.png" alt="" class="your-blinds-block-card_img">
                                 <p class="your-blinds-block-card_name">С вырезом для курения</p>
-                                <input type="radio" name="add-func" value="smok" class="your-blinds-block-card_radio">
+                                <input type="radio" name="additional" value="smoke"
+                                    class="your-blinds-block-card_radio">
                                 <span class="your-blinds-block-card_radio-span"></span>
                             </div>
                         </label>
@@ -338,7 +339,8 @@
                             <div class="your-blinds-block-card wow zoomIn" data-wow-delay=".1s">
                                 <img src="image/your_blinds/shortened.png" alt="" class="your-blinds-block-card_img">
                                 <p class="your-blinds-block-card_name">Укороченные</p>
-                                <input type="radio" name="add-func" value="short" class="your-blinds-block-card_radio">
+                                <input type="radio" name="additional" value="short"
+                                    class="your-blinds-block-card_radio">
                                 <span class="your-blinds-block-card_radio-span"></span>
                             </div>
                         </label>
@@ -355,8 +357,10 @@
                             data-wow-delay=".1s">
                             <img src="image/your_blinds/front_side.png" alt="" class="your-blinds-block-card_img">
                             <p class="your-blinds-block-card_name">Передний комплект</p>
-                            <p class="your-blinds-block-card_text your-blinds-block-card_text__price">2 590</p>
-                            <button class="btn button your-blinds-block-card_button" data-toggle="modal"
+                            <p class="your-blinds-block-card_text your-blinds-block-card_text__price frontSide">
+                                2 590
+                            </p>
+                            <button class="btn button your-blinds-block-card_button btnFrontSide" data-toggle="modal"
                                 data-target="#info-modal">Заказать</button>
                         </div>
                     </div>
@@ -365,8 +369,8 @@
                             data-wow-delay=".2s">
                             <img src="image/your_blinds/rear_side.png" alt="" class="your-blinds-block-card_img">
                             <p class="your-blinds-block-card_name">Задний комплект</p>
-                            <p class="your-blinds-block-card_text your-blinds-block-card_text__price">2 590</p>
-                            <button class="btn button your-blinds-block-card_button" data-toggle="modal"
+                            <p class="your-blinds-block-card_text your-blinds-block-card_text__price rearSide">2 590</p>
+                            <button class="btn button your-blinds-block-card_button btnRearSide" data-toggle="modal"
                                 data-target="#info-modal">Заказать</button>
                         </div>
                     </div>
@@ -375,9 +379,10 @@
                             data-wow-delay=".3s">
                             <img src="image/your_blinds/rear_hemisphere.png" alt="" class="your-blinds-block-card_img">
                             <p class="your-blinds-block-card_name">Задняя полусфера</p>
-                            <p class="your-blinds-block-card_text your-blinds-block-card_text__price">4 290</p>
-                            <button class="btn button your-blinds-block-card_button" data-toggle="modal"
-                                data-target="#info-modal">Заказать</button>
+                            <p class="your-blinds-block-card_text your-blinds-block-card_text__price rearHemisphere">4
+                                290</p>
+                            <button class="btn button your-blinds-block-card_button btnRearHemisphere"
+                                data-toggle="modal" data-target="#info-modal">Заказать</button>
                         </div>
                         <p class="your-blinds-block_text">Бесплатная доствка!</p>
                     </div>
@@ -386,8 +391,9 @@
                             data-wow-delay=".4s">
                             <img src="image/your_blinds/complete_set.png" alt="" class="your-blinds-block-card_img">
                             <p class="your-blinds-block-card_name">Полный комплект</p>
-                            <p class="your-blinds-block-card_text your-blinds-block-card_text__price">5 790</p>
-                            <button class="btn button your-blinds-block-card_button" data-toggle="modal"
+                            <p class="your-blinds-block-card_text your-blinds-block-card_text__price completeSet">5 790
+                            </p>
+                            <button class="btn button your-blinds-block-card_button btnCompleteSet" data-toggle="modal"
                                 data-target="#info-modal">Заказать</button>
                         </div>
                         <p class="your-blinds-block_text">Бесплатная доствка!</p>
@@ -571,22 +577,22 @@
                     <ul class="modal-body-list">
                         <li>
                             <p class="modal-body-list_header">Степень прозрачности</p>
-                            <p class="modal-body-list_desc modal-body-list_desc__opacity">5</p>
+                            <p class="modal-body-list_desc modal-body-list_desc__opacity opText">5</p>
                         </li>
                         <li>
                             <p class="modal-body-list_header">Крепление</p>
-                            <p class="modal-body-list_desc">Клисы</p>
+                            <p class="modal-body-list_desc brText">Клисы</p>
                         </li>
                         <li>
                             <p class="modal-body-list_header">Доп. функции</p>
-                            <p class="modal-body-list_desc">Стандартные</p>
+                            <p class="modal-body-list_desc adText">Стандартные</p>
                         </li>
                         <li>
                             <p class="modal-body-list_header">Комплект</p>
-                            <p class="modal-body-list_desc">Полный комплект</p>
+                            <p class="modal-body-list_desc setText">Полный комплект</p>
                         </li>
                     </ul>
-                    <p class="modal-body_price">5 790</p>
+                    <p class="modal-body_price priceText">5 790</p>
                     <div class="modal-body_btn">
                         <button class="btn button" id="modal-next">Продолжить</button>
                     </div>
@@ -624,7 +630,7 @@
                             <input class="modal-body-list_input" placeholder="Москва">
                         </li>
                     </ul>
-                    <p class="modal-body_price">5 790</p>
+                    <p class="modal-body_price priceText">5 790</p>
                     <div class="modal-body_btn">
                         <button class="btn button" data-dismiss="modal">Заказать</button>
                     </div>
@@ -637,9 +643,6 @@
     <!-- scripts -->
     <!-- jquery -->
     <script src="script/jquery.min.js"></script>
-
-    <!-- adaptation -->
-    <script src="script/adaptation.js"></script>
 
     <!-- bootstrap -->
     <script src="script/bootstrap.min.js"></script>
@@ -737,8 +740,22 @@
         });
     </script>
 
-    <!-- my script -->
-    <script src="script/script.js"></script>
+    <!-- modal -->
+    <script>
+        $('#modal-next').click(() => {
+            $('#info-modal').modal('hide');
+            $('#input-modal').modal('show');
+            modalOpen = setInterval(function () {
+                $(document.body).addClass('modal-open');
+            }, 100);
+            setTimeout(() => {
+                clearInterval(modalOpen);
+            }, 500);
+        });
+    </script>
+
+    <!-- price -->
+    <script src="script/price.js"></script>
 
 </body>
 
