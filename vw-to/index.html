@@ -1,0 +1,842 @@
+<?
+  require "includes/db.php";
+?>
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="img/icon.ico" type="image/x-ico">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="animate/animate.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!--<script type="text/javascript" src="https://vk.com/js/api/openapi.js?163"></script>-->
+
+  <title>VW-TO</title>
+</head>
+
+<body>
+
+  <div class="adaptive-menu">
+    <ul>
+      <!--<a href="#comments"><li>Отзывы</li></a>-->
+      <a href="#stages">
+        <li>Этапы</li>
+      </a>
+      <a href="#price">
+        <li>Цены</li>
+      </a>
+      <a href="#contacts">
+        <li>Обратная связь</li>
+      </a>
+      <li><a href="#form" class="button">заказать сейчас</a></li>
+    </ul>
+  </div>
+
+  <div class="document-content">
+
+    <header class="header" id="header">
+
+      <div class="header-menu">
+        <div class="header-menu-logo logo">vw-to</div>
+
+        <div class="btn-menu">
+          <span></span>
+        </div>
+
+        <ul>
+          <!--<li><a href="#comments">отзывы</a></li>-->
+          <li><a href="#stages">этапы</a></li>
+          <li><a href="#price">цены</a></li>
+          <li><a href="#form">обратная связь</a></li>
+          <li><a href="#form" class="button">заказать сейчас</a></li>
+        </ul>
+      </div>
+
+      <div class="container">
+
+        <div class="header-offer">
+          <div class="row">
+
+            <div class="col-lg-7 col-12">
+              <h1 class="wow fadeInUp" data-wow-delay="0.1s">оригинальные запчасти для технического обслуживания вашего
+                volkswagen</h1>
+              <p class="col-lg-6 col-12 description wow fadeInUp">Поможем купить выгодно, доставить оперативно</p>
+              <a href="#form" class="button wow fadeIn">заказать</a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <a href="#next-screen">
+        <div class="header-arrow">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </a>
+
+    </header><!-- header -->
+
+    <section id="next-screen" class="about-products section-bg">
+      <div class="container">
+
+        <h2>О продукте</h2>
+
+        <div class="row">
+
+          <div class="col-lg-5">
+            <img class="wow fadeInLeft" src="img/about-products/img1.png" alt="img">
+          </div>
+
+          <div class="col-lg-6 offset-lg-1 wow fadeInUp">
+            <p class="text">Мы продаём запчасти для технического обслуживания автомобилей Volkswagen. Высокое качество и
+              выгодные цены достигаются прямыми поставками от дилеров VW, Skoda.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- about-products -->
+
+    <section class="why-we">
+      <div class="container">
+
+        <h2>Почему мы?</h2>
+
+        <div class="why-we-slider">
+
+          <div class="why-we-item">
+            <div class="row">
+
+              <div class="col-lg-2 offset-lg-2">
+                <img src="img/why-we/logo1.png" alt="logo1">
+              </div>
+
+              <div class="col-lg-6 offset-lg-0 col-sm-8 offset-sm-2 col-12">
+                <h3>Выгодные цены</h3>
+                <p class="description wow fadeInRight">Мы работаем напрямую с дилерскими центрами. Отсутствие затрат на
+                  аренду складов, огромных магазинов, даёт возможность сохранить для Вас самые выгодные цены</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="why-we-item">
+            <div class="row">
+
+              <div class="col-lg-2 offset-lg-2">
+                <img src="img/why-we/logo3.png" alt="logo3">
+              </div>
+
+              <div class="col-lg-6 offset-lg-0 col-sm-8 offset-sm-2 col-12">
+                <h3>Удобство заказа</h3>
+                <p class="description wow fadeInRight" data-wow-delay="0.2s">Наши менеджеры сами подберут для Вас
+                  запчасти и предоставят рассчёт. Вам остаётся только подтвердить заказ и получить товар в ТК DPD.
+                  Стоимость доставки оплачивается покупателем по специальному, более низкому тарифу</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="why-we-item">
+            <div class="row">
+
+              <div class="col-lg-2 offset-lg-2">
+                <img src="img/why-we/logo4.png" alt="logo4">
+              </div>
+
+              <div class="col-lg-6 offset-lg-0 col-sm-8 offset-sm-2 col-12">
+                <h3>Никаких рисков</h3>
+                <p class="description wow fadeInRight" data-wow-delay="0.3s">Заказанные запчасти для ТО, Вы оплачиваете
+                  при получении. Что полностью исключает Ваши риски</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- why-we -->
+
+    <section id="comments" class="comments section-bg">
+      <div class="container">
+
+        <h2>Отзывы</h2>
+
+        <div class="comments-slider wow fadeIn" data-wow-delay="0.1s">
+
+          <div class="comments-slide">
+            <div class="comments-image">
+              <img
+                src="https://sun9-69.userapi.com/impg/c205224/v205224280/1a66b/3bU8t154gR4.jpg?size=200x0&quality=90&sign=cb7f11609ae15709736af1b67ac2296e"
+                alt="img1">
+            </div>
+            <p class="comments-description description"><a href="https://vk.com/id85554419">Влад Планин</a></p>
+
+            <div class="row">
+              <div class="col-lg-6 offset-lg-3 col-sm-8 offset-sm-2 col-12">
+                <p class="comments-text text">Получил фильтр масленный и воздушный, всё оригинальное, быстро дошло, всем
+                  советую<br>Буду ещё заказывать :)
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="comments-slide">
+            <div class="comments-image">
+              <img
+                src="https://sun9-18.userapi.com/impg/c856120/v856120580/182b1c/iNDXLOxm_BA.jpg?size=200x0&quality=90&sign=9711f5628076d54d1513aed66b1ca5a6"
+                alt="img2">
+            </div>
+            <p class="comments-description description"><a href="https://vk.com/id16423870">Павел Лунин</a></p>
+
+            <div class="row">
+              <div class="col-lg-6 offset-lg-3 col-sm-8 offset-sm-2 col-12">
+                <p class="comments-text text">Доброго времени суток! Посылку получил! <br>
+                  Спасибо,все чётко и быстро! А главное все оригинал, проверил. Теперь буду брать запчасти только в
+                  нашей группе.<br>
+                  P.S. приятно удивил бесплатный срок хранения, почти месяц!))</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="comments-slide">
+            <div class="comments-image">
+              <img src="https://sun9-45.userapi.com/c622730/v622730869/527fd/nLM6wCN88Z0.jpg?ava=1" alt="img3">
+            </div>
+            <p class="comments-description description"><a href="https://vk.com/id16226940">Василий Бакланов</a></p>
+
+            <div class="row">
+              <div class="col-lg-6 offset-lg-3 col-sm-8 offset-sm-2 col-12">
+                <p class="comments-text text">Добрый день! Заказывал оригинальные запчасти для проведения ТО. Заказ
+                  пришел в срок и в полном комплекте. Хотел бы выразить благодарность сотрудникам компании за их
+                  профессионализм и оперативность! Советую всем!</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="comments-slide">
+            <div class="comments-image">
+              <img src="https://sun1.43222.userapi.com/c855220/v855220759/a8ca2/6nig3clY4Xs.jpg?ava=1" alt="img4">
+            </div>
+            <p class="comments-description description"><a href="https://vk.com/id26153223">Rasim Alekperov</a></p>
+
+            <div class="row">
+              <div class="col-lg-6 offset-lg-3 col-sm-8 offset-sm-2 col-12">
+                <p class="comments-text text">Получил заказ. Запчасти оригинал, дешевле чем у дилера, все в срок.
+                  Cпасибо большое</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- comments -->
+
+    <section id="stages" class="stages">
+      <div class="container">
+
+
+        <h2>Этапы работы</h2>
+
+        <div class="stages-contents">
+
+          <span class="stages-line"></span>
+
+          <div class="stages-block">
+            <div class="row">
+
+              <div class="col-lg-2 offset-lg-5">
+                <div class="stages-number">
+                  <p>1</p>
+                </div>
+              </div>
+
+              <div class="col-lg-4 offset-lg-0 col-md-8 offset-md-2">
+                <div class="stages-text">
+                  <h3>Форма</h3>
+                  <p class="description wow fadeInRight">Заполните <a href="#form">форму</a> и выберите нужные запчасти
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="stages-block">
+            <div class="row">
+
+              <div class="col-lg-4 offset-lg-1 col-md-8 offset-md-2">
+                <div class="stages-text_left">
+                  <h3>Цены</h3>
+                  <p class="description wow fadeInLeft" data-wow-delay="0.1s">Мы отправим вам всю &nbsp;информацию и
+                    цены</p>
+                </div>
+              </div>
+
+              <div class="col-lg-2">
+                <div class="stages-number">
+                  <p>2</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="stages-block">
+            <div class="row">
+
+              <div class="col-lg-2 offset-lg-5">
+                <div class="stages-number">
+                  <p>3</p>
+                </div>
+              </div>
+
+              <div class="col-lg-4 offset-lg-0 col-md-8 offset-md-2">
+                <div class="stages-text">
+                  <h3>Подтверждение</h3>
+                  <p class="description wow fadeInRight" data-wow-delay="0.2s">Подтвердите заказ</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="stages-block">
+            <div class="row">
+
+              <div class="col-lg-4 offset-lg-1 col-md-8 offset-md-2">
+                <div class="stages-text_left">
+                  <h3>Получение</h3>
+                  <p class="description wow fadeInLeft" data-wow-delay="0.3s">Заберите и оплатите свой заказ</p>
+                </div>
+              </div>
+
+              <div class="col-lg-2">
+                <div class="stages-number">
+                  <p>4</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- stages -->
+
+    <section id="price" class="price">
+      <div class="container">
+
+        <h2>Цены</h2>
+        <p class="price-description description">На примере VW Polo Sedan</p>
+        <div class="row mt-5">
+          <div class="col-lg-4">
+            <div class="price-block wow fadeInLeft" data-wow-delay='0.1s'>
+              <img src="img/price/1.jpg" alt="">
+              <h4>Масло моторное VW Special G 5W40 5 л</h4>
+              <p class="description">G R52502M4</p>
+              <p class="price-retail">4 742
+                <span></span>
+              </p>
+              <p class="price-our">3090</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="price-block wow fadeInLeft" data-wow-delay='0.2s'>
+              <img src="img/price/2.jpg" alt="">
+              <h4>Фильтр салона угольный</h4>
+              <p class="description">5Q0819653</p>
+              <p class="price-retail">1603
+                <span></span>
+              </p>
+              <p class="price-our">990</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="price-block wow fadeInLeft" data-wow-delay='0.3s'>
+              <img src="img/price/3.jpg" alt="">
+              <h4>Диск тормозной передний</h4>
+              <p class="description">JZW615301N</p>
+              <p class="price-retail">5 878
+                <span></span>
+              </p>
+              <p class="price-our">2 247</p>
+            </div>
+          </div>
+        </div>
+        <a href="#form" class="button">узнать цену</a>
+    </section><!-- price -->
+
+    <section id="form" class="form">
+      <div class="container">
+
+        <h2>Заполни форму!</h2>
+        <img src="img/form/arrow.png" alt="">
+
+        <div class="form-content">
+          <div class="row">
+
+            <div class="col-lg-6">
+              <form action="php/form.php" method="POST" class="wow zoomIn">
+
+                <div class="row">
+
+                  <div class="col-lg-6">
+                    <input type="text" name="name" placeholder="Имя" required>
+                  </div>
+
+                  <div class="col-lg-6">
+                    <input type="text" id="phone" name="number" placeholder="Телефон" required>
+                  </div>
+
+                </div>
+
+                <div class="row">
+
+                  <div class="col-lg-6">
+                    <input type="text" class="input-top" name="email" placeholder="E-mail" required>
+                  </div>
+
+                  <div class="col-lg-6">
+                    <input type="text" class="input-top" name="vincode" placeholder="VIN код" required>
+                  </div>
+
+                </div>
+
+                <p class="form-description description">Выберите нужные запчасти</p>
+
+                <div class="form-select">
+
+                  <div class="accordion" onselectstart="return false">
+
+                    <div class="panel panel-first">
+                      <p class="accordion-paragraph">Фильтра</p>
+                      <p class="accordion-arrow">
+                        ›
+                      </p>
+                    </div>
+
+                    <div class="content">
+                      <ul>
+
+                        <li>
+                          <p>
+                            <input type="checkbox" name="filter[]" id="filter1">
+                            <label for="filter1">Фильтр масла</label>
+                          </p>
+                        </li>
+
+                        <li>
+                          <p>
+                            <input type="checkbox" name="filter[]" id="filter2">
+                            <label for="filter2">Фильтр воздуха</label>
+                          </p>
+                        </li>
+
+                        <li>
+                          <p>
+                            <input type="checkbox" name="filter[]" id="filter3">
+                            <label for="filter3">Фильтр топлива</label>
+                          </p>
+                        </li>
+
+                        <li>
+                          <p>
+                            <input type="checkbox" name="filter[]" id="filter4">
+                            <label for="filter4">Фильтр салона</label>
+                          </p>
+                        </li>
+
+                      </ul>
+                    </div>
+
+                  </div>
+
+                  <div class="accordion" onselectstart="return false">
+
+                    <div class="panel">
+                      <p class="accordion-paragraph">Масла</p>
+                      <p class="accordion-arrow">
+                        ›
+                      </p>
+                    </div>
+
+                    <div class="content">
+                      <ul>
+
+                        <li>
+                          <p>
+                            <input type="checkbox" name="oil[]" id="oil1">
+                            <label for="oil1">Масло моторное 5л</label>
+                          </p>
+                        </li>
+
+                        <li>
+                          <p>
+                            <input type="checkbox" name="oil[]" id="oil2">
+                            <label for="oil2">Масло моторное 1л</label>
+                          </p>
+                        </li>
+
+                      </ul>
+                    </div>
+
+                  </div>
+
+                  <div class="accordion" onselectstart="return false">
+
+                    <div class="panel">
+                      <p class="accordion-paragraph">Тормозная система</p>
+                      <p class="accordion-arrow">
+                        ›
+                      </p>
+                    </div>
+
+                    <div class="content">
+                      <ul>
+
+                        <li>
+                          <p>
+                            <input type="checkbox" name="brake[]" id="brake1">
+                            <label for="brake1">Торомзные колодки передние</label>
+                          </p>
+                        </li>
+
+                        <li>
+                          <p>
+                            <input type="checkbox" name="brake[]" id="brake2">
+                            <label for="brake2">Торомзные диски передние</label>
+                          </p>
+                        </li>
+
+                        <li>
+                          <p>
+                            <input type="checkbox" name="brake[]" id="brake3">
+                            <label for="brake3">Торомзные колодки задние</label>
+                          </p>
+                        </li>
+
+                        <li>
+                          <p>
+                            <input type="checkbox" name="brake[]" id="brake4">
+                            <label for="brake4">Торомзные диски задние</label>
+                          </p>
+                        </li>
+
+                      </ul>
+                    </div>
+
+                  </div>
+
+                  <div class="accordion" onselectstart="return false">
+
+                    <div class="panel">
+                      <p class="accordion-paragraph">Жидкости</p>
+                      <p class="accordion-arrow">
+                        ›
+                      </p>
+                    </div>
+
+                    <div class="content">
+                      <ul>
+
+                        <li>
+                          <p>
+                            <input type="checkbox" name="liquid[]" id="liquid1">
+                            <label for="liquid1">Тормозная жидкость 0.25л</label>
+                          </p>
+                        </li>
+
+                        <li>
+                          <p>
+                            <input type="checkbox" name="liquid[]" id="liquid2">
+                            <label for="liquid2">Тормозная жидкость 1л</label>
+                          </p>
+                        </li>
+
+                        <li>
+                          <p>
+                            <input type="checkbox" name="liquid[]" id="liquid3">
+                            <label for="liquid3">Антифриз 1.5л</label>
+                          </p>
+                        </li>
+
+                        <li>
+                          <p>
+                            <input type="checkbox" name="liquid[]" id="liquid4">
+                            <label for="liquid4">Жидкость гидроусилителя 1л</label>
+                          </p>
+                        </li>
+
+                      </ul>
+                    </div>
+
+                  </div>
+
+                  <div class="accordion" onselectstart="return false">
+
+                    <div class="panel">
+                      <p class="accordion-paragraph">Щётки стеклоочистителя</p>
+                      <p class="accordion-arrow">
+                        ›
+                      </p>
+                    </div>
+
+                    <div class="content">
+                      <ul>
+
+                        <li>
+                          <p>
+                            <input type="checkbox" name="brushes[]" id="brushes1">
+                            <label for="brushes1">Комплект передних</label>
+                          </p>
+                        </li>
+
+                        <li>
+                          <p>
+                            <input type="checkbox" name="brushes[]" id="brushes2">
+                            <label for="brushes2">Задняя</label>
+                          </p>
+                        </li>
+
+                      </ul>
+                    </div>
+
+                  </div>
+
+                </div><!-- form-select -->
+
+                <textarea name="comment"
+                  placeholder="Укажите запчасти, которых нет в категориях, свои вопросы и коментарий"></textarea>
+
+                <button id="contacts" class="button">Заказать</button>
+                <p class="privacy">Нажимая на кнопку вы соглашаетесь<br>с <a href="/privacy_policy.html"
+                    target="_blank">политикой конфиденциальности</a></p>
+
+                <p class="text" align="center">Или напиши <a href="https://vk.me/vwto_ru">нам в ВК</a></p>
+
+              </form>
+            </div>
+
+            <div class="col-lg-5 offset-lg-1">
+              <div class="contacts">
+                <h3>Обратная связь</h3>
+                <ul class="contact-info">
+                  <!--<li class="description">Все обращения просьба писать на <a class="a" href="mailto:vw-to@ya.ru">электронную почту</a> или в <a href="https://vk.com/vwto_ru">группе ВК</a></li>-->
+                  <li class="description"><a class="a" href="https://vk.me/vwto_ru">Сообщения в ВК</a></li>
+                  <li class="description"><a class="a" href="mailto:vw-to@ya.ru">vw-to@ya.ru</a></li>
+                  <!--<li class="description">ИП Новоселов А.А.</li>-->
+                  <!--<li class="description">ИНН 540956290702</li>-->
+                  <!--<li class="description">ОГРНИП 319554300062411</li>-->
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- form -->
+
+    <footer class="footer">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-md-3 col-sm-4 col-6">
+            <div class="logo">vw-to</div>
+          </div>
+
+          <div class="col-md-9 col-sm-8 col-6">
+            <div class="social-block">
+
+              <a href="https://vk.com/vwto_ru"><img src="img/footer/Tilda_Icons_26sn_vkontakte.png" alt="vk"></a>
+              <!--<a href="#"><img class="last" src="img/footer/Tilda_Icons_26sn_odnoklassniki.png" alt="vk"></a>-->
+
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-3 offset-lg-3">
+            <ul class="contact-info">
+              <!--<li class="description"><a class="a" href="tel:+79789999999">Все обращения просьба писать на электронную почту</a></li>-->
+              <li class="description"><a class="a" href="mailto:vw-to@ya.ru">vw-to@ya.ru</a></li>
+              <li class="description">ИП Новоселов А.А.</li>
+              <li class="description">ИНН 540956290702</li>
+              <li class="description">ОГРНИП 319554300062411</li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 offset-lg-1">
+            <ul class="contact-info">
+              <!-- <li class="description"><a class="a" href="#">Оптовикам</a></li> -->
+              <li class="description"><a class="a" href="admin">Админ</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3">
+            <ul class="contact-info contact-info_small">
+              <li class="description">Иконки: <a class="a" href="https://tilda.cc" target="_blank">Tilda Publishing</a>
+              </li>
+              <!--<li class="description">Разработка сайта: <a class="a" href="https://vk.com/id236520614" target="_blank">Антон</a></li>-->
+            </ul>
+          </div>
+
+        </div>
+
+        <p class="copy">©vw-to 2019<br>не является публичной офертой</p>
+
+      </div>
+    </footer><!-- footer -->
+
+    <a href="#header">
+      <div class="button-top">
+        <p>↑</p>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- script -->
+  <!-- jQuery -->
+  <script src="script/jquery.min.js"></script>
+
+  <!-- scroll animate -->
+  <script src="script/animateTransition.js"></script>
+  <script>
+    animateTransition();
+  </script>
+
+  <!-- animate wow js -->
+  <script src="animate/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
+
+  <!-- slick slider -->
+  <link rel="stylesheet" href="slick/slick.css">
+  <link rel="stylesheet" href="slick/slick-theme.css">
+  <script src="slick/slick.min.js"></script>
+
+  <!-- settings slider -->
+  <script>
+    $(document).ready(function () {
+      //why-we
+      $(window).resize(function () {
+        whyWeSlider();
+      });
+      let whyWe = false;
+
+      function whyWeSlider() {
+        if ($(window).width() < 992 && !whyWe) {
+          $('.why-we-slider').slick({
+            dots: true,
+            arrows: false,
+          });
+          whyWe = true;
+        } else if ($(window).width() >= 992 && whyWe) {
+          $('.why-we-slider').slick('unslick');
+          whyWe = false;
+        }
+      }
+      whyWeSlider();
+
+      //comments
+      $('.comments-slider').slick({
+        dots: true,
+        prevArrow: '<button type="button" class="col-lg-1 offset-lg-1 arrows">&#8249;</button>',
+        nextArrow: '<button type="button" class="col-lg-1 offset-lg-10 arrows">&#8250;</button>',
+        responsive: [{
+          breakpoint: 991,
+          settings: {
+            arrows: false,
+          }
+        }]
+      });
+
+      //price
+      $('.price-slider').slick({
+        dots: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        prevArrow: '<button type="button" class="prev arrows">&#8249;</button>',
+        nextArrow: '<button type="button" class="next arrows">&#8250;</button>',
+        responsive: [{
+            breakpoint: 991,
+            settings: {
+              arrows: false,
+              slidesToShow: 2,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 767,
+            settings: {
+              arrows: false,
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+
+    });
+  </script>
+
+  <!-- masked input -->
+  <script src="script/jquery.maskedinput.min.js"></script>
+  <script>
+    jQuery(function ($) {
+      $("#phone").mask("+7(999) 999-99-99");
+    });
+  </script>
+
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function (m, e, t, r, i, k, a) {
+      m[i] = m[i] || function () {
+        (m[i].a = m[i].a || []).push(arguments)
+      };
+      m[i].l = 1 * new Date();
+      k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k,
+        a)
+    })
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(55537348, "init", {
+      clickmap: true,
+      trackLinks: true,
+      accurateTrackBounce: true,
+      webvisor: true
+    });
+  </script>
+  <noscript>
+    <div><img src="https://mc.yandex.ru/watch/55537348" style="position:absolute; left:-9999px;" alt="" /></div>
+  </noscript>
+  <!-- /Yandex.Metrika counter -->
+
+  <!-- VK Widget -->
+  <!--<div id="vk_community_messages"></div>-->
+  <!--<script type="text/javascript">-->
+  <!--VK.Widgets.CommunityMessages("vk_community_messages", 127607773, {expandTimeout: "10000",widgetPosition: "left",disableExpandChatSound: "1",tooltipButtonText: "Есть вопрос?"});-->
+  <!--</script>-->
+
+  <!-- myScript -->
+  <script src="script/script.js"></script>
+
+</body>
+
+</html>
