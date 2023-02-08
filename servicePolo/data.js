@@ -212,9 +212,7 @@ var pricesData = {
           ]
         }
       ]
-    }
-  ],
-  "Polo SD 1.6 2010-2015 (copy)": [
+    },
     {
       "img": "pack_1.jpg",
       "name": "Пакет 1",
