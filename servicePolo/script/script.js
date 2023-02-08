@@ -83,7 +83,7 @@ $(document).ready(()=>{
 
     $modal.find('.modal-total-price span').text(pack.price);
 
-    $modal.find('.modal-button').data('pack', pack.name);
+    $modal.find('.modal-button').data('pack', `${pack.name} (${pack.desc})`);
     $modal.find('.modal-button').data('model', $(this).data('model'));
   });
 
