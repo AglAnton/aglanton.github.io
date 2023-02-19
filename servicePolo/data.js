@@ -15,7 +15,7 @@ var pricesData = {
           "alt": "Масляный фильтр"
         },
         {
-          "path": "stopper.jpg",
+          "path": "stopper.png",
           "alt": "Пробка"
         }
       ],
@@ -66,7 +66,7 @@ var pricesData = {
           "alt": "Масляный фильтр"
         },
         {
-          "path": "stopper.jpg",
+          "path": "stopper.png",
           "alt": "Пробка"
         },
         {
@@ -141,7 +141,7 @@ var pricesData = {
           "alt": "Масляный фильтр"
         },
         {
-          "path": "stopper.jpg",
+          "path": "stopper.png",
           "alt": "Пробка"
         },
         {
@@ -220,15 +220,15 @@ var pricesData = {
       "price": 6838,
       "images": [
         {
-          "path": "oil.jpg",
+          "path": "oil.png",
           "alt": "Масло"
         },
         {
-          "path": "03C115561H.jpg",
+          "path": "03C115561H.png",
           "alt": "Масляный фильтр"
         },
         {
-          "path": "stopper.jpg",
+          "path": "stopper.png",
           "alt": "Пробка"
         }
       ],
@@ -271,23 +271,23 @@ var pricesData = {
       "price": 9724,
       "images": [
         {
-          "path": "oil.jpg",
+          "path": "oil.png",
           "alt": "Масло"
         },
         {
-          "path": "03C115561H.jpg",
+          "path": "03C115561H.png",
           "alt": "Масляный фильтр"
         },
         {
-          "path": "stopper.jpg",
+          "path": "stopper.png",
           "alt": "Пробка"
         },
         {
-          "path": "036129620J.jpg",
+          "path": "036129620J.png",
           "alt": "Воздушный фильтр"
         },
         {
-          "path": "JZW819653F.jpg",
+          "path": "JZW819653F.png",
           "alt": "Салонный фильтр"
         }
       ],
@@ -346,27 +346,27 @@ var pricesData = {
       "price": 13105,
       "images": [
         {
-          "path": "oil.jpg",
+          "path": "oil.png",
           "alt": "Масло"
         },
         {
-          "path": "03C115561H.jpg",
+          "path": "03C115561H.png",
           "alt": "Масляный фильтр"
         },
         {
-          "path": "stopper.jpg",
+          "path": "stopper.png",
           "alt": "Пробка"
         },
         {
-          "path": "036129620J.jpg",
+          "path": "036129620J.png",
           "alt": "Воздушный фильтр"
         },
         {
-          "path": "JZW819653F.jpg",
+          "path": "JZW819653F.png",
           "alt": "Салонный фильтр"
         },
         {
-          "path": "6Q0201051J.jpg",
+          "path": "6Q0201051J.png",
           "alt": "Топливный фильтр"
         }
       ],
@@ -642,17 +642,17 @@ var pricesData = {
       ]
     },
     {
-      "img": "pack_1.jpg",
+      "img": "car1_pack1_o.png",
       "name": "Пакет 1",
       "desc": "Работа + материалы ОРИГИНАЛ",
       "price": 7305,
       "images": [
         {
-          "path": "oil.jpg",
+          "path": "oil.png",
           "alt": "Масло"
         },
         {
-          "path": "04E115561T.jpg",
+          "path": "04E115561T.png",
           "alt": "Масляный фильтр"
         },
         {
@@ -693,17 +693,17 @@ var pricesData = {
       ]
     },
     {
-      "img": "pack_2.jpg",
+      "img": "car1_pack2_o.png",
       "name": "Пакет 2",
       "desc": "Работа + материалы ОРИГИНАЛ",
       "price": 10086,
       "images": [
         {
-          "path": "oil.jpg",
+          "path": "oil.png",
           "alt": "Масло"
         },
         {
-          "path": "04E115561T.jpg",
+          "path": "04E115561T.png",
           "alt": "Масляный фильтр"
         },
         {
@@ -711,11 +711,11 @@ var pricesData = {
           "alt": "Кольцо уплотнительное"
         },
         {
-          "path": "04E129620A.jpg",
+          "path": "04E129620A.png",
           "alt": "Воздушный фильтр"
         },
         {
-          "path": "JZW819653F.jpg",
+          "path": "JZW819653F.png",
           "alt": "Салонный фильтр"
         }
       ],
@@ -768,17 +768,17 @@ var pricesData = {
       ]
     },
     {
-      "img": "pack_3.jpg",
+      "img": "car1_pack3_o.png",
       "name": "Пакет 3",
       "desc": "Работа + материалы ОРИГИНАЛ",
       "price": 13467,
       "images": [
         {
-          "path": "oil.jpg",
+          "path": "oil.png",
           "alt": "Масло"
         },
         {
-          "path": "04E115561T.jpg",
+          "path": "04E115561T.png",
           "alt": "Масляный фильтр"
         },
         {
@@ -786,15 +786,15 @@ var pricesData = {
           "alt": "Кольцо уплотнительное"
         },
         {
-          "path": "04E129620A.jpg",
+          "path": "04E129620A.png",
           "alt": "Воздушный фильтр"
         },
         {
-          "path": "JZW819653F.jpg",
+          "path": "JZW819653F.png",
           "alt": "салонный фильтр"
         },
         {
-          "path": "6Q0201051J.jpg",
+          "path": "6Q0201051J.png",
           "alt": "топливный фильтр"
         }
       ],
@@ -1070,17 +1070,17 @@ var pricesData = {
       ]
     },
     {
-      "img": "pack_1.jpg",
+      "img": "car1_pack1_o.png",
       "name": "Пакет 1",
       "desc": "Работа + материалы ОРИГИНАЛ",
       "price": 7305,
       "images": [
         {
-          "path": "oil.jpg",
+          "path": "oil.png",
           "alt": "Масло"
         },
         {
-          "path": "04E115561T.jpg",
+          "path": "04E115561T.png",
           "alt": "Масляный фильтр"
         },
         {
@@ -1121,17 +1121,17 @@ var pricesData = {
       ]
     },
     {
-      "img": "pack_2.jpg",
+      "img": "car1_pack2_o.png",
       "name": "Пакет 2",
       "desc": "Работа + материалы ОРИГИНАЛ",
       "price": 11334,
       "images": [
         {
-          "path": "oil.jpg",
+          "path": "oil.png",
           "alt": "Масло"
         },
         {
-          "path": "04E115561T.jpg",
+          "path": "04E115561T.png",
           "alt": "Масляный фильтр"
         },
         {
@@ -1139,11 +1139,11 @@ var pricesData = {
           "alt": "Кольцо уплотнительное"
         },
         {
-          "path": "04E129620.jpg",
+          "path": "04E129620.png",
           "alt": "Воздушный фильтр"
         },
         {
-          "path": "JZW819653F.jpg",
+          "path": "JZW819653F.png",
           "alt": "Салонный фильтр"
         }
       ],
@@ -1196,17 +1196,17 @@ var pricesData = {
       ]
     },
     {
-      "img": "pack_3.jpg",
+      "img": "car1_pack3_o.png",
       "name": "Пакет 3",
       "desc": "Работа + материалы ОРИГИНАЛ",
       "price": 14950,
       "images": [
         {
-          "path": "oil.jpg",
+          "path": "oil.png",
           "alt": "Масло"
         },
         {
-          "path": "04E115561T.jpg",
+          "path": "04E115561T.png",
           "alt": "Масляный фильтр"
         },
         {
@@ -1214,15 +1214,15 @@ var pricesData = {
           "alt": "Кольцо уплотнительное"
         },
         {
-          "path": "04E129620.jpg",
+          "path": "04E129620.png",
           "alt": "Воздушный фильтр"
         },
         {
-          "path": "JZW819653F.jpg",
+          "path": "JZW819653F.png",
           "alt": "Салонный фильтр"
         },
         {
-          "path": "1K0201051K.jpg",
+          "path": "1K0201051K.png",
           "alt": "Топливный фильтр"
         }
       ],
@@ -1498,17 +1498,17 @@ var pricesData = {
       ]
     },
     {
-      "img": "pack_1.jpg",
+      "img": "car1_pack1_o.png",
       "name": "Пакет 1",
       "desc": "Работа + материалы ОРИГИНАЛ",
       "price": 9466,
       "images": [
         {
-          "path": "oil.jpg",
+          "path": "oil.png",
           "alt": "Масло"
         },
         {
-          "path": "04E115561T.jpg",
+          "path": "04E115561T.png",
           "alt": "Масляный фильтр"
         },
         {
@@ -1549,17 +1549,17 @@ var pricesData = {
       ]
     },
     {
-      "img": "pack_2.jpg",
+      "img": "car1_pack2_o.png",
       "name": "Пакет 2",
       "desc": "Работа + материалы ОРИГИНАЛ",
       "price": 13642,
       "images": [
         {
-          "path": "oil.jpg",
+          "path": "oil.png",
           "alt": "Масло"
         },
         {
-          "path": "04E115561T.jpg",
+          "path": "04E115561T.png",
           "alt": "Масляный фильтр"
         },
         {
@@ -1567,11 +1567,11 @@ var pricesData = {
           "alt": "Кольцо уплотнительное"
         },
         {
-          "path": "04E129620.jpg",
+          "path": "04E129620.png",
           "alt": "Воздушный фильтр"
         },
         {
-          "path": "JZW819653F.jpg",
+          "path": "JZW819653F.png",
           "alt": "Салонный фильтр"
         }
       ],
@@ -1624,17 +1624,17 @@ var pricesData = {
       ]
     },
     {
-      "img": "pack_3.jpg",
+      "img": "car1_pack3_o.png",
       "name": "Пакет 3",
       "desc": "Работа + материалы ОРИГИНАЛ",
       "price": 19898,
       "images": [
         {
-          "path": "oil.jpg",
+          "path": "oil.png",
           "alt": "Масло"
         },
         {
-          "path": "04E115561T.jpg",
+          "path": "04E115561T.png",
           "alt": "Масляный фильтр"
         },
         {
@@ -1642,15 +1642,15 @@ var pricesData = {
           "alt": "Кольцо уплотнительное"
         },
         {
-          "path": "04E129620.jpg",
+          "path": "04E129620.png",
           "alt": "Воздушный фильтр"
         },
         {
-          "path": "JZW819653F.jpg",
+          "path": "JZW819653F.png",
           "alt": "Салонный фильтр"
         },
         {
-          "path": "1K0201051K.jpg",
+          "path": "1K0201051K.png",
           "alt": "Топливный фильтр"
         }
       ],
@@ -1711,4 +1711,4 @@ var pricesData = {
       ]
     }
   ]
-};
+}
