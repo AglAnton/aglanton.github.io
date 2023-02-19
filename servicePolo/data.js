@@ -642,7 +642,7 @@ var pricesData = {
       ]
     },
     {
-      "img": "car1_pack1_o.png",
+      "img": "car2_pack1_o.png",
       "name": "Пакет 1",
       "desc": "Работа + материалы ОРИГИНАЛ",
       "price": 7305,
@@ -693,7 +693,7 @@ var pricesData = {
       ]
     },
     {
-      "img": "car1_pack2_o.png",
+      "img": "car2_pack2_o.png",
       "name": "Пакет 2",
       "desc": "Работа + материалы ОРИГИНАЛ",
       "price": 10086,
@@ -768,7 +768,7 @@ var pricesData = {
       ]
     },
     {
-      "img": "car1_pack3_o.png",
+      "img": "car2_pack3_o.png",
       "name": "Пакет 3",
       "desc": "Работа + материалы ОРИГИНАЛ",
       "price": 13467,
@@ -1070,7 +1070,7 @@ var pricesData = {
       ]
     },
     {
-      "img": "car1_pack1_o.png",
+      "img": "car3_pack1_o.png",
       "name": "Пакет 1",
       "desc": "Работа + материалы ОРИГИНАЛ",
       "price": 7305,
@@ -1121,7 +1121,7 @@ var pricesData = {
       ]
     },
     {
-      "img": "car1_pack2_o.png",
+      "img": "car3_pack2_o.png",
       "name": "Пакет 2",
       "desc": "Работа + материалы ОРИГИНАЛ",
       "price": 11334,
@@ -1196,7 +1196,7 @@ var pricesData = {
       ]
     },
     {
-      "img": "car1_pack3_o.png",
+      "img": "car3_pack3_o.png",
       "name": "Пакет 3",
       "desc": "Работа + материалы ОРИГИНАЛ",
       "price": 14950,
@@ -1498,7 +1498,7 @@ var pricesData = {
       ]
     },
     {
-      "img": "car1_pack1_o.png",
+      "img": "car4_pack1_o.png",
       "name": "Пакет 1",
       "desc": "Работа + материалы ОРИГИНАЛ",
       "price": 9466,
@@ -1549,7 +1549,7 @@ var pricesData = {
       ]
     },
     {
-      "img": "car1_pack2_o.png",
+      "img": "car4_pack2_o.png",
       "name": "Пакет 2",
       "desc": "Работа + материалы ОРИГИНАЛ",
       "price": 13642,
@@ -1624,7 +1624,7 @@ var pricesData = {
       ]
     },
     {
-      "img": "car1_pack3_o.png",
+      "img": "car4_pack3_o.png",
       "name": "Пакет 3",
       "desc": "Работа + материалы ОРИГИНАЛ",
       "price": 19898,
